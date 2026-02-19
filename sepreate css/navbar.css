@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     z-index: 40;
-    display: none;
+
 }
 
 .navbar .container {
@@ -91,7 +91,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     .navbar .container .left .links {
         display: flex;
     }
