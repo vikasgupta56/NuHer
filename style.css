@@ -1,4 +1,8 @@
+/* =======================================================
+   GLOBAL STYLES
+======================================================= */
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+/* Reset + Base */
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +10,7 @@
   font-family: "Inter Tight", sans-serif;
 }
 
+/* Global Image Styling */
 img {
   width: 100%;
   height: 100%;
@@ -13,6 +18,7 @@ img {
      object-fit: cover;
 }
 
+/* HTML / Body */
 html,
 body {
   width: 100%;
@@ -20,6 +26,10 @@ body {
   overflow-x: hidden;
 }
 
+/* =======================================================
+   ANIMATIONS
+======================================================= */
+/* Marquee Animation */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -32,40 +42,23 @@ body {
   animation: marquee 15s linear infinite;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 999px;
-  padding: 8px 8px;
-  border: none;
-  cursor: pointer;
-}
-.btn .primary {
-  background: #19869A;
-  color: white;
-}
-.btn .arrow {
-  width: 24px;
-  height: 24px;
-  background: white;
-  color: #19869A;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Divider Line */
 .line {
   width: 100vw;
   height: 1px;
   background-color: #eff6f3;
 }
 
+/* =======================================================
+   MAIN WRAPPER
+======================================================= */
 main {
   width: 100%;
   overflow: hidden;
   position: relative;
+  /* =======================================================
+     NAVBAR
+  ======================================================= */
 }
 main .navbar {
   position: absolute;
@@ -118,7 +111,7 @@ main .navbar .right {
   display: none;
 }
 main .navbar .right .signin {
-  background: none;
+  background-color: white;
   border: none;
   cursor: pointer;
   font-size: 14px;
@@ -138,6 +131,26 @@ main .navbar .right .cart {
   justify-content: center;
   cursor: pointer;
 }
+main .navbar .right .btn {
+  background-color: #19869A;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  color: white;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+}
+main .navbar .right .btn .btn__arrow {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 main .navbar .menu {
   width: 32px;
   height: 32px;
@@ -147,6 +160,11 @@ main .navbar .menu {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+main {
+  /* =======================================================
+     HERO SECTION
+  ======================================================= */
 }
 main .hero {
   width: 100%;
@@ -262,6 +280,11 @@ main .hero .bottom .bottom-container .right .cta-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+main {
+  /* =======================================================
+     VISION SECTION
+  ======================================================= */
 }
 main .vision {
   margin-top: 7vw;
@@ -428,6 +451,11 @@ main .vision .container .trusted .wrapper .right {
   top: 0;
   background: linear-gradient(to left, white, transparent);
 }
+main {
+  /* =======================================================
+     PERSONALIZED SECTION
+  ======================================================= */
+}
 main .personalized {
   background: #eef4f3;
   padding: 2rem;
@@ -471,6 +499,7 @@ main .personalized .container .symptoms .image {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  position: relative;
 }
 main .personalized .container .symptoms .image img {
   width: 100vw;
@@ -707,6 +736,11 @@ main .personalized .container .btn-outline {
   background: white;
   cursor: pointer;
 }
+main {
+  /* =======================================================
+     PRODUCTS (Target Nutrition)
+  ======================================================= */
+}
 main .products {
   padding: 8rem 0;
   background: #ffffff;
@@ -836,6 +870,11 @@ main .products .container .bottom .btn .icon {
   border-radius: 50%;
   color: white;
 }
+main {
+  /* =======================================================
+     PROFESSIONALS SECTION
+  ======================================================= */
+}
 main .doctors {
   padding: 100px 0;
   background-color: rgb(255, 255, 255);
@@ -938,6 +977,11 @@ main .doctors .container .wrapper .track .card p {
 }
 main .doctors .container .wrapper .track .card:nth-child(3) .top .image img {
   top: 2rem;
+}
+main {
+  /* =======================================================
+     TESTIMONIALS SECTION
+  ======================================================= */
 }
 main .testimonials {
   padding: 8rem 1rem;
@@ -1053,6 +1097,11 @@ main .testimonials .container .wrapper .slide .content .user .stars {
   color: gold;
   font-size: 14px;
 }
+main {
+  /* =======================================================
+     FAQ SECTION
+  ======================================================= */
+}
 main .faq {
   padding: 8rem 1rem;
   background: #ffffff;
@@ -1149,72 +1198,81 @@ main .faq .container .content .right .faq-item.active .icon {
 main .faq .container .content .right .faq-item:last-child {
   border: none;
 }
+main {
+  /* =======================================================
+     FOOTER
+  ======================================================= */
+}
 main .footer {
-  background: #063c3d;
   color: #ffffff;
-  padding: 2rem;
-  border-radius: 30px 30px 0 0;
+  padding: 1rem;
 }
 main .footer .container {
-  width: 90%;
-  max-width: 1400px;
-  margin: auto;
+  width: 100%;
+  padding: 2rem;
+  background: #063c3d;
+  border-radius: 2rem;
 }
-main .footer .footer-top {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-  gap: 60px;
-  padding-bottom: 60px;
+main .footer .container .footer-top {
+  gap: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-main .footer .footer-col h4 {
+main .footer .container .footer-top .footer h4 {
   margin-bottom: 20px;
   font-size: 18px;
 }
-main .footer .footer-col ul {
+main .footer .container .footer-top .footer ul {
   list-style: none;
 }
-main .footer .footer-col ul li {
+main .footer .container .footer-top .footer ul li {
   margin-bottom: 12px;
   font-size: 14px;
   opacity: 0.9;
   cursor: pointer;
   transition: 0.3s;
 }
-main .footer .footer-col ul li:hover {
+main .footer .container .footer-top .footer ul li:hover {
   opacity: 1;
 }
-main .footer .brand .logo {
-  width: 150px;
-  margin-bottom: 20px;
+main .footer .container .footer-top .brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
-main .footer .brand p {
-  font-size: 15px;
-  line-height: 1.6;
-  opacity: 0.9;
+main .footer .container .footer-top .brand .image {
+  width: 15rem;
 }
-main .footer .footer-middle {
+main .footer .container .footer-top .footer-links {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-top: 1px solid rgba(211, 211, 211, 0.231);
+}
+main .footer .container .footer-middle {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: start;
   padding: 30px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-main .footer .footer-middle .payments {
+main .footer .container .footer-middle .payments {
   display: flex;
   gap: 15px;
 }
-main .footer .footer-middle .payments img {
-  height: 30px;
+main .footer .container .footer-middle .payments img {
+  height: 2.5rem;
   background: white;
   padding: 5px 10px;
   border-radius: 6px;
 }
-main .footer .footer-middle .socials {
+main .footer .container .footer-middle .socials {
   display: flex;
   gap: 12px;
 }
-main .footer .footer-middle .socials .circle {
+main .footer .container .footer-middle .socials .circle {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1225,11 +1283,11 @@ main .footer .footer-middle .socials .circle {
   cursor: pointer;
   transition: 0.3s;
 }
-main .footer .footer-middle .socials .circle:hover {
+main .footer .container .footer-middle .socials .circle:hover {
   background: #1f7a86;
   border-color: #1f7a86;
 }
-main .footer .footer-bottom {
+main .footer .container .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1237,28 +1295,19 @@ main .footer .footer-bottom {
   font-size: 14px;
   opacity: 0.8;
 }
-main .footer .footer-bottom .links {
+main .footer .container .footer-bottom .links {
   display: flex;
   gap: 10px;
   cursor: pointer;
 }
-main {
-  /* Responsive */
-}
-@media (max-width: 900px) {
-  main .footer .footer-top {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  main .footer .footer-middle,
-  main .footer .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-}
 
+/* =======================================================
+   DESKTOP BREAKPOINT (>=1024px)
+======================================================= */
 @media (min-width: 1024px) {
+  main {
+    /* Navbar Desktop */
+  }
   main .navbar .container .left .links {
     display: flex;
   }
@@ -1267,6 +1316,9 @@ main {
   }
   main .navbar .container .menu {
     display: none;
+  }
+  main {
+    /* Hero Desktop */
   }
   main .hero .bottom {
     position: absolute;
@@ -1307,6 +1359,9 @@ main {
   main .hero .bottom .bottom-container .left h1 .mobile {
     display: none;
   }
+  main {
+    /* Vision Desktop */
+  }
   main .vision {
     flex-direction: row;
   }
@@ -1336,6 +1391,9 @@ main {
   main .vision .container .trusted .header {
     width: 50vw;
     text-align: start;
+  }
+  main {
+    /* Personalized Desktop */
   }
   main .personalized {
     background: #eef4f3;
@@ -1644,6 +1702,9 @@ main {
     background: white;
     cursor: pointer;
   }
+  main {
+    /* Products Desktop */
+  }
   main .products .container {
     width: 80vw;
   }
@@ -1653,11 +1714,17 @@ main {
   main .products .container .wrapper .track .card {
     min-width: 18.5vw;
   }
+  main {
+    /* Doctors Desktop */
+  }
   main .doctors .container {
     width: 80vw;
   }
   main .doctors .container .top .arrows {
     display: flex;
+  }
+  main {
+    /* Testimonials Desktop */
   }
   main .testimonials .container {
     width: 80vw;
@@ -1672,6 +1739,9 @@ main {
   main .testimonials .container .wrapper .slide .content {
     width: 50vw;
     height: 100%;
+  }
+  main {
+    /* FAQ Desktop */
   }
   main .faq .container {
     width: 80vw;
@@ -1692,5 +1762,36 @@ main {
   }
   main .faq .container .content .right {
     width: 50vw;
+  }
+  main {
+    /* Footer Desktop */
+  }
+  main .footer {
+    width: 100%;
+  }
+  main .footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  main .footer .container .wrapper {
+    width: 80vw;
+    padding: 3rem 0;
+  }
+  main .footer .container .footer-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  main .footer .container .footer-top .brand {
+    width: 30vw;
+    border-right: 1px solid rgba(211, 211, 211, 0.231);
+  }
+  main .footer .container .footer-top .brand p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  main .footer .container .footer-top .footer-links {
+    border: none;
+    flex-wrap: nowrap;
   }
 }/*# sourceMappingURL=style.css.map */
