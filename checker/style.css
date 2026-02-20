@@ -1,109 +1,97 @@
 
 .navbar {
-    position: absolute;
-    top: 2.5rem;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 40;
-
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 40;
 }
-
 .navbar .container {
-    width: 80vw;
-    height: 10vh;
-    background: white;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+  width: 80vw;
+  height: 10vh;
+  background: white;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
-
 .navbar .left {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
-
 .navbar .left .logo {
-    width: 150px;
+  width: 150px;
 }
-
 .navbar .left .logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-
 .navbar .left .links {
-    display: flex;
-    gap: 20px;
-    font-weight: 300;
-    display: none;
+  display: flex;
+  gap: 20px;
+  font-weight: 300;
+  display: none;
 }
-
 .navbar .left .links a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
 }
-
 .navbar .right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    display: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  display: none;
 }
-
 .navbar .right .signin {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
-
 .navbar .right .divider {
-    width: 1px;
-    height: 20px;
-    background: black;
+  width: 1px;
+  height: 20px;
+  background: black;
 }
-
 .navbar .right .cart {
-    width: 32px;
-    height: 32px;
-    background: #EFF7F8;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: #EFF7F8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-
 .navbar .menu {
     width: 32px;
     height: 32px;
     background: #EFF7F8;
     border-radius: 50%;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
 @media (min-width: 1024px) {
-    .navbar .container .left .links {
-        display: flex;
-    }
+.navbar .container .left .links {
+    display: flex;
+  }
+.navbar .container .right {
+    display: flex;
+  }
+.navbar .container .menu {
+    display: none;
+  }
 
-    .navbar .container .right {
-        display: flex;
-    }
-
-    .navbar .container .menu {
-        display: none;
-    }
 
 }
 

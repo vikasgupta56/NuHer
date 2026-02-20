@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     z-index: 40;
-
 }
 
 .navbar .container {
@@ -85,7 +84,7 @@
     height: 32px;
     background: #EFF7F8;
     border-radius: 50%;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -103,5 +102,6 @@
     .navbar .container .menu {
         display: none;
     }
+
 
 }
