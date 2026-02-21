@@ -24,6 +24,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* =======================================================
@@ -52,15 +53,10 @@ body {
 /* =======================================================
    MAIN WRAPPER
 ======================================================= */
-main {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  /* =======================================================
-     NAVBAR
-  ======================================================= */
-}
-main .navbar {
+/* =======================================================
+       NAVBAR
+    ======================================================= */
+.navbar {
   position: absolute;
   top: 2.5rem;
   left: 0;
@@ -69,7 +65,7 @@ main .navbar {
   justify-content: center;
   z-index: 40;
 }
-main .navbar .container {
+.navbar .container {
   width: 80vw;
   height: 10vh;
   background: white;
@@ -79,49 +75,49 @@ main .navbar .container {
   justify-content: space-between;
   padding: 0 20px;
 }
-main .navbar .left {
+.navbar .left {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-main .navbar .left .logo {
+.navbar .left .logo {
   width: 150px;
 }
-main .navbar .left .logo img {
+.navbar .left .logo img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .navbar .left .links {
+.navbar .left .links {
   display: flex;
   gap: 20px;
   font-weight: 300;
   display: none;
 }
-main .navbar .left .links a {
+.navbar .left .links a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
 }
-main .navbar .right {
+.navbar .right {
   display: flex;
   align-items: center;
   gap: 20px;
   display: none;
 }
-main .navbar .right .signin {
+.navbar .right .signin {
   background-color: white;
   border: none;
   cursor: pointer;
   font-size: 14px;
 }
-main .navbar .right .divider {
+.navbar .right .divider {
   width: 1px;
   height: 20px;
   background: black;
 }
-main .navbar .right .cart {
+.navbar .right .cart {
   width: 32px;
   height: 32px;
   background: #EFF7F8;
@@ -131,7 +127,7 @@ main .navbar .right .cart {
   justify-content: center;
   cursor: pointer;
 }
-main .navbar .right .btn {
+.navbar .right .btn {
   background-color: #19869A;
   padding: 0.4rem 0.5rem;
   border: none;
@@ -142,7 +138,7 @@ main .navbar .right .btn {
   gap: 1rem;
   font-size: 0.7rem;
 }
-main .navbar .right .btn .btn__arrow {
+.navbar .right .btn .btn__arrow {
   background-color: white;
   color: black;
   border-radius: 50%;
@@ -151,7 +147,7 @@ main .navbar .right .btn .btn__arrow {
   justify-content: center;
   align-items: center;
 }
-main .navbar .menu {
+.navbar .menu {
   width: 32px;
   height: 32px;
   background: #EFF7F8;
@@ -161,21 +157,20 @@ main .navbar .menu {
   justify-content: center;
   cursor: pointer;
 }
-main {
-  /* =======================================================
-     HERO SECTION
-  ======================================================= */
-}
-main .hero {
+
+/* =======================================================
+       HERO SECTION
+    ======================================================= */
+.hero {
   width: 100%;
   position: relative;
 }
-main .hero .image-wrapper {
+.hero .image-wrapper {
   height: 120vh;
   padding: 12px;
   overflow: hidden;
 }
-main .hero .image-wrapper .image {
+.hero .image-wrapper .image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -184,21 +179,21 @@ main .hero .image-wrapper .image {
   -o-object-position: 70% 0%;
      object-position: 70% 0%;
 }
-main .hero .image-wrapper .overlay {
+.hero .image-wrapper .overlay {
   position: absolute;
   inset: 12px;
   border-radius: 28px;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(33, 30, 30) 100%, rgb(0, 0, 0) 100%);
 }
-main .hero .bottom {
+.hero .bottom {
   position: absolute;
   top: 60%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-main .hero .bottom .bottom-container {
+.hero .bottom .bottom-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -206,7 +201,7 @@ main .hero .bottom .bottom-container {
   align-items: center;
   gap: 3rem;
 }
-main .hero .bottom .bottom-container .left {
+.hero .bottom .bottom-container .left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,31 +209,31 @@ main .hero .bottom .bottom-container .left {
   width: 100%;
   color: white;
 }
-main .hero .bottom .bottom-container .left h1 {
+.hero .bottom .bottom-container .left h1 {
   text-align: center;
   font-size: 2rem;
   line-height: 2.5rem;
   width: 100%;
 }
-main .hero .bottom .bottom-container .left h1 span {
+.hero .bottom .bottom-container .left h1 span {
   color: #19869A;
 }
-main .hero .bottom .bottom-container .left h1 .desktop-br {
+.hero .bottom .bottom-container .left h1 .desktop-br {
   display: none;
 }
-main .hero .bottom .bottom-container .left {
+.hero .bottom .bottom-container .left {
   /* Reviews */
 }
-main .hero .bottom .bottom-container .left .reviews {
+.hero .bottom .bottom-container .left .reviews {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-main .hero .bottom .bottom-container .left .reviews .avatars {
+.hero .bottom .bottom-container .left .reviews .avatars {
   display: flex;
   position: relative;
 }
-main .hero .bottom .bottom-container .left .reviews .avatars img {
+.hero .bottom .bottom-container .left .reviews .avatars img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -247,17 +242,17 @@ main .hero .bottom .bottom-container .left .reviews .avatars img {
   border: 2px solid white;
   margin-left: -10px;
 }
-main .hero .bottom .bottom-container .left .reviews .avatars img:first-child {
+.hero .bottom .bottom-container .left .reviews .avatars img:first-child {
   margin-left: 0;
 }
-main .hero .bottom .bottom-container {
+.hero .bottom .bottom-container {
   /* RIGHT CTA */
 }
-main .hero .bottom .bottom-container .right {
+.hero .bottom .bottom-container .right {
   display: flex;
   justify-content: flex-end;
 }
-main .hero .bottom .bottom-container .right .cta {
+.hero .bottom .bottom-container .right .cta {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -267,11 +262,11 @@ main .hero .bottom .bottom-container .right .cta {
   border: none;
   cursor: pointer;
 }
-main .hero .bottom .bottom-container .right .cta span {
+.hero .bottom .bottom-container .right .cta span {
   font-size: 14px;
   white-space: nowrap;
 }
-main .hero .bottom .bottom-container .right .cta-icon {
+.hero .bottom .bottom-container .right .cta-icon {
   width: 32px;
   height: 32px;
   background: #19869A;
@@ -281,37 +276,36 @@ main .hero .bottom .bottom-container .right .cta-icon {
   align-items: center;
   justify-content: center;
 }
-main {
-  /* =======================================================
-     VISION SECTION
-  ======================================================= */
-}
-main .vision {
+
+/* =======================================================
+       VISION SECTION
+    ======================================================= */
+.vision {
   margin-top: 7vw;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-main .vision .container {
+.vision .container {
   width: 100vw;
   padding: 1rem;
   display: flex;
   flex-direction: column;
 }
-main .vision .container .top {
+.vision .container .top {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
   gap: 3rem;
 }
-main .vision .container .top h1 {
+.vision .container .top h1 {
   font-size: 36px;
   line-height: 46px;
 }
-main .vision .container .top h1 span {
+.vision .container .top h1 span {
   color: #19869A;
 }
-main .vision .container .top .btn {
+.vision .container .top .btn {
   display: flex;
   align-items: center;
   width: -moz-fit-content;
@@ -323,7 +317,7 @@ main .vision .container .top .btn {
   background: white;
   cursor: pointer;
 }
-main .vision .container .top .btn-icon {
+.vision .container .top .btn-icon {
   width: 28px;
   height: 28px;
   background: #19869A;
@@ -333,18 +327,18 @@ main .vision .container .top .btn-icon {
   align-items: center;
   justify-content: center;
 }
-main .vision .container .divider {
+.vision .container .divider {
   width: 100%;
   height: 1px;
   background: rgba(0, 0, 0, 0.1);
   margin: 4vw 0;
 }
-main .vision .container .bottom {
+.vision .container .bottom {
   display: flex;
   flex-direction: column;
   gap: 5vw;
 }
-main .vision .container .bottom .image {
+.vision .container .bottom .image {
   width: 100%;
   height: 50vh;
   position: relative;
@@ -352,7 +346,7 @@ main .vision .container .bottom .image {
   display: flex;
   justify-content: center;
 }
-main .vision .container .bottom .image img {
+.vision .container .bottom .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -366,31 +360,31 @@ main .vision .container .bottom .image img {
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
-main .vision .container .bottom .image .image-overlay {
+.vision .container .bottom .image .image-overlay {
   position: absolute;
   inset: -1rem;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
 }
-main .vision .container .bottom .vertical-divider {
+.vision .container .bottom .vertical-divider {
   width: 1px;
   height: 30vw;
   background: rgba(0, 0, 0, 0.1);
   display: none;
 }
-main .vision .container .bottom .text {
+.vision .container .bottom .text {
   width: 100%;
   font-weight: 300;
 }
-main .vision .container .bottom .text p {
+.vision .container .bottom .text p {
   margin-bottom: 16px;
   line-height: 1.6;
 }
-main .vision .container .bottom .text .author {
+.vision .container .bottom .text .author {
   font-weight: 700;
   margin-top: 20px;
 }
-main .vision .container .trusted {
+.vision .container .trusted {
   margin-top: 3vw;
   padding-top: 4vw;
   border-top: 1px solid #eee;
@@ -399,28 +393,28 @@ main .vision .container .trusted {
   align-items: center;
   gap: 4vw;
 }
-main .vision .container .trusted .header {
+.vision .container .trusted .header {
   margin-bottom: 40px;
   width: 100%;
   text-align: center;
 }
-main .vision .container .trusted .header h2 {
+.vision .container .trusted .header h2 {
   font-size: 24px;
   color: #0f3d3e;
 }
-main .vision .container .trusted .wrapper {
+.vision .container .trusted .wrapper {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-main .vision .container .trusted .wrapper .track {
+.vision .container .trusted .wrapper .track {
   display: flex;
   gap: 40px;
   width: -moz-max-content;
   width: max-content;
   animation: marquee 25s linear infinite;
 }
-main .vision .container .trusted .wrapper .track .item {
+.vision .container .trusted .wrapper .track .item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -428,71 +422,70 @@ main .vision .container .trusted .wrapper .track .item {
   padding: 20px 30px;
   border-radius: 20px;
 }
-main .vision .container .trusted .wrapper .track .item img {
+.vision .container .trusted .wrapper .track .item img {
   height: 40px;
   -o-object-fit: contain;
      object-fit: contain;
   opacity: 0.8;
 }
-main .vision .container .trusted .wrapper .fade {
+.vision .container .trusted .wrapper .fade {
   position: absolute;
   top: 20%;
   height: 100%;
   width: 80px;
   z-index: 2;
 }
-main .vision .container .trusted .wrapper .left {
+.vision .container .trusted .wrapper .left {
   left: 0;
   top: 0;
   background: linear-gradient(to right, white, transparent);
 }
-main .vision .container .trusted .wrapper .right {
+.vision .container .trusted .wrapper .right {
   right: 0;
   top: 0;
   background: linear-gradient(to left, white, transparent);
 }
-main {
-  /* =======================================================
-     PERSONALIZED SECTION
-  ======================================================= */
-}
-main .personalized {
+
+/* =======================================================
+       PERSONALIZED SECTION
+    ======================================================= */
+.personalized {
   background: #eef4f3;
   padding: 2rem;
   margin-top: 10vw;
 }
-main .personalized .container {
+.personalized .container {
   width: 100%;
   margin: auto;
 }
-main .personalized .container .heading {
+.personalized .container .heading {
   text-align: center;
   margin-bottom: 5vw;
 }
-main .personalized .container .heading h2 {
+.personalized .container .heading h2 {
   font-size: 1.5rem;
   color: #0f3d3e;
 }
-main .personalized .container .heading p {
+.personalized .container .heading p {
   font-size: 1.5rem;
   color: #1f8c8c;
   margin-top: 0.5rem;
 }
-main .personalized .container .symptoms {
+.personalized .container .symptoms {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5vw;
 }
-main .personalized .container .symptoms .wrapper {
+.personalized .container .symptoms .wrapper {
   width: 100%;
   height: 40vh;
   position: relative;
   z-index: 9;
   display: none;
 }
-main .personalized .container .symptoms .image {
+.personalized .container .symptoms .image {
   width: 100vw;
   height: 100%;
   display: flex;
@@ -501,7 +494,7 @@ main .personalized .container .symptoms .image {
   margin-top: 2rem;
   position: relative;
 }
-main .personalized .container .symptoms .image img {
+.personalized .container .symptoms .image img {
   width: 100vw;
   height: 50vh;
   -o-object-fit: cover;
@@ -512,28 +505,28 @@ main .personalized .container .symptoms .image img {
   mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
 }
-main .personalized .container .symptoms .image .fade {
+.personalized .container .symptoms .image .fade {
   position: absolute;
   bottom: -10px;
   width: 100%;
   height: 120px;
   background: linear-gradient(to top, #eef4f3, transparent);
 }
-main .personalized .container .symptoms .desktop {
+.personalized .container .symptoms .desktop {
   display: none;
 }
-main .personalized .container .symptoms .mob-symptom {
+.personalized .container .symptoms .mob-symptom {
   width: 100%;
   display: flex;
   margin-top: 3rem;
   gap: 1.2rem;
 }
-main .personalized .container .symptoms .mob-symptom .col .symptom {
+.personalized .container .symptoms .mob-symptom .col .symptom {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-main .personalized .container .symptoms .mob-symptom .col .symptom .icon {
+.personalized .container .symptoms .mob-symptom .col .symptom .icon {
   width: 4rem;
   height: 4rem;
   background: white;
@@ -543,53 +536,53 @@ main .personalized .container .symptoms .mob-symptom .col .symptom .icon {
   align-items: center;
   font-size: 1.8rem;
 }
-main .personalized .container .symptoms .mob-symptom .col .symptom .text h3 {
+.personalized .container .symptoms .mob-symptom .col .symptom .text h3 {
   font-size: 0.9rem;
   color: #0f3d3e;
 }
-main .personalized .container .symptoms .mob-symptom .col .symptom .text p {
+.personalized .container .symptoms .mob-symptom .col .symptom .text p {
   font-size: 0.9rem;
   font-weight: 300;
   color: #555;
   margin-top: 0.5rem;
 }
-main .personalized .container .symptoms .mob-symptom .left {
+.personalized .container .symptoms .mob-symptom .left {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-main .personalized .container .symptoms .mob-symptom .left .symptom {
+.personalized .container .symptoms .mob-symptom .left .symptom {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
 }
-main .personalized .container .symptoms .mob-symptom .left .symptom .text {
+.personalized .container .symptoms .mob-symptom .left .symptom .text {
   text-align: end;
 }
-main .personalized .container .symptoms .mob-symptom .right {
+.personalized .container .symptoms .mob-symptom .right {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 1rem;
 }
-main .personalized .container .symptoms .mob-symptom .right .symptom {
+.personalized .container .symptoms .mob-symptom .right .symptom {
   flex-direction: column;
   align-items: start;
 }
-main .personalized .container .personalized__cta {
+.personalized .container .personalized__cta {
   text-align: center;
   margin: 3vw 0;
 }
-main .personalized .container .divider {
+.personalized .container .divider {
   width: 100%;
   height: 1px;
   background: white;
   margin: 4vw 0;
 }
-main .personalized .container .journey {
+.personalized .container .journey {
   margin-top: 3rem;
 }
-main .personalized .container .journey .top {
+.personalized .container .journey .top {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -597,18 +590,18 @@ main .personalized .container .journey .top {
   margin-bottom: 4vw;
   gap: 2rem;
 }
-main .personalized .container .journey .top h2 {
+.personalized .container .journey .top h2 {
   font-size: 2.5rem;
 }
-main .personalized .container .journey .top h2 span {
+.personalized .container .journey .top h2 span {
   color: #19869a;
 }
-main .personalized .container .journey .cards {
+.personalized .container .journey .cards {
   display: grid;
   grid-template-columns: repeat(1fr);
   gap: 2rem;
 }
-main .personalized .container .journey .cards .consult {
+.personalized .container .journey .cards .consult {
   background-color: #19869A;
   color: white;
   border-radius: 2rem;
@@ -621,7 +614,7 @@ main .personalized .container .journey .cards .consult {
   position: relative;
   padding: 1.2rem;
 }
-main .personalized .container .journey .cards .consult .logo {
+.personalized .container .journey .cards .consult .logo {
   width: 4rem;
   height: 4rem;
   background-color: white;
@@ -630,7 +623,7 @@ main .personalized .container .journey .cards .consult .logo {
   justify-content: center;
   align-items: center;
 }
-main .personalized .container .journey .cards .consult .image {
+.personalized .container .journey .cards .consult .image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -642,15 +635,15 @@ main .personalized .container .journey .cards .consult .image {
   transform: scale(1.45);
   display: none;
 }
-main .personalized .container .journey .cards .consult .text h3 {
+.personalized .container .journey .cards .consult .text h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-main .personalized .container .journey .cards .consult .text p {
+.personalized .container .journey .cards .consult .text p {
   opacity: 0.8;
   line-height: 1.3rem;
 }
-main .personalized .container .journey .cards .treatment {
+.personalized .container .journey .cards .treatment {
   position: relative;
   border-radius: 2rem;
   width: 100%;
@@ -661,13 +654,13 @@ main .personalized .container .journey .cards .treatment {
   justify-content: space-between;
   background-color: red;
 }
-main .personalized .container .journey .cards .treatment image {
+.personalized .container .journey .cards .treatment image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .personalized .container .journey .cards .treatment .logo {
+.personalized .container .journey .cards .treatment .logo {
   width: 4rem;
   height: 4rem;
   background-color: #e8f2f3;
@@ -680,7 +673,7 @@ main .personalized .container .journey .cards .treatment .logo {
   top: 1rem;
   left: 1rem;
 }
-main .personalized .container .journey .cards .treatment .text {
+.personalized .container .journey .cards .treatment .text {
   position: absolute;
   bottom: 2rem;
   left: 1rem;
@@ -689,7 +682,7 @@ main .personalized .container .journey .cards .treatment .text {
   border-radius: 2rem;
   padding: 1.2rem;
 }
-main .personalized .container .journey .cards .aftercard {
+.personalized .container .journey .cards .aftercard {
   background-color: #ffffff;
   border-radius: 2rem;
   width: 100%;
@@ -699,14 +692,14 @@ main .personalized .container .journey .cards .aftercard {
   flex-direction: column;
   justify-content: space-between;
 }
-main .personalized .container .journey .cards .aftercard .top {
+.personalized .container .journey .cards .aftercard .top {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: start;
 }
-main .personalized .container .journey .cards .aftercard .top .logo {
+.personalized .container .journey .cards .aftercard .top .logo {
   width: 4rem;
   height: 4rem;
   background-color: #e8f2f3;
@@ -716,35 +709,34 @@ main .personalized .container .journey .cards .aftercard .top .logo {
   align-items: center;
   margin-bottom: 5vw;
 }
-main .personalized .container .journey .cards .aftercard .top .image {
+.personalized .container .journey .cards .aftercard .top .image {
   width: 20vh;
   height: 20vh;
   border-radius: 2rem;
   overflow: hidden;
 }
-main .personalized .container .journey .cards .aftercard .bottom h3 {
+.personalized .container .journey .cards .aftercard .bottom h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-main .personalized .container .journey .cards .aftercard .bottom p {
+.personalized .container .journey .cards .aftercard .bottom p {
   font-size: 0.95rem;
 }
-main .personalized .container .btn-outline {
+.personalized .container .btn-outline {
   padding: 0.7rem 1.5rem;
   border-radius: 30px;
   border: 1px solid #ccc;
   background: white;
   cursor: pointer;
 }
-main {
-  /* =======================================================
-     PRECISE CARE
-  ======================================================= */
-}
-main .precise-care {
+
+/* =======================================================
+       PRECISE CARE
+    ======================================================= */
+.precise-care {
   width: 100%;
 }
-main .precise-care .btn {
+.precise-care .btn {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -755,17 +747,17 @@ main .precise-care .btn {
   border-radius: 5rem;
   border: none;
 }
-main .precise-care .btn .text {
+.precise-care .btn .text {
   color: rgb(0, 0, 0);
   padding-left: 0.5rem;
 }
-main .precise-care .btn .icon {
+.precise-care .btn .icon {
   background-color: #19869A;
   padding: 0.5rem;
   border-radius: 5rem;
   color: white;
 }
-main .precise-care .container {
+.precise-care .container {
   min-height: 150vh;
   background-color: #19869A;
   width: flex;
@@ -775,10 +767,10 @@ main .precise-care .container {
   gap: 3rem;
   padding-bottom: 2rem;
 }
-main .precise-care .container .top {
+.precise-care .container .top {
   width: 100%;
 }
-main .precise-care .container .top .image {
+.precise-care .container .top .image {
   width: 100%;
   height: 80vh;
   position: relative;
@@ -786,13 +778,13 @@ main .precise-care .container .top .image {
   display: flex;
   justify-content: center;
 }
-main .precise-care .container .top .image img {
+.precise-care .container .top .image img {
   -o-object-position: 50% 10%;
      object-position: 50% 10%;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
-main .precise-care .container .top .image .text-container {
+.precise-care .container .top .image .text-container {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -802,13 +794,13 @@ main .precise-care .container .top .image .text-container {
   align-items: center;
   padding: 2rem;
 }
-main .precise-care .container .top .image .text-container h1 {
+.precise-care .container .top .image .text-container h1 {
   font-size: 4vh;
   text-align: center;
   color: white;
   font-weight: 300;
 }
-main .precise-care .container .bottom {
+.precise-care .container .bottom {
   width: 100%;
   padding: 1rem;
   display: grid;
@@ -816,19 +808,19 @@ main .precise-care .container .bottom {
   justify-content: center;
   grid-template-columns: 1fr;
 }
-main .precise-care .container .bottom .card {
+.precise-care .container .bottom .card {
   width: 100%;
   background-color: #75B6C2;
   border-radius: 2rem;
   overflow: hidden;
 }
-main .precise-care .container .bottom .card-1 {
+.precise-care .container .bottom .card-1 {
   height: 35vh;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-main .precise-care .container .bottom .card-1 .left {
+.precise-care .container .bottom .card-1 .left {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -838,42 +830,42 @@ main .precise-care .container .bottom .card-1 .left {
   gap: 3rem;
   z-index: 10;
 }
-main .precise-care .container .bottom .card-1 .left .left-text {
+.precise-care .container .bottom .card-1 .left .left-text {
   color: white;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .precise-care .container .bottom .card-1 .left .left-text h1 {
+.precise-care .container .bottom .card-1 .left .left-text h1 {
   font-size: 1.5rem;
 }
-main .precise-care .container .bottom .card-1 .left .left-text p {
+.precise-care .container .bottom .card-1 .left .left-text p {
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
-main .precise-care .container .bottom .card-1 .left .btn {
+.precise-care .container .bottom .card-1 .left .btn {
   font-size: 0.8rem;
 }
-main .precise-care .container .bottom .card-1 .image {
+.precise-care .container .bottom .card-1 .image {
   transform: scaleX(-1);
   height: 100%;
   position: absolute;
   right: 0;
 }
-main .precise-care .container .bottom .card-1 .image img {
+.precise-care .container .bottom .card-1 .image img {
   -o-object-fit: contain;
      object-fit: contain;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
-main .precise-care .container .bottom .card-1 .image .image-overlay {
+.precise-care .container .bottom .card-1 .image .image-overlay {
   position: absolute;
   inset: 0;
   border-bottom-right-radius: 2rem;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(117, 183, 194, 0) 59%, rgb(117, 183, 194) 100%);
 }
-main .precise-care .container .bottom .card-2 {
+.precise-care .container .bottom .card-2 {
   height: 35vh;
   width: 100%;
   overflow: hidden;
@@ -882,7 +874,7 @@ main .precise-care .container .bottom .card-2 {
   align-items: flex-end;
   /* Background Image */
 }
-main .precise-care .container .bottom .card-2 img {
+.precise-care .container .bottom .card-2 img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -891,13 +883,13 @@ main .precise-care .container .bottom .card-2 img {
      object-fit: cover;
   display: block;
 }
-main .precise-care .container .bottom .card-2::after {
+.precise-care .container .bottom .card-2::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
 }
-main .precise-care .container .bottom .card-2 .text-content {
+.precise-care .container .bottom .card-2 .text-content {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -908,26 +900,26 @@ main .precise-care .container .bottom .card-2 .text-content {
   height: 100%;
   color: white;
 }
-main .precise-care .container .bottom .card-2 .text-content .top-content h1 {
+.precise-care .container .bottom .card-2 .text-content .top-content h1 {
   font-size: 3rem;
   font-weight: 400;
 }
-main .precise-care .container .bottom .card-2 .text-content .bottom-content {
+.precise-care .container .bottom .card-2 .text-content .bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
 }
-main .precise-care .container .bottom .card-2 .text-content .bottom-content p {
+.precise-care .container .bottom .card-2 .text-content .bottom-content p {
   font-size: 1rem;
   line-height: 1.5rem;
   opacity: 0.95;
 }
-main .precise-care .container .bottom .card-2 .text-content .bottom-content .btn {
+.precise-care .container .bottom .card-2 .text-content .bottom-content .btn {
   text-wrap: nowrap;
   font-size: 0.8rem;
 }
-main .precise-care .container .bottom .card-3 {
+.precise-care .container .bottom .card-3 {
   display: flex;
   min-height: 35vh;
   flex-direction: column;
@@ -936,66 +928,65 @@ main .precise-care .container .bottom .card-3 {
   padding: 1.5rem;
   gap: 3rem;
 }
-main .precise-care .container .bottom .card-3 .top-container h1 {
+.precise-care .container .bottom .card-3 .top-container h1 {
   color: white;
   text-align: center;
 }
-main .precise-care .container .bottom .card-3 .mid-container img {
+.precise-care .container .bottom .card-3 .mid-container img {
   -o-object-fit: contain;
      object-fit: contain;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
-main .precise-care .container .bottom .card-3 .bottom-container {
+.precise-care .container .bottom .card-3 .bottom-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
 }
-main .precise-care .container .bottom .card-3 .bottom-container p {
+.precise-care .container .bottom .card-3 .bottom-container p {
   text-align: center;
   line-height: 1.5rem;
   color: white;
 }
-main .precise-care .container .bottom .card-3 .bottom-container .btn {
+.precise-care .container .bottom .card-3 .bottom-container .btn {
   font-size: 0.7rem;
 }
-main {
-  /* =======================================================
-     PRODUCTS (Target Nutrition)
-  ======================================================= */
-}
-main .products {
+
+/* =======================================================
+       PRODUCTS (Target Nutrition)
+    ======================================================= */
+.products {
   padding: 8rem 0;
   background: #ffffff;
 }
-main .products .container {
+.products .container {
   width: 90%;
   max-width: 1400px;
   margin: auto;
 }
-main .products .container .top {
+.products .container .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
 }
-main .products .container .top h2 {
+.products .container .top h2 {
   font-size: 2.2rem;
   font-weight: 500;
   color: #0f3d3e;
 }
-main .products .container .top h2 span {
+.products .container .top h2 span {
   font-family: serif;
   font-style: italic;
   color: #2d7f86;
 }
-main .products .container .top .arrows {
+.products .container .top .arrows {
   display: flex;
   gap: 15px;
   display: none;
 }
-main .products .container .top .arrow {
+.products .container .top .arrow {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1004,19 +995,19 @@ main .products .container .top .arrow {
   cursor: pointer;
   transition: 0.3s;
 }
-main .products .container .top .arrow:hover {
+.products .container .top .arrow:hover {
   background: #0f3d3e;
   color: white;
 }
-main .products .container .wrapper {
+.products .container .wrapper {
   overflow: hidden;
 }
-main .products .container .wrapper .track {
+.products .container .wrapper .track {
   display: flex;
   gap: 1.8rem;
   transition: transform 0.4s ease;
 }
-main .products .container .wrapper .track .card {
+.products .container .wrapper .track .card {
   min-width: 35vh;
   background: #ffffff;
   padding: 0.8rem;
@@ -1025,56 +1016,56 @@ main .products .container .wrapper .track .card {
   border: 1px solid rgb(214, 214, 214);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
-main .products .container .wrapper .track .card .image {
+.products .container .wrapper .track .card .image {
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
-main .products .container .wrapper .track .card .image img {
+.products .container .wrapper .track .card .image img {
   width: 100%;
   display: block;
 }
-main .products .container .wrapper .track .card h3 {
+.products .container .wrapper .track .card h3 {
   font-size: 20px;
   margin-bottom: 5px;
   color: #0f3d3e;
   font-weight: 300;
 }
-main .products .container .wrapper .track .card .price {
+.products .container .wrapper .track .card .price {
   margin-bottom: 15px;
   color: #666;
 }
-main .products .container .wrapper .track .card .buttons {
+.products .container .wrapper .track .card .buttons {
   display: flex;
   gap: 10px;
 }
-main .products .container .wrapper .track .card .buttons .btn {
+.products .container .wrapper .track .card .buttons .btn {
   padding: 10px 18px;
   border-radius: 25px;
   border: none;
   cursor: pointer;
   font-size: 14px;
 }
-main .products .container .wrapper .track .card .buttons .dark {
+.products .container .wrapper .track .card .buttons .dark {
   background: #333;
   color: white;
 }
-main .products .container .wrapper .track .card .buttons .primary {
+.products .container .wrapper .track .card .buttons .primary {
   background: #2d7f86;
   color: white;
 }
-main .products .container .wrapper .track .card .buttons .outline {
+.products .container .wrapper .track .card .buttons .outline {
   background: transparent;
   border: 1px solid #ccc;
 }
-main .products .container .bottom {
+.products .container .bottom {
   width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
   margin-top: 4rem;
 }
-main .products .container .bottom .btn {
+.products .container .bottom .btn {
   padding: 0.5rem 0.5rem;
   background-color: white;
   display: flex;
@@ -1083,10 +1074,10 @@ main .products .container .bottom .btn {
   border-radius: 5rem;
   border: 1px solid lightgray;
 }
-main .products .container .bottom .btn .text {
+.products .container .bottom .btn .text {
   padding-left: 0.5rem;
 }
-main .products .container .bottom .btn .icon {
+.products .container .bottom .btn .icon {
   padding: 0.5rem 0.5rem;
   background-color: #19869a;
   display: flex;
@@ -1094,43 +1085,42 @@ main .products .container .bottom .btn .icon {
   border-radius: 50%;
   color: white;
 }
-main {
-  /* =======================================================
-     PROFESSIONALS SECTION
-  ======================================================= */
-}
-main .doctors {
+
+/* =======================================================
+       PROFESSIONALS SECTION
+    ======================================================= */
+.doctors {
   padding: 100px 0;
   background-color: rgb(255, 255, 255);
 }
-main .doctors .container {
+.doctors .container {
   width: 100%;
   max-width: 1400px;
   margin: auto;
 }
-main .doctors .container .top {
+.doctors .container .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
   padding: 1.5rem;
 }
-main .doctors .container .top h2 {
+.doctors .container .top h2 {
   font-size: 2rem;
   font-weight: 500;
   color: #0f3d3e;
 }
-main .doctors .container .top h2 span {
+.doctors .container .top h2 span {
   font-family: serif;
   font-style: italic;
   color: #2d7f86;
 }
-main .doctors .container .top .arrows {
+.doctors .container .top .arrows {
   display: flex;
   gap: 15px;
   display: none;
 }
-main .doctors .container .top .arrow {
+.doctors .container .top .arrow {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1139,25 +1129,25 @@ main .doctors .container .top .arrow {
   cursor: pointer;
   transition: 0.3s;
 }
-main .doctors .container .top .arrow:hover {
+.doctors .container .top .arrow:hover {
   background: #0f3d3e;
   color: white;
 }
-main .doctors .container .wrapper {
+.doctors .container .wrapper {
   overflow: hidden;
 }
-main .doctors .container .wrapper .track {
+.doctors .container .wrapper .track {
   display: flex;
   gap: 1rem;
   transition: transform 0.4s ease;
 }
-main .doctors .container .wrapper .track .card {
+.doctors .container .wrapper .track .card {
   min-width: 45vh;
   padding: 1.2rem;
   border-radius: 20px;
   transition: 0.3s;
 }
-main .doctors .container .wrapper .track .card .top {
+.doctors .container .wrapper .track .card .top {
   display: flex;
   align-items: center;
   border-radius: 2rem;
@@ -1169,49 +1159,48 @@ main .doctors .container .wrapper .track .card .top {
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(187, 220, 225) 100%);
 }
-main .doctors .container .wrapper .track .card .top .image {
+.doctors .container .wrapper .track .card .top .image {
   width: 15vh;
   height: 24vh;
   position: relative;
 }
-main .doctors .container .wrapper .track .card .top .image img {
+.doctors .container .wrapper .track .card .top .image img {
   position: absolute;
   top: 1rem;
 }
-main .doctors .container .wrapper .track .card .top .info h4 {
+.doctors .container .wrapper .track .card .top .info h4 {
   font-size: 14px;
   margin-bottom: 5px;
   color: #0f3d3e;
 }
-main .doctors .container .wrapper .track .card .top .info ul {
+.doctors .container .wrapper .track .card .top .info ul {
   padding-left: 18px;
 }
-main .doctors .container .wrapper .track .card .top .info ul li {
+.doctors .container .wrapper .track .card .top .info ul li {
   font-size: 13px;
   color: #2d7f86;
 }
-main .doctors .container .wrapper .track .card h3 {
+.doctors .container .wrapper .track .card h3 {
   margin-bottom: 10px;
   color: #0f3d3e;
 }
-main .doctors .container .wrapper .track .card p {
+.doctors .container .wrapper .track .card p {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
 }
-main .doctors .container .wrapper .track .card:nth-child(3) .top .image img {
+.doctors .container .wrapper .track .card:nth-child(3) .top .image img {
   top: 2rem;
 }
-main {
-  /* =======================================================
-     TESTIMONIALS SECTION
-  ======================================================= */
-}
-main .testimonials {
+
+/* =======================================================
+       TESTIMONIALS SECTION
+    ======================================================= */
+.testimonials {
   padding: 8rem 1rem;
   background: #ffffff;
 }
-main .testimonials .container {
+.testimonials .container {
   width: 100%;
   margin: auto;
   background: #1f7a86;
@@ -1219,24 +1208,24 @@ main .testimonials .container {
   padding: 1rem;
   color: white;
 }
-main .testimonials .container .top {
+.testimonials .container .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.2rem;
 }
-main .testimonials .container .top h2 {
+.testimonials .container .top h2 {
   font-size: 36px;
 }
-main .testimonials .container .top h2 span {
+.testimonials .container .top h2 span {
   font-family: serif;
   font-style: italic;
 }
-main .testimonials .container .top .arrows {
+.testimonials .container .top .arrows {
   display: flex;
   gap: 10px;
 }
-main .testimonials .container .top .arrow {
+.testimonials .container .top .arrow {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1246,38 +1235,38 @@ main .testimonials .container .top .arrow {
   cursor: pointer;
   transition: 0.3s;
 }
-main .testimonials .container .top .arrow:hover {
+.testimonials .container .top .arrow:hover {
   background: white;
   color: #1f7a86;
 }
-main .testimonials .container .wrapper {
+.testimonials .container .wrapper {
   overflow: hidden;
 }
-main .testimonials .container .wrapper .track {
+.testimonials .container .wrapper .track {
   display: flex;
   gap: 2rem;
   transition: transform 0.4s ease;
 }
-main .testimonials .container .wrapper .slide {
+.testimonials .container .wrapper .slide {
   min-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
   align-items: center;
 }
-main .testimonials .container .wrapper .slide .image {
+.testimonials .container .wrapper .slide .image {
   width: 42dvh;
   height: 40vh;
   border-radius: 1rem;
   overflow: hidden;
 }
-main .testimonials .container .wrapper .slide .image img {
+.testimonials .container .wrapper .slide .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .testimonials .container .wrapper .slide .content {
+.testimonials .container .wrapper .slide .content {
   width: 42vh;
   background: white;
   border-radius: 20px;
@@ -1285,56 +1274,55 @@ main .testimonials .container .wrapper .slide .content {
   color: #333;
   position: relative;
 }
-main .testimonials .container .wrapper .slide .content .quote {
+.testimonials .container .wrapper .slide .content .quote {
   font-size: 50px;
   color: #1f7a86;
   margin-bottom: 10px;
 }
-main .testimonials .container .wrapper .slide .content p {
+.testimonials .container .wrapper .slide .content p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 25px;
 }
-main .testimonials .container .wrapper .slide .content .user {
+.testimonials .container .wrapper .slide .content .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .testimonials .container .wrapper .slide .content .user .user-info {
+.testimonials .container .wrapper .slide .content .user .user-info {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-main .testimonials .container .wrapper .slide .content .user .user-info img {
+.testimonials .container .wrapper .slide .content .user .user-info img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-main .testimonials .container .wrapper .slide .content .user .user-info h4 {
+.testimonials .container .wrapper .slide .content .user .user-info h4 {
   margin: 0;
 }
-main .testimonials .container .wrapper .slide .content .user .user-info span {
+.testimonials .container .wrapper .slide .content .user .user-info span {
   font-size: 12px;
   color: #777;
 }
-main .testimonials .container .wrapper .slide .content .user .stars {
+.testimonials .container .wrapper .slide .content .user .stars {
   color: gold;
   font-size: 14px;
 }
-main {
-  /* =======================================================
-     FAQ SECTION
-  ======================================================= */
-}
-main .faq {
+
+/* =======================================================
+       FAQ SECTION
+    ======================================================= */
+.faq {
   padding: 8rem 1rem;
   background: #ffffff;
 }
-main .faq .container {
+.faq .container {
   width: 100%;
   margin: auto;
 }
-main .faq .container .top {
+.faq .container .top {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1342,16 +1330,16 @@ main .faq .container .top {
   gap: 2rem;
   margin-bottom: 60px;
 }
-main .faq .container .top h2 {
+.faq .container .top h2 {
   font-size: 42px;
   color: #0f3d3e;
 }
-main .faq .container .top h2 span {
+.faq .container .top h2 span {
   font-family: serif;
   font-style: italic;
   color: #2d7f86;
 }
-main .faq .container .top .faq-btn {
+.faq .container .top .faq-btn {
   padding: 0.5rem 0.5rem;
   display: flex;
   align-items: center;
@@ -1360,83 +1348,82 @@ main .faq .container .top .faq-btn {
   border-radius: 2rem;
   border: 1px solid lightgray;
 }
-main .faq .container .top .faq-btn .text {
+.faq .container .top .faq-btn .text {
   padding-left: 0.5rem;
 }
-main .faq .container .top .faq-btn .icon {
+.faq .container .top .faq-btn .icon {
   background-color: #19869a;
   color: white;
   padding: 0.5rem;
   border-radius: 50%;
 }
-main .faq .container .content {
+.faq .container .content {
   width: 100%;
 }
-main .faq .container .content .left {
+.faq .container .content .left {
   display: none;
 }
-main .faq .container .content .right {
+.faq .container .content .right {
   width: 100%;
 }
-main .faq .container .content .right .faq-item {
+.faq .container .content .right .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 25px 0;
 }
-main .faq .container .content .right .faq-item .faq-question {
+.faq .container .content .right .faq-item .faq-question {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: start;
   cursor: pointer;
 }
-main .faq .container .content .right .faq-item .faq-question h3 {
+.faq .container .content .right .faq-item .faq-question h3 {
   font-size: 1rem;
   color: #0f3d3e;
 }
-main .faq .container .content .right .faq-item .faq-question .icon {
+.faq .container .content .right .faq-item .faq-question .icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .faq .container .content .right .faq-item .faq-question .faq-item.active .icon {
+.faq .container .content .right .faq-item .faq-question .faq-item.active .icon {
   transform: rotate(180deg);
 }
-main .faq .container .content .right .faq-item .faq-answer {
+.faq .container .content .right .faq-item .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
   padding-top: 0;
 }
-main .faq .container .content .right .faq-item .faq-answer p {
+.faq .container .content .right .faq-item .faq-answer p {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
   line-height: 1.6;
 }
-main .faq .container .content .right .faq-item.active .faq-answer {
+.faq .container .content .right .faq-item.active .faq-answer {
   max-height: 200px;
 }
-main .faq .container .content .right .faq-item.active .icon {
+.faq .container .content .right .faq-item.active .icon {
   transform: rotate(180deg);
 }
-main .faq .container .content .right .faq-item:last-child {
+.faq .container .content .right .faq-item:last-child {
   border: none;
 }
-main {
-  /* =======================================================
-     Grow Together
-  ======================================================= */
-}
-main .together {
+
+/* =======================================================
+       Grow Together
+    ======================================================= */
+.together {
   padding: 8rem 0;
 }
-main .together .container {
+.together .container {
   width: 100%;
 }
-main .together .container .top {
+.together .container .top {
   width: 100%;
 }
-main .together .container .top .image {
+.together .container .top .image {
   width: 100%;
   height: 80vh;
   position: relative;
@@ -1444,26 +1431,26 @@ main .together .container .top .image {
   display: flex;
   justify-content: center;
 }
-main .together .container .top .image img {
+.together .container .top .image img {
   -o-object-position: 50% 10%;
      object-position: 50% 10%;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
-main .together .container .top .image .image-overlay {
+.together .container .top .image .image-overlay {
   position: absolute;
   inset: -1rem;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
 }
-main .together .container .top .image .container {
+.together .container .top .image .container {
   position: absolute;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main .together .container .top .image .container .top {
+.together .container .top .image .container .top {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1472,16 +1459,16 @@ main .together .container .top .image .container .top {
   padding: 2rem;
   font-size: 2vh;
 }
-main .together .container .top .image .container .top h1 {
+.together .container .top .image .container .top h1 {
   font-weight: 500;
 }
-main .together .container .top .image .container .bottom {
+.together .container .top .image .container .bottom {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 3rem;
 }
-main .together .container .top .image .container .bottom .btn {
+.together .container .top .image .container .bottom .btn {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1489,35 +1476,35 @@ main .together .container .top .image .container .bottom .btn {
   padding: 0.4rem 0.5rem;
   border-radius: 5rem;
 }
-main .together .container .top .image .container .bottom .btn .text {
+.together .container .top .image .container .bottom .btn .text {
   padding-left: 0.3rem;
   color: white;
 }
-main .together .container .top .image .container .bottom .btn .icon {
+.together .container .top .image .container .bottom .btn .icon {
   background-color: white;
   border-radius: 5rem;
   padding: 0.4rem 0.5rem;
 }
-main .together .container .top .image .container .bottom .btn:nth-child(2) {
+.together .container .top .image .container .bottom .btn:nth-child(2) {
   background-color: white;
 }
-main .together .container .top .image .container .bottom .btn:nth-child(2) .text {
+.together .container .top .image .container .bottom .btn:nth-child(2) .text {
   color: black;
 }
-main .together .container .top .image .container .bottom .btn:nth-child(2) .icon {
+.together .container .top .image .container .bottom .btn:nth-child(2) .icon {
   background-color: #19869A;
   color: white;
 }
-main .together .container .bottom {
+.together .container .bottom {
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-main .together .container .bottom .card {
+.together .container .bottom .card {
   padding: 1.2rem;
 }
-main .together .container .bottom .card-1 {
+.together .container .bottom .card-1 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1525,21 +1512,21 @@ main .together .container .bottom .card-1 {
   background-color: #19869A;
   border-radius: 2rem;
 }
-main .together .container .bottom .card-1 .left {
+.together .container .bottom .card-1 .left {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   color: white;
 }
-main .together .container .bottom .card-1 .left h1 {
+.together .container .bottom .card-1 .left h1 {
   font-size: 1.5rem;
   font-weight: 300;
 }
-main .together .container .bottom .card-1 .left .social-icon {
+.together .container .bottom .card-1 .left .social-icon {
   display: flex;
   gap: 0.5rem;
 }
-main .together .container .bottom .card-1 .left .social-icon .icon {
+.together .container .bottom .card-1 .left .social-icon .icon {
   width: 2rem;
   height: 2rem;
   border-radius: 5rem;
@@ -1548,13 +1535,13 @@ main .together .container .bottom .card-1 .left .social-icon .icon {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.502);
 }
-main .together .container .bottom .card-1 .mid {
+.together .container .bottom .card-1 .mid {
   height: 40vh;
   display: flex;
   justify-content: center;
   width: 100%;
 }
-main .together .container .bottom .card-1 .mid .image {
+.together .container .bottom .card-1 .mid .image {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1563,7 +1550,7 @@ main .together .container .bottom .card-1 .mid .image {
   position: relative;
   overflow: hidden;
 }
-main .together .container .bottom .card-1 .mid .image .hand {
+.together .container .bottom .card-1 .mid .image .hand {
   width: 25rem;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1576,14 +1563,14 @@ main .together .container .bottom .card-1 .mid .image .hand {
   z-index: 2;
   overflow: hidden;
 }
-main .together .container .bottom .card-1 .mid .image .frame {
+.together .container .bottom .card-1 .mid .image .frame {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
   bottom: -1.8rem;
 }
-main .together .container .bottom .card-1 .mid .image .mobile {
+.together .container .bottom .card-1 .mid .image .mobile {
   width: 10rem;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1593,13 +1580,13 @@ main .together .container .bottom .card-1 .mid .image .mobile {
   top: 2rem;
   z-index: 1;
 }
-main .together .container .bottom .card-1 .mid .image .image-overlay {
+.together .container .bottom .card-1 .mid .image .image-overlay {
   position: absolute;
   inset: 0;
   z-index: 5;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(149, 199, 208, 0) 76%, rgb(27, 134, 154) 100%);
 }
-main .together .container .bottom .card-1 .right {
+.together .container .bottom .card-1 .right {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1607,32 +1594,32 @@ main .together .container .bottom .card-1 .right {
   justify-content: center;
   gap: 2rem;
 }
-main .together .container .bottom .card-1 .right .text-cont {
+.together .container .bottom .card-1 .right .text-cont {
   color: white;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   text-align: center;
 }
-main .together .container .bottom .card-1 .right .text-cont h1 {
+.together .container .bottom .card-1 .right .text-cont h1 {
   font-size: 2rem;
   font-weight: 400;
 }
-main .together .container .bottom .card-1 .right .text-cont p {
+.together .container .bottom .card-1 .right .text-cont p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 300;
 }
-main .together .container .bottom .card-1 .right .reviews {
+.together .container .bottom .card-1 .right .reviews {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-main .together .container .bottom .card-1 .right .reviews .avatars {
+.together .container .bottom .card-1 .right .reviews .avatars {
   display: flex;
   position: relative;
 }
-main .together .container .bottom .card-1 .right .reviews .avatars img {
+.together .container .bottom .card-1 .right .reviews .avatars img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
@@ -1641,14 +1628,14 @@ main .together .container .bottom .card-1 .right .reviews .avatars img {
   border: 2px solid white;
   margin-left: -10px;
 }
-main .together .container .bottom .card-1 .right .reviews .avatars img:first-child {
+.together .container .bottom .card-1 .right .reviews .avatars img:first-child {
   margin-left: 0;
 }
-main .together .container .bottom .card-1 .right .reviews p {
+.together .container .bottom .card-1 .right .reviews p {
   color: white;
   font-size: 0.9rem;
 }
-main .together .container .bottom .card-1 .right .mail {
+.together .container .bottom .card-1 .right .mail {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1658,12 +1645,12 @@ main .together .container .bottom .card-1 .right .mail {
   padding: 0.5rem 0.5rem;
   border: 1px solid white;
 }
-main .together .container .bottom .card-1 .right .mail h1 {
+.together .container .bottom .card-1 .right .mail h1 {
   font-size: 1rem;
   font-weight: 200;
   color: white;
 }
-main .together .container .bottom .card-1 .right .mail .btn {
+.together .container .bottom .card-1 .right .mail .btn {
   background-color: white;
   display: flex;
   padding: 0.3rem;
@@ -1672,10 +1659,10 @@ main .together .container .bottom .card-1 .right .mail .btn {
   border-radius: 2rem;
   gap: 1rem;
 }
-main .together .container .bottom .card-1 .right .mail .btn .text {
+.together .container .bottom .card-1 .right .mail .btn .text {
   padding-left: 0.5rem;
 }
-main .together .container .bottom .card-1 .right .mail .btn .icon {
+.together .container .bottom .card-1 .right .mail .btn .icon {
   background-color: #19869A;
   padding: 0.3rem 0.3rem;
   color: white;
@@ -1684,7 +1671,7 @@ main .together .container .bottom .card-1 .right .mail .btn .icon {
   align-items: center;
   border-radius: 50%;
 }
-main .together .container .bottom .card-2 {
+.together .container .bottom .card-2 {
   width: 100%;
   background-color: #19869A;
   height: 40vh;
@@ -1692,7 +1679,7 @@ main .together .container .bottom .card-2 {
   overflow: hidden;
   position: relative;
 }
-main .together .container .bottom .card-2 .text-container {
+.together .container .bottom .card-2 .text-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1702,7 +1689,7 @@ main .together .container .bottom .card-2 .text-container {
   position: relative;
   z-index: 10;
 }
-main .together .container .bottom .card-2 .text-container .top-text {
+.together .container .bottom .card-2 .text-container .top-text {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1712,11 +1699,11 @@ main .together .container .bottom .card-2 .text-container .top-text {
   gap: 1rem;
   color: white;
 }
-main .together .container .bottom .card-2 .text-container .top-text h1 {
+.together .container .bottom .card-2 .text-container .top-text h1 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-main .together .container .bottom .card-2 .text-container .bottom-btn .btn {
+.together .container .bottom .card-2 .text-container .bottom-btn .btn {
   background-color: rgb(255, 255, 255);
   border-radius: 2rem;
   padding: 0.3rem 0.5rem;
@@ -1724,19 +1711,19 @@ main .together .container .bottom .card-2 .text-container .bottom-btn .btn {
   align-items: center;
   gap: 1rem;
 }
-main .together .container .bottom .card-2 .text-container .bottom-btn .btn .text {
+.together .container .bottom .card-2 .text-container .bottom-btn .btn .text {
   color: black;
   height: -moz-fit-content;
   height: fit-content;
   padding-left: 0.5rem;
 }
-main .together .container .bottom .card-2 .text-container .bottom-btn .btn .icon {
+.together .container .bottom .card-2 .text-container .bottom-btn .btn .icon {
   background-color: #19869A;
   padding: 0.3rem 0.3rem;
   color: white;
   border-radius: 50%;
 }
-main .together .container .bottom .card-2 img {
+.together .container .bottom .card-2 img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1744,13 +1731,13 @@ main .together .container .bottom .card-2 img {
   right: 1vh;
   top: 8vh;
 }
-main .together .container .bottom .card-2 .image-overlay {
+.together .container .bottom .card-2 .image-overlay {
   position: absolute;
   inset: 0;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 134, 154, 0) 45%, rgb(27, 134, 154) 100%);
 }
-main .together .container .bottom .card-3 {
+.together .container .bottom .card-3 {
   height: 40vh;
   width: 100%;
   overflow: hidden;
@@ -1760,7 +1747,7 @@ main .together .container .bottom .card-3 {
   border-radius: 2rem;
   /* Background Image */
 }
-main .together .container .bottom .card-3 img {
+.together .container .bottom .card-3 img {
   transform: scaleX(-1);
   position: absolute;
   inset: 0;
@@ -1770,13 +1757,13 @@ main .together .container .bottom .card-3 img {
      object-fit: cover;
   display: block;
 }
-main .together .container .bottom .card-3::after {
+.together .container .bottom .card-3::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
 }
-main .together .container .bottom .card-3 .text-content {
+.together .container .bottom .card-3 .text-content {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -1787,23 +1774,23 @@ main .together .container .bottom .card-3 .text-content {
   height: 100%;
   color: white;
 }
-main .together .container .bottom .card-3 .text-content .top-content h1 {
+.together .container .bottom .card-3 .text-content .top-content h1 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-main .together .container .bottom .card-3 .text-content .bottom-content {
+.together .container .bottom .card-3 .text-content .bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
 }
-main .together .container .bottom .card-3 .text-content .bottom-content .left-text {
+.together .container .bottom .card-3 .text-content .bottom-content .left-text {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   font-size: 0.9rem;
 }
-main .together .container .bottom .card-3 .text-content .bottom-content .btn {
+.together .container .bottom .card-3 .text-content .bottom-content .btn {
   background-color: white;
   border-radius: 2rem;
   padding: 0.3rem 0.5rem;
@@ -1813,72 +1800,71 @@ main .together .container .bottom .card-3 .text-content .bottom-content .btn {
   margin-top: 2rem;
   text-wrap: nowrap;
 }
-main .together .container .bottom .card-3 .text-content .bottom-content .btn .text {
+.together .container .bottom .card-3 .text-content .bottom-content .btn .text {
   font-size: 0.7rem;
   color: black;
   height: -moz-fit-content;
   height: fit-content;
   padding-left: 0.5rem;
 }
-main .together .container .bottom .card-3 .text-content .bottom-content .btn .icon {
+.together .container .bottom .card-3 .text-content .bottom-content .btn .icon {
   background-color: #19869A;
   padding: 0.3rem 0.3rem;
   color: white;
   border-radius: 50%;
 }
-main {
-  /* =======================================================
-     FOOTER
-  ======================================================= */
-}
-main .footer {
+
+/* =======================================================
+       FOOTER
+    ======================================================= */
+.footer {
   color: #ffffff;
   padding: 1rem;
 }
-main .footer .container {
+.footer .container {
   width: 100%;
   padding: 2rem;
   background: #063c3d;
   border-radius: 2rem;
 }
-main .footer .container .footer-top {
+.footer .container .footer-top {
   gap: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-main .footer .container .footer-top .footer h4 {
+.footer .container .footer-top .footer h4 {
   margin-bottom: 20px;
   font-size: 18px;
 }
-main .footer .container .footer-top .footer ul {
+.footer .container .footer-top .footer ul {
   list-style: none;
 }
-main .footer .container .footer-top .footer ul li {
+.footer .container .footer-top .footer ul li {
   margin-bottom: 12px;
   font-size: 14px;
   opacity: 0.9;
   cursor: pointer;
   transition: 0.3s;
 }
-main .footer .container .footer-top .footer ul li:hover {
+.footer .container .footer-top .footer ul li:hover {
   opacity: 1;
 }
-main .footer .container .footer-top .brand {
+.footer .container .footer-top .brand {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
-main .footer .container .footer-top .brand .image {
+.footer .container .footer-top .brand .image {
   width: 15rem;
 }
-main .footer .container .footer-top .footer-links {
+.footer .container .footer-top .footer-links {
   padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   border-top: 1px solid rgba(211, 211, 211, 0.231);
 }
-main .footer .container .footer-middle {
+.footer .container .footer-middle {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1886,21 +1872,21 @@ main .footer .container .footer-middle {
   padding: 30px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-main .footer .container .footer-middle .payments {
+.footer .container .footer-middle .payments {
   display: flex;
   gap: 15px;
 }
-main .footer .container .footer-middle .payments img {
+.footer .container .footer-middle .payments img {
   height: 2.5rem;
   background: white;
   padding: 5px 10px;
   border-radius: 6px;
 }
-main .footer .container .footer-middle .socials {
+.footer .container .footer-middle .socials {
   display: flex;
   gap: 12px;
 }
-main .footer .container .footer-middle .socials .circle {
+.footer .container .footer-middle .socials .circle {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1911,11 +1897,11 @@ main .footer .container .footer-middle .socials .circle {
   cursor: pointer;
   transition: 0.3s;
 }
-main .footer .container .footer-middle .socials .circle:hover {
+.footer .container .footer-middle .socials .circle:hover {
   background: #1f7a86;
   border-color: #1f7a86;
 }
-main .footer .container .footer-bottom {
+.footer .container .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1923,7 +1909,7 @@ main .footer .container .footer-bottom {
   font-size: 14px;
   opacity: 0.8;
 }
-main .footer .container .footer-bottom .links {
+.footer .container .footer-bottom .links {
   display: flex;
   gap: 10px;
   cursor: pointer;
