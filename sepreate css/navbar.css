@@ -1,107 +1,146 @@
-.navbar {
-    position: absolute;
-    top: 2.5rem;
-    left: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset + Base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+}
+
+/* Global Image Styling */
+
+img {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 40;
+    height: 100%;
+    object-fit: cover;
 }
 
-.navbar .container {
-    width: 80vw;
-    height: 10vh;
-    background: white;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
 
-.navbar .left {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
 
-.navbar .left .logo {
-    width: 150px;
-}
+/* HTML / Body */
 
-.navbar .left .logo img {
+
+html,
+body {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-.navbar .left .links {
-    display: flex;
-    gap: 20px;
-    font-weight: 300;
-    display: none;
+ .navbar {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 40;
 }
-
-.navbar .left .links a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
+ .navbar .container {
+  width: 80vw;
+  height: 10vh;
+  background: white;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
-
-.navbar .right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    display: none;
+ .navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
-
-.navbar .right .signin {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+ .navbar .left .logo {
+  width: 150px;
 }
-
-.navbar .right .divider {
-    width: 1px;
-    height: 20px;
-    background: black;
+ .navbar .left .logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-
-.navbar .right .cart {
-    width: 32px;
-    height: 32px;
-    background: #EFF7F8;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+ .navbar .left .links {
+  display: flex;
+  gap: 20px;
+  font-weight: 300;
+  display: none;
 }
-
-.navbar .menu {
-    width: 32px;
-    height: 32px;
-    background: #EFF7F8;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+ .navbar .left .links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+ .navbar .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  display: none;
+}
+ .navbar .right .signin {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+ .navbar .right .divider {
+  width: 1px;
+  height: 20px;
+  background: black;
+}
+ .navbar .right .cart {
+  width: 32px;
+  height: 32px;
+  background: #EFF7F8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+ .navbar .right .btn {
+  background-color: #19869A;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  color: white;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+}
+ .navbar .right .btn .btn__arrow {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .navbar .menu {
+  width: 32px;
+  height: 32px;
+  background: #EFF7F8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
-    .navbar .container .left .links {
-        display: flex;
-    }
-
-    .navbar .container .right {
-        display: flex;
-    }
-
-    .navbar .container .menu {
-        display: none;
-    }
+      .navbar .container .left .links {
+    display: flex;
+  }
+   .navbar .container .right {
+    display: flex;
+  }
+   .navbar .container .menu {
+    display: none;
+  }
 
 
 }

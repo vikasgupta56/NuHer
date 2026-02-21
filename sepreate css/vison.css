@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset + Base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+}
+
+/* Global Image Styling */
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* HTML / Body */
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
 @keyframes marquee {
     0% {
         transform: translateX(0%);
@@ -12,38 +44,40 @@
     animation: marquee 15s linear infinite;
 }
 
-.vision {
+ .vision {
     margin-top: 7vw;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.vision .container {
-    width: 80vw;
+ .vision .container {
+    width: 100vw;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.vision .container .top {
+ .vision .container .top {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     gap: 3rem;
 }
 
-.vision .container .top h1 {
+ .vision .container .top h1 {
     font-size: 36px;
     line-height: 46px;
 }
 
-.vision .container .top h1 span {
+ .vision .container .top h1 span {
     color: #19869A;
 }
 
-.vision .container .top .btn {
+ .vision .container .top .btn {
     display: flex;
     align-items: center;
+    width: -moz-fit-content;
     width: fit-content;
     gap: 20px;
     padding: 8px 12px;
@@ -53,7 +87,7 @@
     cursor: pointer;
 }
 
-.vision .container .top .btn-icon {
+ .vision .container .top .btn-icon {
     width: 28px;
     height: 28px;
     background: #19869A;
@@ -64,21 +98,21 @@
     justify-content: center;
 }
 
-.vision .container .divider {
+ .vision .container .divider {
     width: 100%;
     height: 1px;
     background: rgba(0, 0, 0, 0.1);
     margin: 4vw 0;
 }
 
-.vision .container .bottom {
+ .vision .container .bottom {
     display: flex;
     flex-direction: column;
     gap: 5vw;
 }
 
-.vision .container .bottom .image {
-    width: 70vw;
+ .vision .container .bottom .image {
+    width: 100%;
     height: 50vh;
     position: relative;
     overflow: hidden;
@@ -86,46 +120,51 @@
     justify-content: center;
 }
 
-.vision .container .bottom .image img {
+ .vision .container .bottom .image img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
-    object-position: 0% 13%;
-    transform: scale(1.55);
+    -o-object-position: 40% 10%;
+    object-position: 40% 10%;
+    transform: scale(1.35);
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-.vision .container .bottom .image .image-overlay {
+ .vision .container .bottom .image .image-overlay {
     position: absolute;
-    inset: 0;
+    inset: -1rem;
     background: #ffffff;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
 }
 
-.vision .container .bottom .vertical-divider {
+ .vision .container .bottom .vertical-divider {
     width: 1px;
     height: 30vw;
     background: rgba(0, 0, 0, 0.1);
     display: none;
 }
 
-.vision .container .bottom .text {
+ .vision .container .bottom .text {
     width: 100%;
     font-weight: 300;
 }
 
-.vision .container .bottom .text p {
+ .vision .container .bottom .text p {
     margin-bottom: 16px;
     line-height: 1.6;
 }
 
-.vision .container .bottom .text .author {
+ .vision .container .bottom .text .author {
     font-weight: 700;
     margin-top: 20px;
 }
 
-.vision .container .trusted {
+ .vision .container .trusted {
     margin-top: 3vw;
     padding-top: 4vw;
     border-top: 1px solid #eee;
@@ -135,31 +174,32 @@
     gap: 4vw;
 }
 
-.vision .container .trusted .header {
+ .vision .container .trusted .header {
     margin-bottom: 40px;
     width: 100%;
     text-align: center;
 }
 
-.vision .container .trusted .header h2 {
+ .vision .container .trusted .header h2 {
     font-size: 24px;
     color: #0f3d3e;
 }
 
-.vision .container .trusted .wrapper {
+ .vision .container .trusted .wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.vision .container .trusted .wrapper .track {
+ .vision .container .trusted .wrapper .track {
     display: flex;
     gap: 40px;
+    width: -moz-max-content;
     width: max-content;
     animation: marquee 25s linear infinite;
 }
 
-.vision .container .trusted .wrapper .track .item {
+ .vision .container .trusted .wrapper .track .item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,13 +208,14 @@
     border-radius: 20px;
 }
 
-.vision .container .trusted .wrapper .track .item img {
+ .vision .container .trusted .wrapper .track .item img {
     height: 40px;
+    -o-object-fit: contain;
     object-fit: contain;
     opacity: 0.8;
 }
 
-.vision .container .trusted .wrapper .fade {
+ .vision .container .trusted .wrapper .fade {
     position: absolute;
     top: 20%;
     height: 100%;
@@ -182,42 +223,53 @@
     z-index: 2;
 }
 
-.vision .container .trusted .wrapper .left {
+ .vision .container .trusted .wrapper .left {
     left: 0;
     top: 0;
     background: linear-gradient(to right, white, transparent);
 }
 
-.vision .container .trusted .wrapper .right {
+ .vision .container .trusted .wrapper .right {
     right: 0;
     top: 0;
     background: linear-gradient(to left, white, transparent);
 }
 
-
 @media (min-width: 1024px) {
-    .vision {
+     .vision {
         flex-direction: row;
     }
 
-    .vision .container .top {
+     .vision .container {
+        width: 80vw;
+    }
+
+     .vision .container .top {
         flex-direction: row;
         justify-content: space-between;
-        align-items: end;
+        align-items: flex-end;
     }
 
-    .vision .container .bottom {
+     .vision .container .bottom {
         flex-direction: row;
         gap: 10vw;
     }
 
-    .vision .container .trusted {
+     .vision .container .bottom .image {
+        width: 70vw;
+    }
+
+     .vision .container .bottom .image img {
+        top: 0;
+    }
+
+     .vision .container .trusted {
         flex-direction: row;
         justify-content: space-between;
         gap: 15vh;
     }
 
-    .vision .container .trusted .header {
+     .vision .container .trusted .header {
         width: 50vw;
         text-align: start;
     }

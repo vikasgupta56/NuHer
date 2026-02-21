@@ -738,6 +738,230 @@ main .personalized .container .btn-outline {
 }
 main {
   /* =======================================================
+     PRECISE CARE
+  ======================================================= */
+}
+main .precise-care {
+  width: 100%;
+}
+main .precise-care .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5rem;
+  border: none;
+}
+main .precise-care .btn .text {
+  color: rgb(0, 0, 0);
+  padding-left: 0.5rem;
+}
+main .precise-care .btn .icon {
+  background-color: #19869A;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  color: white;
+}
+main .precise-care .container {
+  min-height: 150vh;
+  background-color: #19869A;
+  width: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 2rem;
+}
+main .precise-care .container .top {
+  width: 100%;
+}
+main .precise-care .container .top .image {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main .precise-care .container .top .image img {
+  -o-object-position: 50% 10%;
+     object-position: 50% 10%;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+main .precise-care .container .top .image .text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+main .precise-care .container .top .image .text-container h1 {
+  font-size: 4vh;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}
+main .precise-care .container .bottom {
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+main .precise-care .container .bottom .card {
+  width: 100%;
+  background-color: #75B6C2;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+main .precise-care .container .bottom .card-1 {
+  height: 35vh;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+main .precise-care .container .bottom .card-1 .left {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 40vh;
+  gap: 3rem;
+  z-index: 10;
+}
+main .precise-care .container .bottom .card-1 .left .left-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .precise-care .container .bottom .card-1 .left .left-text h1 {
+  font-size: 1.5rem;
+}
+main .precise-care .container .bottom .card-1 .left .left-text p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+main .precise-care .container .bottom .card-1 .left .btn {
+  font-size: 0.8rem;
+}
+main .precise-care .container .bottom .card-1 .image {
+  transform: scaleX(-1);
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+main .precise-care .container .bottom .card-1 .image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+main .precise-care .container .bottom .card-1 .image .image-overlay {
+  position: absolute;
+  inset: 0;
+  border-bottom-right-radius: 2rem;
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(117, 183, 194, 0) 59%, rgb(117, 183, 194) 100%);
+}
+main .precise-care .container .bottom .card-2 {
+  height: 35vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* Background Image */
+}
+main .precise-care .container .bottom .card-2 img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+main .precise-care .container .bottom .card-2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+}
+main .precise-care .container .bottom .card-2 .text-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: white;
+}
+main .precise-care .container .bottom .card-2 .text-content .top-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+main .precise-care .container .bottom .card-2 .text-content .bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+main .precise-care .container .bottom .card-2 .text-content .bottom-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  opacity: 0.95;
+}
+main .precise-care .container .bottom .card-2 .text-content .bottom-content .btn {
+  text-wrap: nowrap;
+  font-size: 0.8rem;
+}
+main .precise-care .container .bottom .card-3 {
+  display: flex;
+  min-height: 35vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 3rem;
+}
+main .precise-care .container .bottom .card-3 .top-container h1 {
+  color: white;
+  text-align: center;
+}
+main .precise-care .container .bottom .card-3 .mid-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+main .precise-care .container .bottom .card-3 .bottom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+main .precise-care .container .bottom .card-3 .bottom-container p {
+  text-align: center;
+  line-height: 1.5rem;
+  color: white;
+}
+main .precise-care .container .bottom .card-3 .bottom-container .btn {
+  font-size: 0.7rem;
+}
+main {
+  /* =======================================================
      PRODUCTS (Target Nutrition)
   ======================================================= */
 }
@@ -1197,6 +1421,410 @@ main .faq .container .content .right .faq-item.active .icon {
 }
 main .faq .container .content .right .faq-item:last-child {
   border: none;
+}
+main {
+  /* =======================================================
+     Grow Together
+  ======================================================= */
+}
+main .together {
+  padding: 8rem 0;
+}
+main .together .container {
+  width: 100%;
+}
+main .together .container .top {
+  width: 100%;
+}
+main .together .container .top .image {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main .together .container .top .image img {
+  -o-object-position: 50% 10%;
+     object-position: 50% 10%;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+main .together .container .top .image .image-overlay {
+  position: absolute;
+  inset: -1rem;
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
+main .together .container .top .image .container {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .together .container .top .image .container .top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2vh;
+}
+main .together .container .top .image .container .top h1 {
+  font-weight: 500;
+}
+main .together .container .top .image .container .bottom {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+main .together .container .top .image .container .bottom .btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #19869A;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5rem;
+}
+main .together .container .top .image .container .bottom .btn .text {
+  padding-left: 0.3rem;
+  color: white;
+}
+main .together .container .top .image .container .bottom .btn .icon {
+  background-color: white;
+  border-radius: 5rem;
+  padding: 0.4rem 0.5rem;
+}
+main .together .container .top .image .container .bottom .btn:nth-child(2) {
+  background-color: white;
+}
+main .together .container .top .image .container .bottom .btn:nth-child(2) .text {
+  color: black;
+}
+main .together .container .top .image .container .bottom .btn:nth-child(2) .icon {
+  background-color: #19869A;
+  color: white;
+}
+main .together .container .bottom {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+main .together .container .bottom .card {
+  padding: 1.2rem;
+}
+main .together .container .bottom .card-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #19869A;
+  border-radius: 2rem;
+}
+main .together .container .bottom .card-1 .left {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: white;
+}
+main .together .container .bottom .card-1 .left h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+main .together .container .bottom .card-1 .left .social-icon {
+  display: flex;
+  gap: 0.5rem;
+}
+main .together .container .bottom .card-1 .left .social-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.502);
+}
+main .together .container .bottom .card-1 .mid {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .together .container .bottom .card-1 .mid .image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+main .together .container .bottom .card-1 .mid .image .hand {
+  width: 25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  bottom: -7rem;
+  -o-object-position: -590% 20%;
+     object-position: -590% 20%;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  z-index: 2;
+  overflow: hidden;
+}
+main .together .container .bottom .card-1 .mid .image .frame {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  bottom: -1.8rem;
+}
+main .together .container .bottom .card-1 .mid .image .mobile {
+  width: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+  top: 2rem;
+  z-index: 1;
+}
+main .together .container .bottom .card-1 .mid .image .image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(149, 199, 208, 0) 76%, rgb(27, 134, 154) 100%);
+}
+main .together .container .bottom .card-1 .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+main .together .container .bottom .card-1 .right .text-cont {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+main .together .container .bottom .card-1 .right .text-cont h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+main .together .container .bottom .card-1 .right .text-cont p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+main .together .container .bottom .card-1 .right .reviews {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+main .together .container .bottom .card-1 .right .reviews .avatars {
+  display: flex;
+  position: relative;
+}
+main .together .container .bottom .card-1 .right .reviews .avatars img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid white;
+  margin-left: -10px;
+}
+main .together .container .bottom .card-1 .right .reviews .avatars img:first-child {
+  margin-left: 0;
+}
+main .together .container .bottom .card-1 .right .reviews p {
+  color: white;
+  font-size: 0.9rem;
+}
+main .together .container .bottom .card-1 .right .mail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid white;
+}
+main .together .container .bottom .card-1 .right .mail h1 {
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+}
+main .together .container .bottom .card-1 .right .mail .btn {
+  background-color: white;
+  display: flex;
+  padding: 0.3rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  gap: 1rem;
+}
+main .together .container .bottom .card-1 .right .mail .btn .text {
+  padding-left: 0.5rem;
+}
+main .together .container .bottom .card-1 .right .mail .btn .icon {
+  background-color: #19869A;
+  padding: 0.3rem 0.3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+main .together .container .bottom .card-2 {
+  width: 100%;
+  background-color: #19869A;
+  height: 40vh;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+main .together .container .bottom .card-2 .text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+main .together .container .bottom .card-2 .text-container .top-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  color: white;
+}
+main .together .container .bottom .card-2 .text-container .top-text h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .together .container .bottom .card-2 .text-container .bottom-btn .btn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .together .container .bottom .card-2 .text-container .bottom-btn .btn .text {
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 0.5rem;
+}
+main .together .container .bottom .card-2 .text-container .bottom-btn .btn .icon {
+  background-color: #19869A;
+  padding: 0.3rem 0.3rem;
+  color: white;
+  border-radius: 50%;
+}
+main .together .container .bottom .card-2 img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  right: 1vh;
+  top: 8vh;
+}
+main .together .container .bottom .card-2 .image-overlay {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 134, 154, 0) 45%, rgb(27, 134, 154) 100%);
+}
+main .together .container .bottom .card-3 {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 2rem;
+  /* Background Image */
+}
+main .together .container .bottom .card-3 img {
+  transform: scaleX(-1);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+main .together .container .bottom .card-3::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+}
+main .together .container .bottom .card-3 .text-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: white;
+}
+main .together .container .bottom .card-3 .text-content .top-content h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .together .container .bottom .card-3 .text-content .bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+main .together .container .bottom .card-3 .text-content .bottom-content .left-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+main .together .container .bottom .card-3 .text-content .bottom-content .btn {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  text-wrap: nowrap;
+}
+main .together .container .bottom .card-3 .text-content .bottom-content .btn .text {
+  font-size: 0.7rem;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 0.5rem;
+}
+main .together .container .bottom .card-3 .text-content .bottom-content .btn .icon {
+  background-color: #19869A;
+  padding: 0.3rem 0.3rem;
+  color: white;
+  border-radius: 50%;
 }
 main {
   /* =======================================================
@@ -1724,6 +2352,31 @@ main .footer .container .footer-bottom .links {
     display: flex;
   }
   main {
+    /* PRECISE CARE */
+  }
+  main .precise-care .container {
+    justify-content: center;
+    display: flex;
+  }
+  main .precise-care .container .bottom {
+    width: 80vw;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a c" "b c";
+  }
+  main .precise-care .container .bottom .card-1 {
+    grid-area: a;
+  }
+  main .precise-care .container .bottom .card-2 {
+    grid-area: b;
+  }
+  main .precise-care .container .bottom .card-3 {
+    min-height: 20vh;
+    gap: 1rem;
+    grid-area: c;
+  }
+  main {
     /* Testimonials Desktop */
   }
   main .testimonials .container {
@@ -1762,6 +2415,35 @@ main .footer .container .footer-bottom .links {
   }
   main .faq .container .content .right {
     width: 50vw;
+  }
+  main {
+    /* GORW TOGETHER */
+  }
+  main .together .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .together .container .bottom {
+    width: 80vw;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-areas: "a a" "b c";
+  }
+  main .together .container .bottom .card-1 {
+    flex-direction: row;
+    grid-area: a;
+  }
+  main .together .container .bottom .card-1 .left {
+    width: 45vw;
+    flex-direction: column;
+  }
+  main .together .container .bottom .card-2 {
+    grid-area: b;
+  }
+  main .together .container .bottom .card-3 {
+    grid-area: c;
   }
   main {
     /* Footer Desktop */
