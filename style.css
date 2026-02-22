@@ -40,7 +40,7 @@ body {
   }
 }
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 /* Divider Line */
@@ -50,9 +50,16 @@ body {
   background-color: #eff6f3;
 }
 
-/* =======================================================
-   MAIN WRAPPER
-======================================================= */
+.track {
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+.track img {
+  pointer-events: none;
+}
+
 /* =======================================================
        NAVBAR
     ======================================================= */
@@ -349,20 +356,17 @@ body {
 .vision .container .bottom .image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 40% 10%;
-     object-position: 40% 10%;
+  -o-object-fit: contain;
+     object-fit: contain;
   transform: scale(1.35);
   position: absolute;
   top: 4rem;
-  right: 2rem;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 .vision .container .bottom .image .image-overlay {
   position: absolute;
-  inset: -1rem;
+  inset: 0rem;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
 }
@@ -454,6 +458,36 @@ body {
   padding: 2rem;
   margin-top: 10vw;
 }
+.personalized .btn {
+  background-color: white;
+  padding: 0.5rem 0.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  border-radius: 2rem;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.personalized .btn .text {
+  padding-left: 0.5rem;
+}
+.personalized .btn .icon {
+  background-color: #19869A;
+  border-radius: 50%;
+  padding: 0.5rem 0.5rem;
+  color: white;
+}
+.personalized .btn:hover {
+  background-color: #19869A;
+}
+.personalized .btn:hover .text {
+  color: white;
+}
+.personalized .btn:hover .icon {
+  background-color: white;
+  color: black;
+}
 .personalized .container {
   width: 100%;
   margin: auto;
@@ -496,21 +530,17 @@ body {
 }
 .personalized .container .symptoms .image img {
   width: 100vw;
-  height: 50vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transform: scale(1);
-  -o-object-position: 40% 40%;
-     object-position: 40% 40%;
+  height: 60vh;
+  -o-object-fit: contain;
+     object-fit: contain;
   mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
 }
 .personalized .container .symptoms .image .fade {
   position: absolute;
-  bottom: -10px;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(to top, #eef4f3, transparent);
+  inset: 0;
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(249, 251, 251, 0.39) 65%, rgb(238, 244, 243) 100%);
 }
 .personalized .container .symptoms .desktop {
   display: none;
@@ -570,7 +600,8 @@ body {
   align-items: start;
 }
 .personalized .container .personalized__cta {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 3vw 0;
 }
 .personalized .container .divider {
@@ -746,6 +777,7 @@ body {
   padding: 0.4rem 0.5rem;
   border-radius: 5rem;
   border: none;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .precise-care .btn .text {
   color: rgb(0, 0, 0);
@@ -753,9 +785,19 @@ body {
 }
 .precise-care .btn .icon {
   background-color: #19869A;
-  padding: 0.5rem;
+  padding: 0.4rem 0.5rem;
   border-radius: 5rem;
   color: white;
+}
+.precise-care .btn:hover {
+  background-color: #19869A;
+}
+.precise-care .btn:hover .text {
+  color: white;
+}
+.precise-care .btn:hover .icon {
+  background-color: white;
+  color: black;
 }
 .precise-care .container {
   min-height: 150vh;
@@ -1014,7 +1056,6 @@ body {
   border-radius: 1.2rem;
   position: relative;
   border: 1px solid rgb(214, 214, 214);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 .products .container .wrapper .track .card .image {
   border-radius: 1rem;
@@ -1073,6 +1114,7 @@ body {
   gap: 1rem;
   border-radius: 5rem;
   border: 1px solid lightgray;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .products .container .bottom .btn .text {
   padding-left: 0.5rem;
@@ -1084,6 +1126,16 @@ body {
   align-items: center;
   border-radius: 50%;
   color: white;
+}
+.products .container .bottom .btn:hover {
+  background-color: #19869A;
+}
+.products .container .bottom .btn:hover .text {
+  color: white;
+}
+.products .container .bottom .btn:hover .icon {
+  background-color: white;
+  color: black;
 }
 
 /* =======================================================
@@ -1251,23 +1303,25 @@ body {
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  justify-content: center;
+  gap: 1.5rem;
   align-items: center;
 }
 .testimonials .container .wrapper .slide .image {
-  width: 42dvh;
+  width: 100%;
   height: 40vh;
   border-radius: 1rem;
   overflow: hidden;
 }
 .testimonials .container .wrapper .slide .image img {
-  width: 100%;
+  border-radius: 1rem;
+  min-width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .testimonials .container .wrapper .slide .content {
-  width: 42vh;
+  width: 100%;
   background: white;
   border-radius: 20px;
   padding: 40px;
@@ -1288,6 +1342,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5rem;
 }
 .testimonials .container .wrapper .slide .content .user .user-info {
   display: flex;
@@ -1347,6 +1402,7 @@ body {
   background-color: #ffffff;
   border-radius: 2rem;
   border: 1px solid lightgray;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .faq .container .top .faq-btn .text {
   padding-left: 0.5rem;
@@ -1356,6 +1412,16 @@ body {
   color: white;
   padding: 0.5rem;
   border-radius: 50%;
+}
+.faq .container .top .faq-btn:hover {
+  background-color: #19869A;
+}
+.faq .container .top .faq-btn:hover .text {
+  color: white;
+}
+.faq .container .top .faq-btn:hover .icon {
+  background-color: white;
+  color: black;
 }
 .faq .container .content {
   width: 100%;
@@ -1801,7 +1867,7 @@ body {
   text-wrap: nowrap;
 }
 .together .container .bottom .card-3 .text-content .bottom-content .btn .text {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: black;
   height: -moz-fit-content;
   height: fit-content;
@@ -1994,9 +2060,6 @@ body {
   main .vision .container .bottom .image {
     width: 70vw;
   }
-  main .vision .container .bottom .image img {
-    top: 0;
-  }
   main .vision .container .trusted {
     flex-direction: row;
     justify-content: space-between;
@@ -2019,7 +2082,7 @@ body {
   }
   main .personalized .container .heading {
     text-align: center;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw;
   }
   main .personalized .container .heading h2 {
     font-size: 2.8rem;
@@ -2054,7 +2117,6 @@ body {
   main .personalized .container .symptoms .wrapper .left {
     position: relative;
     height: 100%;
-    left: 5rem;
     text-align: end;
   }
   main .personalized .container .symptoms .wrapper .left .symptom {
@@ -2095,7 +2157,6 @@ body {
   }
   main .personalized .container .symptoms .wrapper .right {
     position: relative;
-    right: 2rem;
   }
   main .personalized .container .symptoms .wrapper .right .symptom {
     display: flex;
@@ -2134,29 +2195,24 @@ body {
   }
   main .personalized .container .symptoms .image {
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     position: relative;
     overflow: hidden;
+    z-index: 99;
   }
   main .personalized .container .symptoms .image img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: scale(1.2);
-    -o-object-position: 35% 100%;
-       object-position: 35% 100%;
-    position: absolute;
-    top: 2rem;
+    -o-object-fit: contain;
+       object-fit: contain;
     mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
   }
   main .personalized .container .symptoms .image .fade {
     position: absolute;
-    bottom: -10px;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(to top, #eef4f3, transparent);
+    inset: 0;
+    background: #ffffff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 248, 248, 0) 71%, rgb(238, 244, 243) 100%);
   }
   main .personalized .container .symptoms .mobile {
     display: none;
@@ -2326,7 +2382,7 @@ body {
     display: flex;
   }
   main .products .container .wrapper .track .card {
-    min-width: 18.5vw;
+    min-width: 25vw;
   }
   main {
     /* Doctors Desktop */
@@ -2376,7 +2432,7 @@ body {
     flex-direction: row;
   }
   main .testimonials .container .wrapper .slide .content {
-    width: 50vw;
+    width: 100vw;
     height: 100%;
   }
   main {

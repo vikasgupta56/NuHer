@@ -52,7 +52,7 @@ body {
 }
 
 .animate-marquee {
-    animation: marquee 15s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
 
@@ -68,9 +68,14 @@ body {
 }
 
 
-/* =======================================================
-   MAIN WRAPPER
-======================================================= */
+.track {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.track img {
+  pointer-events: none;
+}
 
 
 
@@ -423,12 +428,11 @@ body {
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
-                    object-position: 40% 10%;
+                    object-fit: contain;
                     transform: scale(1.35);
                     position: absolute;
                     top: 4rem;
-                    right: 2rem;
+
 
                     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
                     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
@@ -436,7 +440,7 @@ body {
 
                 .image-overlay {
                     position: absolute;
-                    inset: -1rem;
+                    inset: 0rem;
                     background: #ffffff;
                     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
                 }
@@ -556,6 +560,46 @@ body {
     margin-top: 10vw;
     // display: none;
 
+    .btn {
+        background-color: white;
+        padding: 0.5rem 0.5rem;
+        color: black;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: none;
+        border-radius: 2rem;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        .text {
+            padding-left: 0.5rem;
+
+        }
+
+        .icon {
+            background-color: #19869A;
+            border-radius: 50%;
+            padding: 0.5rem 0.5rem;
+            color: white;
+        }
+
+
+    }
+
+    .btn:hover {
+        background-color: #19869A;
+
+        .text {
+            color: white;
+        }
+
+        .icon {
+            background-color: white;
+            color: black;
+        }
+
+    }
+
     .container {
         width: 100%;
         margin: auto;
@@ -606,10 +650,8 @@ body {
 
                 img {
                     width: 100vw;
-                    height: 50vh;
-                    object-fit: cover;
-                    transform: scale(1);
-                    object-position: 40% 40%;
+                    height: 60vh;
+                    object-fit: contain;
 
                     mask-image: linear-gradient(to bottom,
                             black 55%,
@@ -624,10 +666,9 @@ body {
 
                 .fade {
                     position: absolute;
-                    bottom: -10px;
-                    width: 100%;
-                    height: 120px;
-                    background: linear-gradient(to top, #eef4f3, transparent);
+                    inset: 0;
+                    background: #ffffff;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(249, 251, 251, 0.39) 65%, rgba(238, 244, 243, 1) 100%);
                 }
             }
 
@@ -709,7 +750,8 @@ body {
 
 
         .personalized__cta {
-            text-align: center;
+            display: flex;
+            justify-content: center;
             margin: 3vw 0;
         }
 
@@ -921,6 +963,7 @@ body {
         padding: 0.4rem 0.5rem;
         border-radius: 5rem;
         border: none;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
         .text {
             color: rgb(0, 0, 0);
@@ -929,10 +972,24 @@ body {
 
         .icon {
             background-color: #19869A;
-            padding: 0.5rem;
+            padding: 0.4rem 0.5rem;
             border-radius: 5rem;
             color: white;
         }
+    }
+
+    .btn:hover {
+        background-color: #19869A;
+
+        .text {
+            color: white;
+        }
+
+        .icon {
+            background-color: white;
+            color: black;
+        }
+
     }
 
     .container {
@@ -1255,7 +1312,6 @@ body {
                     border-radius: 1.2rem;
                     position: relative;
                     border: 1px solid rgb(214, 214, 214);
-                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 
                     .image {
                         border-radius: 1rem;
@@ -1332,6 +1388,7 @@ body {
                 gap: 1rem;
                 border-radius: 5rem;
                 border: 1px solid lightgray;
+                transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
                 .text {
                     padding-left: 0.5rem;
@@ -1345,6 +1402,20 @@ body {
                     border-radius: 50%;
                     color: white;
                 }
+            }
+
+            .btn:hover {
+                background-color: #19869A;
+
+                .text {
+                    color: white;
+                }
+
+                .icon {
+                    background-color: white;
+                    color: black;
+                }
+
             }
         }
     }
@@ -1570,24 +1641,27 @@ body {
                 min-width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                // flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
                 align-items: center;
-
+                
                 .image {
-                    width: 42dvh;
+                    width: 100%;
                     height: 40vh;
                     border-radius: 1rem;
                     overflow: hidden;
 
                     img {
-                        width: 100%;
+                        border-radius: 1rem;
+                        min-width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
                 }
 
                 .content {
-                    width: 42vh;
+                    width: 100%;
                     background: white;
                     border-radius: 20px;
                     padding: 40px;
@@ -1610,6 +1684,7 @@ body {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        margin-top: 5rem;
 
                         .user-info {
                             display: flex;
@@ -1689,6 +1764,7 @@ body {
                 background-color: #ffffff;
                 border-radius: 2rem;
                 border: 1px solid lightgray;
+                transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
                 .text {
                     padding-left: 0.5rem;
@@ -1701,6 +1777,20 @@ body {
                     border-radius: 50%;
 
                 }
+            }
+
+            .faq-btn:hover {
+                background-color: #19869A;
+
+                .text {
+                    color: white;
+                }
+
+                .icon {
+                    background-color: white;
+                    color: black;
+                }
+
             }
         }
 
@@ -2252,7 +2342,7 @@ body {
                             text-wrap: nowrap;
 
                             .text {
-                                font-size: 0.7rem;
+                                font-size: 0.9rem;
                                 color: black;
                                 height: fit-content;
                                 padding-left: 0.5rem;
@@ -2514,10 +2604,6 @@ body {
 
                     .image {
                         width: 70vw;
-
-                        img {
-                            top: 0;
-                        }
                     }
                 }
 
@@ -2550,7 +2636,7 @@ body {
 
                 .heading {
                     text-align: center;
-                    margin-bottom: 5vw;
+                    margin-bottom: 3vw;
 
                     h2 {
                         font-size: 2.8rem;
@@ -2590,7 +2676,7 @@ body {
                         .left {
                             position: relative;
                             height: 100%;
-                            left: 5rem;
+                            // left: 3rem;
                             text-align: end;
 
 
@@ -2644,7 +2730,7 @@ body {
 
                         .right {
                             position: relative;
-                            right: 2rem;
+                            // right: 1rem;
 
                             .symptom {
                                 display: flex;
@@ -2696,18 +2782,15 @@ body {
 
                     .image {
                         width: 100vw;
-                        height: 50vh;
+                        height: 60vh;
                         position: relative;
                         overflow: hidden;
+                        z-index: 99;
 
                         img {
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
-                            transform: scale(1.2);
-                            object-position: 35% 100%;
-                            position: absolute;
-                            top: 2rem;
+                            object-fit: contain;
 
                             mask-image: linear-gradient(to bottom,
                                     black 55%,
@@ -2722,10 +2805,10 @@ body {
 
                         .fade {
                             position: absolute;
-                            bottom: -10px;
-                            width: 100%;
-                            height: 120px;
-                            background: linear-gradient(to top, #eef4f3, transparent);
+                            inset: 0;
+                            // display: none;
+                            background: #ffffff;
+                            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 248, 248, 0) 71%, rgba(238, 244, 243, 1) 100%);
                         }
                     }
 
@@ -2942,7 +3025,7 @@ body {
                 .wrapper {
                     .track {
                         .card {
-                            min-width: 18.5vw;
+                            min-width: 25vw;
                         }
                     }
                 }
@@ -3015,7 +3098,7 @@ body {
                         flex-direction: row;
 
                         .content {
-                            width: 50vw;
+                            width: 100vw;
                             height: 100%;
 
                         }
