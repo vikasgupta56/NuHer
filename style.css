@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter Tight", sans-serif;
+  cursor: default;
 }
 
 /* Global Image Styling */
@@ -24,6 +25,12 @@ img {
   text-wrap: nowrap;
   width: -moz-fit-content;
   width: fit-content;
+}
+.btn .text {
+  transition: all 0.5s ease;
+}
+.btn .icon {
+  transition: all 0.5s ease;
 }
 
 p {
@@ -86,13 +93,13 @@ body {
 }
 .navbar .container {
   width: 80vw;
-  height: 9vh;
+  height: 4rem;
   background: white;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 .navbar .left {
   display: flex;
@@ -387,7 +394,8 @@ body {
   width: 100%;
   height: 1px;
   background: rgba(0, 0, 0, 0.1);
-  margin: 4vw 0;
+  margin: 3rem 0;
+  display: none;
 }
 .vision .container .bottom {
   display: flex;
@@ -396,7 +404,7 @@ body {
 }
 .vision .container .bottom .image {
   width: 100%;
-  height: 50vh;
+  height: 30rem;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -447,12 +455,13 @@ body {
   font-size: 1rem;
 }
 .vision .container .bottom .text .author {
+  font-size: 1.1rem;
   font-weight: 500;
   margin-top: 20px;
 }
 .vision .container .trusted {
-  margin-top: 3vw;
-  padding-top: 4vw;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
   border-top: 1px solid #eee;
   display: flex;
   flex-direction: column;
@@ -465,8 +474,9 @@ body {
   text-align: center;
 }
 .vision .container .trusted .header h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2rem;
   color: #0f3d3e;
 }
 .vision .container .trusted .wrapper {
@@ -541,6 +551,9 @@ body {
   min-width: 2rem;
   min-height: 2rem;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   color: white;
   transition: all 0.5s ease;
@@ -589,7 +602,7 @@ body {
   display: none;
 }
 .personalized .container .symptoms .image {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -599,7 +612,7 @@ body {
 }
 .personalized .container .symptoms .image img {
   width: 100vw;
-  height: 60vh;
+  height: 20rem;
   -o-object-fit: contain;
      object-fit: contain;
   mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
@@ -609,7 +622,7 @@ body {
   position: absolute;
   inset: 0;
   background: #ffffff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(249, 251, 251, 0.39) 65%, rgb(238, 244, 243) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(238, 244, 243) 100%, rgb(238, 244, 243) 87%);
 }
 .personalized .container .symptoms .desktop {
   display: none;
@@ -626,14 +639,23 @@ body {
   gap: 2rem;
 }
 .personalized .container .symptoms .mob-symptom .col .symptom .icon {
-  width: 4rem;
-  height: 4rem;
-  background: white;
-  border-radius: 50%;
+  position: relative;
+}
+.personalized .container .symptoms .mob-symptom .col .symptom .icon .outer svg {
+  width: 5rem;
+  height: 5rem;
+}
+.personalized .container .symptoms .mob-symptom .col .symptom .icon .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
+}
+.personalized .container .symptoms .mob-symptom .col .symptom .icon .inner svg {
+  width: 2rem;
 }
 .personalized .container .symptoms .mob-symptom .col .symptom .text h3 {
   font-size: 0.9rem;
@@ -673,6 +695,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .personalized .container .divider {
   width: 100%;
@@ -711,7 +734,7 @@ body {
   background-color: #19869A;
   color: white;
   border-radius: 2rem;
-  height: 50vh;
+  height: 22rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -754,7 +777,7 @@ body {
   position: relative;
   border-radius: 2rem;
   width: 100%;
-  height: 50vh;
+  height: 22rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -809,7 +832,7 @@ body {
   background-color: #ffffff;
   border-radius: 2rem;
   width: 100%;
-  height: 50vh;
+  height: 22rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -913,7 +936,7 @@ body {
 }
 .precise-care .container .top .image {
   width: 100%;
-  height: 80vh;
+  height: 40rem;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -961,7 +984,8 @@ body {
   overflow: hidden;
 }
 .precise-care .container .bottom .card-1 {
-  height: 40vh;
+  width: 100%;
+  height: 20rem;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -1021,7 +1045,7 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(117, 183, 194, 0) 59%, rgb(117, 183, 194) 100%);
 }
 .precise-care .container .bottom .card-2 {
-  height: 40vh;
+  height: 20rem;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -1075,10 +1099,25 @@ body {
   text-wrap: nowrap;
   font-size: 0.8rem;
   gap: 0.7rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+.precise-care .container .bottom .card-2 .text-content .bottom-content .btn .text {
+  color: white;
+}
+.precise-care .container .bottom .card-2 .text-content .bottom-content .btn .icon {
+  background-color: white;
+  color: black;
+}
+.precise-care .container .bottom .card-2 .text-content .bottom-content .btn:hover {
+  background: rgba(98, 87, 87, 0.15);
 }
 .precise-care .container .bottom .card-3 {
   display: flex;
-  min-height: 40vh;
+  min-height: 20rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1162,6 +1201,8 @@ body {
 }
 .products .container .top .arrows {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
   display: none;
 }
@@ -1173,6 +1214,9 @@ body {
   background: white;
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .products .container .top .arrow:hover {
   background: #0f3d3e;
@@ -1183,11 +1227,11 @@ body {
 }
 .products .container .wrapper .track {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.5rem;
   transition: transform 0.4s ease;
 }
 .products .container .wrapper .track .card {
-  min-width: 35vh;
+  min-width: 18rem;
   background: #ffffff;
   padding: 0.8rem;
   border-radius: 1.2rem;
@@ -1302,7 +1346,7 @@ body {
   padding: 1rem;
 }
 .doctors .container .top-part h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #0f3d3e;
 }
@@ -1324,6 +1368,9 @@ body {
   background: white;
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .doctors .container .top-part .arrow:hover {
   background: #0f3d3e;
@@ -1339,7 +1386,7 @@ body {
   transition: transform 0.4s ease;
 }
 .doctors .container .wrapper .track .card {
-  min-width: 35vh;
+  min-width: 17rem;
   padding: 0rem;
   border-radius: 20px;
   transition: 0.3s;
@@ -1358,13 +1405,13 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(187, 220, 225) 100%);
 }
 .doctors .container .wrapper .track .card .top .image {
-  width: 15vh;
-  height: 24vh;
+  width: 9rem;
+  height: 12rem;
   position: relative;
 }
 .doctors .container .wrapper .track .card .top .image img {
+  z-index: 10;
   position: absolute;
-  top: 1rem;
 }
 .doctors .container .wrapper .track .card .top .info {
   padding-right: 1rem;
@@ -1394,7 +1441,8 @@ body {
   line-height: 1.6;
 }
 .doctors .container .wrapper .track .card:nth-child(3) .top .image img {
-  top: 2rem;
+  -o-object-position: 0% 10%;
+     object-position: 0% 10%;
 }
 
 /* =======================================================
@@ -1422,6 +1470,7 @@ body {
 }
 .testimonials .container .top h2 {
   font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 500;
 }
 .testimonials .container .top h2 span {
@@ -1443,6 +1492,9 @@ body {
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .testimonials .container .top .arrow:hover {
   background: white;
@@ -1466,7 +1518,7 @@ body {
 }
 .testimonials .container .wrapper .slide .image {
   width: 100%;
-  height: 40vh;
+  height: 20rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
@@ -1491,6 +1543,7 @@ body {
   cursor: pointer;
 }
 .testimonials .container .wrapper .slide .image .play-btn svg {
+  padding-left: 0.2rem;
   width: 1rem;
   height: 1rem;
 }
@@ -1564,48 +1617,54 @@ body {
   margin-bottom: 60px;
 }
 .faq .container .top h2 {
-  font-size: 42px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 3rem;
   color: #0f3d3e;
 }
 .faq .container .top h2 span {
-  font-family: serif;
+  font-family: "Playfun Display", serif;
   font-style: italic;
   color: #2d7f86;
 }
-.faq .container .top .faq-btn {
-  padding: 0.5rem 0.5rem;
+.faq .container .top .btn {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: #ffffff;
-  border-radius: 2rem;
+  padding: 0.3rem 0.4rem;
   border: 1px solid lightgray;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 5rem;
+  font-size: 0.9rem;
+  transition: all 0.5s ease;
 }
-.faq .container .top .faq-btn .text {
+.faq .container .top .btn .text {
   padding-left: 0.5rem;
+  transition: all 0.5s ease;
 }
-.faq .container .top .faq-btn .icon {
+.faq .container .top .btn .icon {
+  transition: all 0.5s ease;
   background-color: #19869a;
   color: white;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem;
   border-radius: 50%;
 }
-.faq .container .top .faq-btn:hover {
+.faq .container .top .btn:hover {
   background-color: #19869A;
 }
-.faq .container .top .faq-btn:hover .text {
+.faq .container .top .btn:hover .text {
   color: white;
 }
-.faq .container .top .faq-btn:hover .icon {
+.faq .container .top .btn:hover .icon {
   background-color: white;
   color: black;
 }
 .faq .container .content {
   width: 100%;
-}
-.faq .container .content .left {
-  display: none;
 }
 .faq .container .content .right {
   width: 100%;
@@ -1618,17 +1677,22 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   cursor: pointer;
 }
 .faq .container .content .right .faq-item .faq-question h3 {
   font-size: 1rem;
-  color: #0f3d3e;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 .faq .container .content .right .faq-item .faq-question .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 50%;
 }
 .faq .container .content .right .faq-item .faq-question .faq-item.active .icon {
   transform: rotate(180deg);
@@ -1667,6 +1731,13 @@ body {
 .together .btn .text {
   font-size: 0.8rem;
 }
+.together .btn .icon {
+  min-height: 2rem;
+  min-width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .together .container {
   width: 100%;
 }
@@ -1675,7 +1746,7 @@ body {
 }
 .together .container .top .image {
   width: 100%;
-  height: 80vh;
+  height: 40rem;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1689,6 +1760,7 @@ body {
 }
 .together .container .top .image .image-overlay {
   position: absolute;
+  display: none;
   inset: -1rem;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
@@ -1708,15 +1780,22 @@ body {
   text-align: center;
   padding: 2rem;
   font-size: 2vh;
+  margin-top: 2rem;
 }
 .together .container .top .image .container .top h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 500;
+}
+.together .container .top .image .container .top span {
+  font-style: italic;
+  font-family: "Playfun Display", serif;
 }
 .together .container .top .image .container .bottom {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .together .container .top .image .container .bottom .btn {
   display: flex;
@@ -1749,7 +1828,7 @@ body {
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1rem;
 }
 .together .container .bottom .card {
   padding: 1.2rem;
@@ -1762,6 +1841,8 @@ body {
   gap: 2rem;
   background-color: #19869A;
   border-radius: 2rem;
+  padding: 2rem;
+  gap: 3rem;
 }
 .together .container .bottom .card-1 .left {
   width: 100%;
@@ -1771,27 +1852,34 @@ body {
   color: white;
 }
 .together .container .bottom .card-1 .left h1 {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .together .container .bottom .card-1 .left .social-icon {
   display: flex;
   gap: 0.5rem;
 }
 .together .container .bottom .card-1 .left .social-icon .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.502);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+.together .container .bottom .card-1 .left .social-icon .icon svg {
+  width: 1.2rem;
 }
 .together .container .bottom .card-1 .mid {
-  height: 30vh;
+  min-width: 15rem;
   display: flex;
   justify-content: center;
-  width: 15rem;
+  align-items: center;
 }
 .together .container .bottom .card-1 .mid .image {
   width: 100%;
@@ -1801,34 +1889,6 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-}
-.together .container .bottom .card-1 .mid .image .hand {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  bottom: -7rem;
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  z-index: 2;
-  overflow: hidden;
-}
-.together .container .bottom .card-1 .mid .image .frame {
-  width: 8.7rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  left: 5.2rem;
-  bottom: -3.2rem;
-}
-.together .container .bottom .card-1 .mid .image .mobile {
-  width: 8.1rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  top: 3.5rem;
-  left: 5.5rem;
-  z-index: 1;
 }
 .together .container .bottom .card-1 .mid .image .image-overlay {
   position: absolute;
@@ -1852,13 +1912,13 @@ body {
   text-align: center;
 }
 .together .container .bottom .card-1 .right .text-cont h1 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .together .container .bottom .card-1 .right .text-cont p {
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 400;
 }
 .together .container .bottom .card-1 .right .reviews {
   display: flex;
@@ -1870,8 +1930,8 @@ body {
   position: relative;
 }
 .together .container .bottom .card-1 .right .reviews .avatars img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1884,6 +1944,7 @@ body {
 .together .container .bottom .card-1 .right .reviews p {
   color: white;
   font-size: 0.9rem;
+  display: none;
 }
 .together .container .bottom .card-1 .right .mail {
   width: 100%;
@@ -1892,13 +1953,17 @@ body {
   align-items: center;
   border-radius: 2rem;
   overflow: hidden;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.3rem;
   border: 1px solid white;
 }
 .together .container .bottom .card-1 .right .mail h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 200;
   color: white;
+  padding-left: 0.2rem;
 }
 .together .container .bottom .card-1 .right .mail .btn {
   background-color: white;
@@ -1908,12 +1973,15 @@ body {
   align-items: center;
   border-radius: 2rem;
   gap: 1rem;
+  transition: all 0.5s ease;
 }
 .together .container .bottom .card-1 .right .mail .btn .text {
+  transition: all 0.5s ease;
   font-size: 0.8rem;
   padding-left: 0.5rem;
 }
 .together .container .bottom .card-1 .right .mail .btn .icon {
+  transition: all 0.5s ease;
   background-color: #19869A;
   padding: 0.3rem 0.3rem;
   color: white;
@@ -1922,10 +1990,18 @@ body {
   align-items: center;
   border-radius: 50%;
 }
+.together .container .bottom .card-1 .right .btn:hover {
+  background-color: #19869A;
+  color: white;
+}
+.together .container .bottom .card-1 .right .btn:hover .icon {
+  background-color: white;
+  color: black;
+}
 .together .container .bottom .card-2 {
   width: 100%;
   background-color: #19869A;
-  height: 40vh;
+  height: 20rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
@@ -1939,6 +2015,7 @@ body {
   flex-direction: column;
   position: relative;
   z-index: 10;
+  padding: 1rem;
 }
 .together .container .bottom .card-2 .text-container .top-text {
   width: 100%;
@@ -1951,11 +2028,12 @@ body {
   color: white;
 }
 .together .container .bottom .card-2 .text-container .top-text h1 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .together .container .bottom .card-2 .text-container .top-text p {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 .together .container .bottom .card-2 .text-container .bottom-btn .btn {
   background-color: rgb(255, 255, 255);
@@ -1978,13 +2056,25 @@ body {
   color: white;
   border-radius: 50%;
 }
+.together .container .bottom .card-2 .text-container .bottom-btn .btn:hover {
+  background-color: #19869A;
+  color: white;
+}
+.together .container .bottom .card-2 .text-container .bottom-btn .btn:hover .text {
+  color: white;
+}
+.together .container .bottom .card-2 .text-container .bottom-btn .btn:hover .icon {
+  background-color: white;
+  color: black;
+}
 .together .container .bottom .card-2 img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
-  right: 1vh;
-  top: 8vh;
+  right: 0;
+  top: 6rem;
+  transform: scale(0.8);
 }
 .together .container .bottom .card-2 .image-overlay {
   position: absolute;
@@ -1993,7 +2083,7 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 134, 154, 0) 45%, rgb(27, 134, 154) 100%);
 }
 .together .container .bottom .card-3 {
-  height: 40vh;
+  height: 20rem;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -2022,6 +2112,7 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
+  height: 100%;
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -2030,20 +2121,22 @@ body {
   color: white;
 }
 .together .container .bottom .card-3 .text-content .top-content h1 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
 .together .container .bottom .card-3 .text-content .bottom-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 2rem;
+  align-items: end;
+  flex-direction: column;
+  gap: 1rem;
 }
 .together .container .bottom .card-3 .text-content .bottom-content .left-text {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  font-size: 0.8rem;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 .together .container .bottom .card-3 .text-content .bottom-content .btn {
   background-color: white;
@@ -2052,7 +2145,6 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
   text-wrap: nowrap;
 }
 .together .container .bottom .card-3 .text-content .bottom-content .btn .text {
@@ -2072,77 +2164,98 @@ body {
 /* =======================================================
        FOOTER
     ======================================================= */
-.footer {
+.main-footer {
   color: #ffffff;
   padding: 1rem;
 }
-.footer .container {
+.main-footer .desktop {
+  display: none;
+}
+.main-footer .container {
   width: 100%;
-  padding: 2rem;
-  background: #063c3d;
+  padding: 2rem 0 1rem 0;
+  background: #022F35;
   border-radius: 2rem;
+  position: relative;
 }
-.footer .container .footer-top {
-  gap: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.main-footer .container .logo-behind {
+  position: absolute;
+  width: 25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.05;
+  top: 0;
+  left: 1rem;
 }
-.footer .container .footer-top .footer h4 {
+.main-footer .container .wrapper {
+  padding: 1rem;
+}
+.main-footer .container .wrapper .footer-top {
+  border-bottom: 1px solid rgba(211, 211, 211, 0.073);
+}
+.main-footer .container .wrapper .footer-top .footer h4 {
   margin-bottom: 20px;
   font-size: 18px;
 }
-.footer .container .footer-top .footer ul {
+.main-footer .container .wrapper .footer-top .footer ul {
   list-style: none;
 }
-.footer .container .footer-top .footer ul li {
+.main-footer .container .wrapper .footer-top .footer ul li {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
   margin-bottom: 12px;
   font-size: 14px;
   opacity: 0.9;
   cursor: pointer;
   transition: 0.3s;
 }
-.footer .container .footer-top .footer ul li:hover {
+.main-footer .container .wrapper .footer-top .footer ul li:hover {
   opacity: 1;
 }
-.footer .container .footer-top .brand {
+.main-footer .container .wrapper .footer-top .brand {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  padding: 0;
 }
-.footer .container .footer-top .brand .image {
-  width: 15rem;
+.main-footer .container .wrapper .footer-top .brand p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
-.footer .container .footer-top .footer-links {
-  padding: 2rem 0;
+.main-footer .container .wrapper .footer-top .footer-links {
+  padding: 2.5rem 0 2rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  border-top: 1px solid rgba(211, 211, 211, 0.231);
+  border-top: 1px solid rgba(211, 211, 211, 0.073);
 }
-.footer .container .footer-middle {
+.main-footer .container .wrapper .footer-middle {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: start;
-  padding: 30px 0;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
   gap: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(211, 211, 211, 0.073);
 }
-.footer .container .footer-middle .payments {
+.main-footer .container .wrapper .footer-middle .payments {
   display: flex;
   gap: 15px;
 }
-.footer .container .footer-middle .payments img {
+.main-footer .container .wrapper .footer-middle .payments img {
   height: 2.5rem;
   background: white;
   padding: 5px 10px;
   border-radius: 6px;
 }
-.footer .container .footer-middle .socials {
+.main-footer .container .wrapper .footer-middle .socials {
   display: flex;
   gap: 12px;
 }
-.footer .container .footer-middle .socials .circle {
+.main-footer .container .wrapper .footer-middle .socials .circle {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2153,21 +2266,27 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.footer .container .footer-middle .socials .circle:hover {
+.main-footer .container .wrapper .footer-middle .socials .circle:hover {
   background: #1f7a86;
   border-color: #1f7a86;
 }
-.footer .container .footer-bottom {
+.main-footer .container .wrapper .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 25px;
-  font-size: 14px;
-  opacity: 0.8;
+  gap: 3rem;
+  font-size: 0.9rem;
 }
-.footer .container .footer-bottom .links {
+.main-footer .container .wrapper .footer-bottom p {
+  font-size: 0.9rem;
+}
+.main-footer .container .wrapper .footer-bottom .links {
+  flex-direction: column;
+  text-wrap: nowrap;
+  text-align: end;
   display: flex;
-  gap: 10px;
+  gap: 0.2rem;
   cursor: pointer;
 }
 
@@ -2180,7 +2299,9 @@ body {
     top: 2.5rem;
   }
   .navbar .container {
-    height: 10vh;
+    height: 5rem;
+    padding: 0 1rem;
+    overflow: hidden;
   }
   .navbar .container .left .logo {
     width: 10rem;
@@ -2197,7 +2318,7 @@ body {
   /* Hero Desktop */
   .hero .bottom {
     position: absolute;
-    top: 60%;
+    top: 65%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -2256,21 +2377,37 @@ body {
     justify-content: space-between;
     align-items: flex-end;
   }
+  .vision .container .divider {
+    display: block;
+  }
   .vision .container .bottom {
+    width: 100%;
     flex-direction: row;
-    gap: 10vw;
+    align-items: center;
+    gap: 3rem;
   }
   .vision .container .bottom .image {
-    width: 70vw;
+    width: 45%;
+  }
+  .vision .container .bottom .vertical-divider {
+    display: block;
+  }
+  .vision .container .bottom .text {
+    width: 55%;
   }
   .vision .container .trusted {
+    margin-top: 3rem;
     flex-direction: row;
     justify-content: space-between;
-    gap: 15vh;
+    width: 100%;
   }
   .vision .container .trusted .header {
-    width: 50vw;
+    margin-top: 2rem;
+    width: 30%;
     text-align: start;
+  }
+  .vision .container .trusted .wrapper {
+    width: 70%;
   }
   /* Personalized Desktop */
   .personalized {
@@ -2279,6 +2416,10 @@ body {
   }
   .personalized .btn {
     font-size: 1rem;
+  }
+  .personalized .btn .icon {
+    min-width: 2rem;
+    min-height: 2rem;
   }
   .personalized .container {
     width: 80vw;
@@ -2289,13 +2430,14 @@ body {
     margin-bottom: 3vw;
   }
   .personalized .container .heading h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
     color: #0f3d3e;
   }
   .personalized .container .heading p {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     color: #1f8c8c;
-    margin-top: 0.5rem;
   }
   .personalized .container .symptoms {
     display: flex;
@@ -2306,10 +2448,10 @@ body {
     position: relative;
   }
   .personalized .container .symptoms .wrapper {
-    width: 100%;
-    height: 40vh;
+    min-width: 25rem;
+    height: 22rem;
     position: relative;
-    z-index: 9;
+    z-index: 20;
     display: block;
   }
   .personalized .container .symptoms .wrapper .col {
@@ -2317,10 +2459,12 @@ body {
     height: 100%;
     flex-direction: column;
     gap: 3rem;
+    z-index: 20;
   }
   .personalized .container .symptoms .wrapper .left {
     position: relative;
     height: 100%;
+    left: 6rem;
     text-align: end;
   }
   .personalized .container .symptoms .wrapper .left .symptom {
@@ -2330,21 +2474,33 @@ body {
     position: absolute;
   }
   .personalized .container .symptoms .wrapper .left .symptom .icon {
-    width: 70px;
-    height: 70px;
-    background: white;
-    border-radius: 50%;
+    position: relative;
+  }
+  .personalized .container .symptoms .wrapper .left .symptom .icon .outer svg {
+    width: 6rem;
+    height: 6rem;
+  }
+  .personalized .container .symptoms .wrapper .left .symptom .icon .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    padding-bottom: 0.2rem;
+  }
+  .personalized .container .symptoms .wrapper .left .symptom .icon .inner svg {
+    width: 2rem;
   }
   .personalized .container .symptoms .wrapper .left .symptom .text h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: #0f3d3e;
   }
   .personalized .container .symptoms .wrapper .left .symptom .text p {
     font-size: 0.9rem;
+    font-weight: 400;
     color: #555;
     margin-top: 0.5rem;
   }
@@ -2361,6 +2517,7 @@ body {
   }
   .personalized .container .symptoms .wrapper .right {
     position: relative;
+    right: 2rem;
   }
   .personalized .container .symptoms .wrapper .right .symptom {
     display: flex;
@@ -2369,21 +2526,33 @@ body {
     gap: 1.5rem;
   }
   .personalized .container .symptoms .wrapper .right .symptom .icon {
-    width: 70px;
-    height: 70px;
-    background: white;
-    border-radius: 50%;
+    position: relative;
+  }
+  .personalized .container .symptoms .wrapper .right .symptom .icon .outer svg {
+    width: 6rem;
+    height: 6rem;
+  }
+  .personalized .container .symptoms .wrapper .right .symptom .icon .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    padding-bottom: 0.2rem;
+  }
+  .personalized .container .symptoms .wrapper .right .symptom .icon .inner svg {
+    width: 2rem;
   }
   .personalized .container .symptoms .wrapper .right .symptom .text h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: #0f3d3e;
   }
   .personalized .container .symptoms .wrapper .right .symptom .text p {
     font-size: 0.9rem;
+    font-weight: 400;
     color: #555;
     margin-top: 0.5rem;
   }
@@ -2398,11 +2567,11 @@ body {
     top: 20rem;
   }
   .personalized .container .symptoms .image {
-    width: 100vw;
-    height: 60vh;
+    min-width: 30rem;
+    height: 30rem;
     position: relative;
     overflow: hidden;
-    z-index: 99;
+    z-index: 10;
   }
   .personalized .container .symptoms .image img {
     width: 100%;
@@ -2446,20 +2615,21 @@ body {
   }
   .personalized .container .journey .top h2 {
     font-size: 2.5rem;
+    line-height: 3rem;
   }
   .personalized .container .journey .top h2 span {
     color: #19869a;
   }
   .personalized .container .journey .cards {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .personalized .container .journey .cards .consult {
     background-color: #19869A;
     color: white;
     border-radius: 2rem;
-    height: 45vh;
-    width: 28vw;
+    height: 25rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2477,13 +2647,13 @@ body {
     align-items: center;
   }
   .personalized .container .journey .cards .consult .image {
-    width: 20rem;
+    width: 18rem;
     -o-object-fit: contain;
        object-fit: contain;
     position: absolute;
     opacity: 0.2;
-    right: -3rem;
-    display: block;
+    right: -1.5rem;
+    top: 0rem;
   }
   .personalized .container .journey .cards .consult .text h3 {
     font-size: 2rem;
@@ -2496,8 +2666,8 @@ body {
   .personalized .container .journey .cards .treatment {
     position: relative;
     border-radius: 2rem;
-    width: 28vw;
-    height: 45vh;
+    width: 25rem;
+    height: 25rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -2542,10 +2712,10 @@ body {
     font-weight: 300;
   }
   .personalized .container .journey .cards .aftercard {
-    background-color: #f6f6f6;
+    background-color: #FFFFFF;
     border-radius: 2rem;
-    width: 28vw;
-    height: 45vh;
+    width: 25rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2583,6 +2753,10 @@ body {
   .products .container {
     width: 80vw;
   }
+  .products .container .top .heading h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
   .products .container .top .arrows {
     display: flex;
   }
@@ -2602,15 +2776,19 @@ body {
   .doctors .container .top-part {
     width: 80vw;
   }
+  .doctors .container .top-part h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
   .doctors .container .top-part .arrows {
     display: flex;
   }
   .doctors .container .wrapper .track {
-    padding-left: 21vw;
-    gap: 2rem;
+    padding-left: 12rem;
+    gap: 1.5rem;
   }
   .doctors .container .wrapper .track .card {
-    min-width: 23vw;
+    min-width: 20rem;
   }
   .doctors .container .wrapper .track .card .top {
     background-color: #f5f9f9;
@@ -2630,9 +2808,16 @@ body {
     justify-content: center;
     display: flex;
   }
+  .precise-care .container .top .image {
+    height: 50rem;
+  }
+  .precise-care .container .top .image .text-container h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
   .precise-care .container .bottom {
     width: 80vw;
-    gap: 1rem;
+    gap: 0.9rem;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "a c" "b c";
@@ -2711,19 +2896,27 @@ body {
     width: 80vw;
     padding: 3rem;
   }
+  .testimonials .container .top {
+    flex-direction: row;
+    align-items: start;
+  }
+  .testimonials .container .top .arrows {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
   .testimonials .container .wrapper {
     width: 100%;
-    min-height: 24vw;
   }
   .testimonials .container .wrapper .slide {
     flex-direction: row;
   }
   .testimonials .container .wrapper .slide .image {
     width: 30%;
+    height: 20rem;
   }
   .testimonials .container .wrapper .slide .content {
     width: 70%;
-    height: 100%;
+    height: 20rem;
     padding: 2rem;
   }
   .testimonials .container .wrapper .slide .content .quote svg {
@@ -2740,6 +2933,18 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+  }
+  .testimonials .container .wrapper .slide .content .user .user-info img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .testimonials .container .wrapper .slide .content .user .user-info h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+  }
+  .testimonials .container .wrapper .slide .content .user .user-info span {
+    font-size: 1rem;
   }
   .testimonials .container .wrapper .slide .content .user .stars {
     font-size: 1.5rem;
@@ -2760,10 +2965,17 @@ body {
   }
   .faq .container .content .left {
     display: block;
-    width: 25vw;
+    width: 30%;
   }
   .faq .container .content .right {
-    width: 50vw;
+    width: 70%;
+  }
+  .faq .container .content .right .faq-item .faq-question h3 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .faq .container .content .right .faq-item .faq-answer p {
+    font-size: 1rem;
   }
   /* GORW TOGETHER */
   .together .btn .text {
@@ -2775,21 +2987,31 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .together .container .top .image {
+    height: 50rem;
+  }
+  .together .container .top .image .container .top {
+    margin-top: 3rem;
+  }
   .together .container .top .image .container .top h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
   .together .container .bottom {
     width: 80vw;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a a" "b c";
   }
   .together .container .bottom .card-1 {
     flex-direction: row;
     grid-area: a;
+    border-radius: 1rem;
+    gap: 0;
   }
   .together .container .bottom .card-1 .left {
-    width: 45vw;
+    width: 35rem;
     height: 100%;
     flex-direction: column;
   }
@@ -2797,31 +3019,36 @@ body {
     font-size: 1.5rem;
   }
   .together .container .bottom .card-1 .mid {
-    width: 45rem;
-    height: 40vh;
-    justify-content: start;
+    min-width: 20rem;
   }
-  .together .container .bottom .card-1 .mid .image .hand {
-    width: 18rem;
-  }
-  .together .container .bottom .card-1 .mid .image .frame {
-    width: 15rem;
-    left: 4.3rem;
-    bottom: -2.5rem;
-  }
-  .together .container .bottom .card-1 .mid .image .mobile {
-    width: 15rem;
-    left: 4.2rem;
-    top: 3rem;
+  .together .container .bottom .card-1 .right {
+    padding: 2rem;
   }
   .together .container .bottom .card-1 .right .text-cont h1 {
     font-size: 1.5rem;
+    line-height: 1.5rem;
   }
   .together .container .bottom .card-1 .right .text-cont p {
     font-size: 1rem;
+    width: 25rem;
+  }
+  .together .container .bottom .card-1 .right .mail {
+    width: 25rem;
+    padding: 0.3rem 0.5rem;
+  }
+  .together .container .bottom .card-1 .right .mail h1 {
+    padding-left: 0.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 0.9rem;
+  }
+  .together .container .bottom .card-1 .right .mail .btn {
+    padding: 0.3rem 0.5rem;
   }
   .together .container .bottom .card-2 {
     grid-area: b;
+    height: 25rem;
+    border-radius: 1rem;
   }
   .together .container .bottom .card-2 .text-container .top-text h1 {
     font-size: 1.5rem;
@@ -2831,6 +3058,12 @@ body {
   }
   .together .container .bottom .card-3 {
     grid-area: c;
+    height: 25rem;
+    border-radius: 1rem;
+  }
+  .together .container .bottom .card-3 .text-content .bottom-content {
+    flex-direction: row;
+    justify-content: space-between;
   }
   .together .container .bottom .card-3 .text-content .bottom-content .left-text {
     font-size: 1rem;
@@ -2839,33 +3072,62 @@ body {
     width: 20vw;
     font-weight: 200;
   }
+  .together .container .bottom .card-3 .text-content .bottom-content .btn:hover {
+    background-color: #19869A;
+    color: white;
+  }
+  .together .container .bottom .card-3 .text-content .bottom-content .btn:hover .text {
+    color: white;
+  }
+  .together .container .bottom .card-3 .text-content .bottom-content .btn:hover .icon {
+    background-color: white;
+    color: black;
+  }
   /* Footer Desktop */
-  .footer {
+  .main-footer {
     width: 100%;
   }
-  .footer .container {
+  .main-footer .desktop {
+    display: block;
+  }
+  .main-footer .container {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  .footer .container .wrapper {
+  .main-footer .container .wrapper {
     width: 80vw;
+    padding: 0.5rem 0 2rem 0;
+  }
+  .main-footer .container .wrapper .footer-top {
+    display: flex;
+    align-items: start;
+    gap: 10rem;
     padding: 3rem 0;
   }
-  .footer .container .footer-top {
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer .container .footer-top .brand {
+  .main-footer .container .wrapper .footer-top .brand {
     width: 30vw;
-    border-right: 1px solid rgba(211, 211, 211, 0.231);
+    border-right: 1px solid rgba(211, 211, 211, 0.073);
   }
-  .footer .container .footer-top .brand p {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
+  .main-footer .container .wrapper .footer-top .brand p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 20rem;
   }
-  .footer .container .footer-top .footer-links {
+  .main-footer .container .wrapper .footer-top .footer {
+    padding: 0;
+  }
+  .main-footer .container .wrapper .footer-top .footer-links {
+    padding: 0;
+    gap: 8rem;
     border: none;
     flex-wrap: nowrap;
+  }
+  .main-footer .container .wrapper .footer-top .footer-links h4 {
+    font-size: 1.2rem;
+  }
+  .main-footer .container .wrapper .footer-bottom .links {
+    flex-direction: row;
+    gap: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
