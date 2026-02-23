@@ -2,6 +2,7 @@
    GLOBAL STYLES
 ======================================================= */
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 /* Reset + Base */
 * {
   margin: 0;
@@ -16,6 +17,17 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.btn {
+  transition: all 0.5s ease;
+  text-wrap: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /* HTML / Body */
@@ -65,22 +77,23 @@ body {
     ======================================================= */
 .navbar {
   position: absolute;
-  top: 2.5rem;
+  top: 2rem;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   z-index: 40;
+  display: none;
 }
 .navbar .container {
   width: 80vw;
-  height: 10vh;
+  height: 9vh;
   background: white;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 .navbar .left {
   display: flex;
@@ -88,7 +101,7 @@ body {
   gap: 40px;
 }
 .navbar .left .logo {
-  width: 150px;
+  width: 7rem;
 }
 .navbar .left .logo img {
   width: 100%;
@@ -105,7 +118,7 @@ body {
 .navbar .left .links a {
   text-decoration: none;
   color: #000;
-  font-size: 14px;
+  font-size: 1rem;
 }
 .navbar .right {
   display: flex;
@@ -125,9 +138,10 @@ body {
   background: black;
 }
 .navbar .right .cart {
-  width: 32px;
-  height: 32px;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #EFF7F8;
+  padding: 0.5rem 0.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -143,11 +157,16 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
-.navbar .right .btn .btn__arrow {
+.navbar .right .btn .text {
+  padding-left: 0.8rem;
+}
+.navbar .right .btn .icon {
   background-color: white;
   color: black;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 50%;
   padding: 0.3rem;
   display: flex;
@@ -155,8 +174,8 @@ body {
   align-items: center;
 }
 .navbar .menu {
-  width: 32px;
-  height: 32px;
+  width: 2.2rem;
+  height: 2.2rem;
   background: #EFF7F8;
   border-radius: 50%;
   display: flex;
@@ -171,9 +190,10 @@ body {
 .hero {
   width: 100%;
   position: relative;
+  display: none;
 }
 .hero .image-wrapper {
-  height: 120vh;
+  height: 110vh;
   padding: 12px;
   overflow: hidden;
 }
@@ -195,7 +215,7 @@ body {
 }
 .hero .bottom {
   position: absolute;
-  top: 60%;
+  top: 55%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -215,15 +235,19 @@ body {
   gap: 40px;
   width: 100%;
   color: white;
+  position: relative;
 }
 .hero .bottom .bottom-container .left h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 2.5rem;
   width: 100%;
 }
 .hero .bottom .bottom-container .left h1 span {
   color: #19869A;
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
 }
 .hero .bottom .bottom-container .left h1 .desktop-br {
   display: none;
@@ -241,8 +265,8 @@ body {
   position: relative;
 }
 .hero .bottom .bottom-container .left .reviews .avatars img {
-  width: 36px;
-  height: 36px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -252,6 +276,16 @@ body {
 .hero .bottom .bottom-container .left .reviews .avatars img:first-child {
   margin-left: 0;
 }
+.hero .bottom .bottom-container .left .reviews p {
+  font-size: 1rem;
+}
+.hero .bottom .bottom-container .left .line {
+  position: absolute;
+  top: 3.5rem;
+  width: 80vw;
+  height: 0.5px;
+  background-color: rgba(211, 211, 211, 0.287);
+}
 .hero .bottom .bottom-container {
   /* RIGHT CTA */
 }
@@ -259,39 +293,41 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.hero .bottom .bottom-container .right .cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: white;
-  border-radius: 999px;
-  padding: 8px 12px;
+.hero .bottom .bottom-container .right .btn {
+  background-color: #ffffff;
+  padding: 0.4rem 0.5rem;
   border: none;
-  cursor: pointer;
-}
-.hero .bottom .bottom-container .right .cta span {
-  font-size: 14px;
-  white-space: nowrap;
-}
-.hero .bottom .bottom-container .right .cta-icon {
-  width: 32px;
-  height: 32px;
-  background: #19869A;
-  color: white;
-  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  border-radius: 2rem;
   display: flex;
   align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.hero .bottom .bottom-container .right .btn .text {
+  padding-left: 0.8rem;
+}
+.hero .bottom .bottom-container .right .btn .icon {
+  background-color: #19869A;
+  color: rgb(255, 255, 255);
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* =======================================================
        VISION SECTION
     ======================================================= */
 .vision {
-  margin-top: 7vw;
+  margin-top: 0rem;
   width: 100%;
   display: flex;
   justify-content: center;
+  display: none;
 }
 .vision .container {
   width: 100vw;
@@ -306,33 +342,49 @@ body {
   gap: 3rem;
 }
 .vision .container .top h1 {
-  font-size: 36px;
+  font-weight: 500;
+  font-size: 2rem;
   line-height: 46px;
 }
 .vision .container .top h1 span {
+  font-style: italic;
+  font-family: "Playfair Display", serif;
   color: #19869A;
 }
 .vision .container .top .btn {
   display: flex;
   align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  gap: 20px;
-  padding: 8px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 999px;
-  background: white;
-  cursor: pointer;
+  padding: 0.4rem 0.5rem;
+  gap: 1rem;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5rem;
 }
-.vision .container .top .btn-icon {
-  width: 28px;
-  height: 28px;
-  background: #19869A;
-  color: white;
-  border-radius: 50%;
+.vision .container .top .btn .text {
+  padding-left: 0.5rem;
+  transition: all 0.5s ease;
+}
+.vision .container .top .btn .icon {
+  background-color: #19869A;
+  color: rgb(255, 255, 255);
+  padding: 0.3rem;
+  min-width: 2rem;
+  min-height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.vision .container .top .btn:hover {
+  background-color: #19869A;
+}
+.vision .container .top .btn:hover .text {
+  color: white;
+}
+.vision .container .top .btn:hover .icon {
+  background-color: white;
+  color: black;
 }
 .vision .container .divider {
   width: 100%;
@@ -353,7 +405,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.vision .container .bottom .image img {
+.vision .container .bottom .image .main {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -361,14 +413,26 @@ body {
   transform: scale(1.35);
   position: absolute;
   top: 4rem;
+  z-index: 10;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 .vision .container .bottom .image .image-overlay {
   position: absolute;
+  z-index: 10;
   inset: 0rem;
   background: #ffffff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 65%, rgb(255, 255, 255) 100%);
+}
+.vision .container .bottom .image .logo {
+  width: 15rem;
+  left: -1rem;
+  -o-object-position: 10% 0;
+     object-position: 10% 0;
+  opacity: 0.2;
+  position: absolute;
+  top: 1rem;
 }
 .vision .container .bottom .vertical-divider {
   width: 1px;
@@ -383,9 +447,10 @@ body {
 .vision .container .bottom .text p {
   margin-bottom: 16px;
   line-height: 1.6;
+  font-size: 1rem;
 }
 .vision .container .bottom .text .author {
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 20px;
 }
 .vision .container .trusted {
@@ -403,7 +468,8 @@ body {
   text-align: center;
 }
 .vision .container .trusted .header h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #0f3d3e;
 }
 .vision .container .trusted .wrapper {
@@ -455,8 +521,9 @@ body {
     ======================================================= */
 .personalized {
   background: #eef4f3;
-  padding: 2rem;
-  margin-top: 10vw;
+  margin-top: 4rem;
+  padding: 4rem 1rem;
+  display: none;
 }
 .personalized .btn {
   background-color: white;
@@ -467,16 +534,20 @@ body {
   gap: 1rem;
   border: none;
   border-radius: 2rem;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s ease;
 }
 .personalized .btn .text {
   padding-left: 0.5rem;
+  transition: all 0.5s ease;
 }
 .personalized .btn .icon {
   background-color: #19869A;
+  min-width: 2rem;
+  min-height: 2rem;
   border-radius: 50%;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   color: white;
+  transition: all 0.5s ease;
 }
 .personalized .btn:hover {
   background-color: #19869A;
@@ -497,13 +568,15 @@ body {
   margin-bottom: 5vw;
 }
 .personalized .container .heading h2 {
+  font-weight: 400;
   font-size: 1.5rem;
   color: #0f3d3e;
 }
 .personalized .container .heading p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
   font-size: 1.5rem;
   color: #1f8c8c;
-  margin-top: 0.5rem;
 }
 .personalized .container .symptoms {
   display: flex;
@@ -549,7 +622,7 @@ body {
   width: 100%;
   display: flex;
   margin-top: 3rem;
-  gap: 1.2rem;
+  gap: 0.7rem;
 }
 .personalized .container .symptoms .mob-symptom .col .symptom {
   display: flex;
@@ -568,6 +641,7 @@ body {
 }
 .personalized .container .symptoms .mob-symptom .col .symptom .text h3 {
   font-size: 0.9rem;
+  font-weight: 400;
   color: #0f3d3e;
 }
 .personalized .container .symptoms .mob-symptom .col .symptom .text p {
@@ -602,7 +676,7 @@ body {
 .personalized .container .personalized__cta {
   display: flex;
   justify-content: center;
-  margin: 3vw 0;
+  margin-top: 3rem;
 }
 .personalized .container .divider {
   width: 100%;
@@ -623,11 +697,16 @@ body {
 }
 .personalized .container .journey .top h2 {
   font-size: 2.5rem;
+  font-weight: 500;
 }
 .personalized .container .journey .top h2 span {
   color: #19869a;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
 }
 .personalized .container .journey .cards {
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(1fr);
   gap: 2rem;
@@ -636,14 +715,14 @@ body {
   background-color: #19869A;
   color: white;
   border-radius: 2rem;
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
   position: relative;
-  padding: 1.2rem;
+  padding: 2rem;
 }
 .personalized .container .journey .cards .consult .logo {
   width: 4rem;
@@ -655,70 +734,87 @@ body {
   align-items: center;
 }
 .personalized .container .journey .cards .consult .image {
-  width: 100%;
-  height: 100%;
+  width: 15rem;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  -o-object-position: -50%;
-     object-position: -50%;
-  opacity: 0.6;
-  transform: scale(1.45);
-  display: none;
+  opacity: 0.2;
+  right: -1rem;
+  top: -1rem;
+  transform: scale(1);
 }
 .personalized .container .journey .cards .consult .text h3 {
   font-size: 2rem;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 .personalized .container .journey .cards .consult .text p {
-  opacity: 0.8;
+  opacity: 0.7;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.3rem;
 }
 .personalized .container .journey .cards .treatment {
   position: relative;
   border-radius: 2rem;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: red;
 }
-.personalized .container .journey .cards .treatment image {
+.personalized .container .journey .cards .treatment img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.personalized .container .journey .cards .treatment::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+}
 .personalized .container .journey .cards .treatment .logo {
   width: 4rem;
   height: 4rem;
-  background-color: #e8f2f3;
+  background-color: #ffffff;
   border-radius: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5vw;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 2rem;
+  left: 2rem;
 }
 .personalized .container .journey .cards .treatment .text {
   position: absolute;
   bottom: 2rem;
-  left: 1rem;
-  right: 1rem;
+  left: 2rem;
+  right: 2rem;
+  z-index: 20;
+}
+.personalized .container .journey .cards .treatment .text h3 {
+  padding-bottom: 1.5rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.personalized .container .journey .cards .treatment .text p {
   background-color: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
   padding: 1.2rem;
 }
 .personalized .container .journey .cards .aftercard {
   background-color: #ffffff;
   border-radius: 2rem;
   width: 100%;
-  height: 40vh;
-  padding: 1.2rem;
+  height: 50vh;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -741,13 +837,14 @@ body {
   margin-bottom: 5vw;
 }
 .personalized .container .journey .cards .aftercard .top .image {
-  width: 20vh;
-  height: 20vh;
+  width: 15vh;
+  height: 15vh;
   border-radius: 2rem;
   overflow: hidden;
 }
 .personalized .container .journey .cards .aftercard .bottom h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 .personalized .container .journey .cards .aftercard .bottom p {
@@ -766,18 +863,20 @@ body {
     ======================================================= */
 .precise-care {
   width: 100%;
+  display: none;
 }
 .precise-care .btn {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background-color: white;
-  padding: 0.4rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 5rem;
   border: none;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-wrap: nowrap;
 }
 .precise-care .btn .text {
   color: rgb(0, 0, 0);
@@ -785,7 +884,12 @@ body {
 }
 .precise-care .btn .icon {
   background-color: #19869A;
-  padding: 0.4rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.5rem;
   border-radius: 5rem;
   color: white;
 }
@@ -821,8 +925,8 @@ body {
   justify-content: center;
 }
 .precise-care .container .top .image img {
-  -o-object-position: 50% 10%;
-     object-position: 50% 10%;
+  -o-object-position: 55% 10%;
+     object-position: 55% 10%;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
@@ -835,18 +939,23 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  padding-top: 3rem;
 }
 .precise-care .container .top .image .text-container h1 {
   font-size: 4vh;
   text-align: center;
   color: white;
-  font-weight: 300;
+  font-weight: 500;
+}
+.precise-care .container .top .image .text-container span {
+  font-style: italic;
+  font-family: "Playfair Display", serif;
 }
 .precise-care .container .bottom {
   width: 100%;
   padding: 1rem;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   grid-template-columns: 1fr;
 }
@@ -857,19 +966,18 @@ body {
   overflow: hidden;
 }
 .precise-care .container .bottom .card-1 {
-  height: 35vh;
+  height: 40vh;
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: 2rem;
 }
 .precise-care .container .bottom .card-1 .left {
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   width: 40vh;
-  gap: 3rem;
+  gap: 0rem;
   z-index: 10;
 }
 .precise-care .container .bottom .card-1 .left .left-text {
@@ -880,21 +988,32 @@ body {
 }
 .precise-care .container .bottom .card-1 .left .left-text h1 {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 .precise-care .container .bottom .card-1 .left .left-text p {
   font-size: 0.9rem;
   line-height: 1.5rem;
+  font-weight: 300;
 }
 .precise-care .container .bottom .card-1 .left .btn {
   font-size: 0.8rem;
 }
 .precise-care .container .bottom .card-1 .image {
   transform: scaleX(-1);
-  height: 100%;
+  width: 15rem;
+  height: 20rem;
+  overflow: hidden;
   position: absolute;
-  right: 0;
+  margin-right: 0rem;
+  right: -1rem;
+  top: -2rem;
 }
 .precise-care .container .bottom .card-1 .image img {
+  width: 100%;
+  height: 100%;
+  top: 2rem;
+  position: absolute;
+  transform: scale(0.8);
   -o-object-fit: contain;
      object-fit: contain;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
@@ -903,12 +1022,11 @@ body {
 .precise-care .container .bottom .card-1 .image .image-overlay {
   position: absolute;
   inset: 0;
-  border-bottom-right-radius: 2rem;
   background: #ffffff;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(117, 183, 194, 0) 59%, rgb(117, 183, 194) 100%);
 }
 .precise-care .container .bottom .card-2 {
-  height: 35vh;
+  height: 40vh;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -935,7 +1053,7 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 1.2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -943,52 +1061,76 @@ body {
   color: white;
 }
 .precise-care .container .bottom .card-2 .text-content .top-content h1 {
-  font-size: 3rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .precise-care .container .bottom .card-2 .text-content .bottom-content {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: flex-end;
-  gap: 2rem;
+  gap: 1rem;
 }
 .precise-care .container .bottom .card-2 .text-content .bottom-content p {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
   opacity: 0.95;
 }
 .precise-care .container .bottom .card-2 .text-content .bottom-content .btn {
   text-wrap: nowrap;
   font-size: 0.8rem;
+  gap: 0.7rem;
 }
 .precise-care .container .bottom .card-3 {
   display: flex;
-  min-height: 35vh;
+  min-height: 40vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
-  gap: 3rem;
+}
+.precise-care .container .bottom .card-3 .top-container {
+  padding: 2rem;
 }
 .precise-care .container .bottom .card-3 .top-container h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
   color: white;
   text-align: center;
 }
+.precise-care .container .bottom .card-3 .mid-container {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+}
 .precise-care .container .bottom .card-3 .mid-container img {
+  position: absolute;
+  left: 2rem;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
   -o-object-fit: contain;
      object-fit: contain;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
+.precise-care .container .bottom .card-3 .mid-container .image-overlay {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(117, 182, 194, 0.81) 87%, rgb(117, 182, 194) 100%);
+}
 .precise-care .container .bottom .card-3 .bottom-container {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
   gap: 2rem;
   align-items: center;
 }
 .precise-care .container .bottom .card-3 .bottom-container p {
   text-align: center;
-  line-height: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
   color: white;
 }
 .precise-care .container .bottom .card-3 .bottom-container .btn {
@@ -999,8 +1141,9 @@ body {
        PRODUCTS (Target Nutrition)
     ======================================================= */
 .products {
-  padding: 8rem 0;
+  padding: 4rem 0;
   background: #ffffff;
+  display: none;
 }
 .products .container {
   width: 90%;
@@ -1014,12 +1157,12 @@ body {
   margin-bottom: 60px;
 }
 .products .container .top h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #0f3d3e;
 }
 .products .container .top h2 span {
-  font-family: serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   color: #2d7f86;
 }
@@ -1114,13 +1257,17 @@ body {
   gap: 1rem;
   border-radius: 5rem;
   border: 1px solid lightgray;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s ease;
 }
 .products .container .bottom .btn .text {
   padding-left: 0.5rem;
+  transition: all 0.5s ease;
 }
 .products .container .bottom .btn .icon {
-  padding: 0.5rem 0.5rem;
+  transition: all 0.5s ease;
+  padding: 0.5rem;
+  min-width: 2rem;
+  min-height: 2rem;
   background-color: #19869a;
   display: flex;
   align-items: center;
@@ -1142,37 +1289,41 @@ body {
        PROFESSIONALS SECTION
     ======================================================= */
 .doctors {
-  padding: 100px 0;
+  padding-top: 4rem;
   background-color: rgb(255, 255, 255);
+  display: none;
+}
+.doctors .desktop {
+  display: none;
 }
 .doctors .container {
   width: 100%;
   max-width: 1400px;
   margin: auto;
 }
-.doctors .container .top {
+.doctors .container .top-part {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem;
-  padding: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
-.doctors .container .top h2 {
+.doctors .container .top-part h2 {
   font-size: 2rem;
   font-weight: 500;
   color: #0f3d3e;
 }
-.doctors .container .top h2 span {
-  font-family: serif;
+.doctors .container .top-part h2 span {
+  font-family: "Playfair Display", serif;
   font-style: italic;
   color: #2d7f86;
 }
-.doctors .container .top .arrows {
+.doctors .container .top-part .arrows {
   display: flex;
   gap: 15px;
   display: none;
 }
-.doctors .container .top .arrow {
+.doctors .container .top-part .arrow {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -1181,7 +1332,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.doctors .container .top .arrow:hover {
+.doctors .container .top-part .arrow:hover {
   background: #0f3d3e;
   color: white;
 }
@@ -1191,11 +1342,12 @@ body {
 .doctors .container .wrapper .track {
   display: flex;
   gap: 1rem;
+  padding-left: 1rem;
   transition: transform 0.4s ease;
 }
 .doctors .container .wrapper .track .card {
-  min-width: 45vh;
-  padding: 1.2rem;
+  min-width: 35vh;
+  padding: 0rem;
   border-radius: 20px;
   transition: 0.3s;
 }
@@ -1205,7 +1357,7 @@ body {
   border-radius: 2rem;
   position: relative;
   overflow: hidden;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   gap: 20px;
   margin-bottom: 20px;
   background: #ffffff;
@@ -1220,6 +1372,9 @@ body {
   position: absolute;
   top: 1rem;
 }
+.doctors .container .wrapper .track .card .top .info {
+  padding-right: 1rem;
+}
 .doctors .container .wrapper .track .card .top .info h4 {
   font-size: 14px;
   margin-bottom: 5px;
@@ -1233,11 +1388,14 @@ body {
   color: #2d7f86;
 }
 .doctors .container .wrapper .track .card h3 {
+  font-size: 1.2rem;
   margin-bottom: 10px;
+  font-weight: 500;
   color: #0f3d3e;
 }
 .doctors .container .wrapper .track .card p {
-  font-size: 14px;
+  font-size: 13px;
+  width: 15rem;
   color: #666;
   line-height: 1.6;
 }
@@ -1255,26 +1413,31 @@ body {
 .testimonials .container {
   width: 100%;
   margin: auto;
-  background: #1f7a86;
+  background: #19869A;
   border-radius: 1.2rem;
-  padding: 1rem;
+  padding: 2rem;
   color: white;
 }
 .testimonials .container .top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 2.2rem;
 }
 .testimonials .container .top h2 {
-  font-size: 36px;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .testimonials .container .top h2 span {
-  font-family: serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
 }
 .testimonials .container .top .arrows {
   display: flex;
+  justify-content: end;
+  width: 100%;
   gap: 10px;
 }
 .testimonials .container .top .arrow {
@@ -1312,6 +1475,18 @@ body {
   height: 40vh;
   border-radius: 1rem;
   overflow: hidden;
+  position: relative;
+}
+.testimonials .container .wrapper .slide .image svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.478);
+  width: 5rem;
+  height: 5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 .testimonials .container .wrapper .slide .image img {
   border-radius: 1rem;
@@ -1324,25 +1499,21 @@ body {
   width: 100%;
   background: white;
   border-radius: 20px;
-  padding: 40px;
+  padding: 1.5rem;
   color: #333;
   position: relative;
 }
-.testimonials .container .wrapper .slide .content .quote {
-  font-size: 50px;
-  color: #1f7a86;
-  margin-bottom: 10px;
-}
 .testimonials .container .wrapper .slide .content p {
+  margin-top: 1rem;
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 25px;
 }
 .testimonials .container .wrapper .slide .content .user {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5rem;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 2.5rem;
 }
 .testimonials .container .wrapper .slide .content .user .user-info {
   display: flex;
@@ -1362,6 +1533,7 @@ body {
   color: #777;
 }
 .testimonials .container .wrapper .slide .content .user .stars {
+  margin-left: 3rem;
   color: gold;
   font-size: 14px;
 }
@@ -1370,7 +1542,7 @@ body {
        FAQ SECTION
     ======================================================= */
 .faq {
-  padding: 8rem 1rem;
+  padding: 0rem 1rem;
   background: #ffffff;
 }
 .faq .container {
@@ -1481,7 +1653,13 @@ body {
        Grow Together
     ======================================================= */
 .together {
-  padding: 8rem 0;
+  padding: 4rem 0;
+}
+.together .btn {
+  text-wrap: nowrap;
+}
+.together .btn .text {
+  font-size: 0.8rem;
 }
 .together .container {
   width: 100%;
@@ -1532,7 +1710,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .together .container .top .image .container .bottom .btn {
   display: flex;
@@ -1574,18 +1752,20 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   background-color: #19869A;
   border-radius: 2rem;
 }
 .together .container .bottom .card-1 .left {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   color: white;
 }
 .together .container .bottom .card-1 .left h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 .together .container .bottom .card-1 .left .social-icon {
@@ -1602,10 +1782,10 @@ body {
   background-color: rgba(255, 255, 255, 0.502);
 }
 .together .container .bottom .card-1 .mid {
-  height: 40vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 15rem;
 }
 .together .container .bottom .card-1 .mid .image {
   width: 100%;
@@ -1617,33 +1797,31 @@ body {
   overflow: hidden;
 }
 .together .container .bottom .card-1 .mid .image .hand {
-  width: 25rem;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
   bottom: -7rem;
-  -o-object-position: -590% 20%;
-     object-position: -590% 20%;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   z-index: 2;
   overflow: hidden;
 }
 .together .container .bottom .card-1 .mid .image .frame {
-  width: 100%;
+  width: 8.7rem;
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
-  bottom: -1.8rem;
+  left: 5.2rem;
+  bottom: -3.2rem;
 }
 .together .container .bottom .card-1 .mid .image .mobile {
-  width: 10rem;
+  width: 8.1rem;
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
-  top: 2rem;
+  top: 3.5rem;
+  left: 5.5rem;
   z-index: 1;
 }
 .together .container .bottom .card-1 .mid .image .image-overlay {
@@ -1668,11 +1846,11 @@ body {
   text-align: center;
 }
 .together .container .bottom .card-1 .right .text-cont h1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .together .container .bottom .card-1 .right .text-cont p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5rem;
   font-weight: 300;
 }
@@ -1708,11 +1886,11 @@ body {
   align-items: center;
   border-radius: 2rem;
   overflow: hidden;
-  padding: 0.5rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   border: 1px solid white;
 }
 .together .container .bottom .card-1 .right .mail h1 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 200;
   color: white;
 }
@@ -1726,6 +1904,7 @@ body {
   gap: 1rem;
 }
 .together .container .bottom .card-1 .right .mail .btn .text {
+  font-size: 0.8rem;
   padding-left: 0.5rem;
 }
 .together .container .bottom .card-1 .right .mail .btn .icon {
@@ -1766,8 +1945,11 @@ body {
   color: white;
 }
 .together .container .bottom .card-2 .text-container .top-text h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
+}
+.together .container .bottom .card-2 .text-container .top-text p {
+  font-size: 1rem;
 }
 .together .container .bottom .card-2 .text-container .bottom-btn .btn {
   background-color: rgb(255, 255, 255);
@@ -1782,6 +1964,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   padding-left: 0.5rem;
+  font-size: 0.8rem;
 }
 .together .container .bottom .card-2 .text-container .bottom-btn .btn .icon {
   background-color: #19869A;
@@ -1841,7 +2024,7 @@ body {
   color: white;
 }
 .together .container .bottom .card-3 .text-content .top-content h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .together .container .bottom .card-3 .text-content .bottom-content {
@@ -1854,7 +2037,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .together .container .bottom .card-3 .text-content .bottom-content .btn {
   background-color: white;
@@ -1867,7 +2050,7 @@ body {
   text-wrap: nowrap;
 }
 .together .container .bottom .card-3 .text-content .bottom-content .btn .text {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: black;
   height: -moz-fit-content;
   height: fit-content;
@@ -1936,6 +2119,7 @@ body {
   flex-wrap: wrap;
   align-items: start;
   padding: 30px 0;
+  gap: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .footer .container .footer-middle .payments {
@@ -1985,29 +2169,34 @@ body {
    DESKTOP BREAKPOINT (>=1024px)
 ======================================================= */
 @media (min-width: 1024px) {
-  main {
-    /* Navbar Desktop */
+  /* Navbar Desktop */
+  .navbar {
+    top: 2.5rem;
   }
-  main .navbar .container .left .links {
+  .navbar .container {
+    height: 10vh;
+  }
+  .navbar .container .left .logo {
+    width: 10rem;
+  }
+  .navbar .container .left .links {
     display: flex;
   }
-  main .navbar .container .right {
+  .navbar .container .right {
     display: flex;
   }
-  main .navbar .container .menu {
+  .navbar .container .menu {
     display: none;
   }
-  main {
-    /* Hero Desktop */
-  }
-  main .hero .bottom {
+  /* Hero Desktop */
+  .hero .bottom {
     position: absolute;
-    top: 65%;
+    top: 60%;
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  main .hero .bottom .bottom-container {
+  .hero .bottom .bottom-container {
     width: 80vw;
     display: flex;
     flex-direction: row;
@@ -2015,7 +2204,8 @@ body {
     align-items: end;
     gap: 0rem;
   }
-  main .hero .bottom .bottom-container .left {
+  .hero .bottom .bottom-container .left {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -2024,76 +2214,84 @@ body {
     width: fit-content;
     color: white;
   }
-  main .hero .bottom .bottom-container .left h1 {
+  .hero .bottom .bottom-container .left h1 {
     text-align: start;
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 3.5rem;
     width: 100%;
+    font-weight: 400;
+    margin-top: 1rem;
   }
-  main .hero .bottom .bottom-container .left h1 span {
+  .hero .bottom .bottom-container .left h1 span {
     color: #19869A;
   }
-  main .hero .bottom .bottom-container .left h1 .desktop-br {
+  .hero .bottom .bottom-container .left h1 .desktop-br {
     display: block;
   }
-  main .hero .bottom .bottom-container .left h1 .mobile {
+  .hero .bottom .bottom-container .left h1 .mobile {
     display: none;
   }
-  main {
-    /* Vision Desktop */
+  .hero .bottom .bottom-container .left .line {
+    position: absolute;
+    top: 3.5rem;
+    width: 80vw;
+    height: 0.5px;
+    background-color: rgba(211, 211, 211, 0.608);
   }
-  main .vision {
+  /* Vision Desktop */
+  .vision {
     flex-direction: row;
   }
-  main .vision .container {
+  .vision .container {
     width: 80vw;
   }
-  main .vision .container .top {
+  .vision .container .top {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
   }
-  main .vision .container .bottom {
+  .vision .container .bottom {
     flex-direction: row;
     gap: 10vw;
   }
-  main .vision .container .bottom .image {
+  .vision .container .bottom .image {
     width: 70vw;
   }
-  main .vision .container .trusted {
+  .vision .container .trusted {
     flex-direction: row;
     justify-content: space-between;
     gap: 15vh;
   }
-  main .vision .container .trusted .header {
+  .vision .container .trusted .header {
     width: 50vw;
     text-align: start;
   }
-  main {
-    /* Personalized Desktop */
-  }
-  main .personalized {
+  /* Personalized Desktop */
+  .personalized {
     background: #eef4f3;
     padding: 6vw 0;
   }
-  main .personalized .container {
+  .personalized .btn {
+    font-size: 1rem;
+  }
+  .personalized .container {
     width: 80vw;
     margin: auto;
   }
-  main .personalized .container .heading {
+  .personalized .container .heading {
     text-align: center;
     margin-bottom: 3vw;
   }
-  main .personalized .container .heading h2 {
+  .personalized .container .heading h2 {
     font-size: 2.8rem;
     color: #0f3d3e;
   }
-  main .personalized .container .heading p {
-    font-size: 2rem;
+  .personalized .container .heading p {
+    font-size: 3rem;
     color: #1f8c8c;
     margin-top: 0.5rem;
   }
-  main .personalized .container .symptoms {
+  .personalized .container .symptoms {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2101,31 +2299,31 @@ body {
     margin-bottom: 5vw;
     position: relative;
   }
-  main .personalized .container .symptoms .wrapper {
+  .personalized .container .symptoms .wrapper {
     width: 100%;
     height: 40vh;
     position: relative;
     z-index: 9;
     display: block;
   }
-  main .personalized .container .symptoms .wrapper .col {
+  .personalized .container .symptoms .wrapper .col {
     display: flex;
     height: 100%;
     flex-direction: column;
     gap: 3rem;
   }
-  main .personalized .container .symptoms .wrapper .left {
+  .personalized .container .symptoms .wrapper .left {
     position: relative;
     height: 100%;
     text-align: end;
   }
-  main .personalized .container .symptoms .wrapper .left .symptom {
+  .personalized .container .symptoms .wrapper .left .symptom {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     position: absolute;
   }
-  main .personalized .container .symptoms .wrapper .left .symptom .icon {
+  .personalized .container .symptoms .wrapper .left .symptom .icon {
     width: 70px;
     height: 70px;
     background: white;
@@ -2135,36 +2333,36 @@ body {
     align-items: center;
     font-size: 1.8rem;
   }
-  main .personalized .container .symptoms .wrapper .left .symptom .text h3 {
+  .personalized .container .symptoms .wrapper .left .symptom .text h3 {
     font-size: 1.2rem;
     color: #0f3d3e;
   }
-  main .personalized .container .symptoms .wrapper .left .symptom .text p {
+  .personalized .container .symptoms .wrapper .left .symptom .text p {
     font-size: 0.9rem;
     color: #555;
     margin-top: 0.5rem;
   }
-  main .personalized .container .symptoms .wrapper .left .child-1 {
+  .personalized .container .symptoms .wrapper .left .child-1 {
     top: -1rem;
   }
-  main .personalized .container .symptoms .wrapper .left .child-2 {
+  .personalized .container .symptoms .wrapper .left .child-2 {
     top: 10rem;
     left: -5rem;
   }
-  main .personalized .container .symptoms .wrapper .left .child-3 {
+  .personalized .container .symptoms .wrapper .left .child-3 {
     top: 20rem;
     left: 0rem;
   }
-  main .personalized .container .symptoms .wrapper .right {
+  .personalized .container .symptoms .wrapper .right {
     position: relative;
   }
-  main .personalized .container .symptoms .wrapper .right .symptom {
+  .personalized .container .symptoms .wrapper .right .symptom {
     display: flex;
     align-items: center;
     position: absolute;
     gap: 1.5rem;
   }
-  main .personalized .container .symptoms .wrapper .right .symptom .icon {
+  .personalized .container .symptoms .wrapper .right .symptom .icon {
     width: 70px;
     height: 70px;
     background: white;
@@ -2174,33 +2372,33 @@ body {
     align-items: center;
     font-size: 1.8rem;
   }
-  main .personalized .container .symptoms .wrapper .right .symptom .text h3 {
+  .personalized .container .symptoms .wrapper .right .symptom .text h3 {
     font-size: 1.2rem;
     color: #0f3d3e;
   }
-  main .personalized .container .symptoms .wrapper .right .symptom .text p {
+  .personalized .container .symptoms .wrapper .right .symptom .text p {
     font-size: 0.9rem;
     color: #555;
     margin-top: 0.5rem;
   }
-  main .personalized .container .symptoms .wrapper .right .child-1 {
+  .personalized .container .symptoms .wrapper .right .child-1 {
     top: -2rem;
   }
-  main .personalized .container .symptoms .wrapper .right .child-2 {
+  .personalized .container .symptoms .wrapper .right .child-2 {
     top: 9rem;
     left: 4rem;
   }
-  main .personalized .container .symptoms .wrapper .right .child-3 {
+  .personalized .container .symptoms .wrapper .right .child-3 {
     top: 20rem;
   }
-  main .personalized .container .symptoms .image {
+  .personalized .container .symptoms .image {
     width: 100vw;
     height: 60vh;
     position: relative;
     overflow: hidden;
     z-index: 99;
   }
-  main .personalized .container .symptoms .image img {
+  .personalized .container .symptoms .image img {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
@@ -2208,62 +2406,62 @@ body {
     mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 55%, rgba(0, 0, 0, 0.7) 75%, transparent 100%);
   }
-  main .personalized .container .symptoms .image .fade {
+  .personalized .container .symptoms .image .fade {
     position: absolute;
     inset: 0;
     background: #ffffff;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 248, 248, 0) 71%, rgb(238, 244, 243) 100%);
   }
-  main .personalized .container .symptoms .mobile {
+  .personalized .container .symptoms .mobile {
     display: none;
   }
-  main .personalized .container .symptoms .desktop {
+  .personalized .container .symptoms .desktop {
     display: block;
   }
-  main .personalized .container .symptoms .mob-symptom {
+  .personalized .container .symptoms .mob-symptom {
     display: none;
   }
-  main .personalized .container .personalized__cta {
+  .personalized .container .personalized__cta {
     text-align: center;
     margin: 3vw 0;
   }
-  main .personalized .container .divider {
+  .personalized .container .divider {
     width: 100%;
     height: 1px;
     background: white;
     margin: 4vw 0;
   }
-  main .personalized .container .journey .top {
+  .personalized .container .journey .top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 4vw;
   }
-  main .personalized .container .journey .top h2 {
+  .personalized .container .journey .top h2 {
     font-size: 2.5rem;
   }
-  main .personalized .container .journey .top h2 span {
+  .personalized .container .journey .top h2 span {
     color: #19869a;
   }
-  main .personalized .container .journey .cards {
+  .personalized .container .journey .cards {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
   }
-  main .personalized .container .journey .cards .consult {
+  .personalized .container .journey .cards .consult {
     background-color: #19869A;
     color: white;
     border-radius: 2rem;
-    height: 40vh;
-    width: 25vw;
+    height: 45vh;
+    width: 28vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-    padding: 1.2rem;
+    padding: 2rem;
   }
-  main .personalized .container .journey .cards .consult .logo {
+  .personalized .container .journey .cards .consult .logo {
     width: 4rem;
     height: 4rem;
     background-color: white;
@@ -2272,84 +2470,87 @@ body {
     justify-content: center;
     align-items: center;
   }
-  main .personalized .container .journey .cards .consult .image {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .personalized .container .journey .cards .consult .image {
+    width: 20rem;
+    -o-object-fit: contain;
+       object-fit: contain;
     position: absolute;
-    -o-object-position: -50%;
-       object-position: -50%;
     opacity: 0.2;
-    transform: scale(1.45);
+    right: -3rem;
     display: block;
   }
-  main .personalized .container .journey .cards .consult .text h3 {
+  .personalized .container .journey .cards .consult .text h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  main .personalized .container .journey .cards .consult .text p {
+  .personalized .container .journey .cards .consult .text p {
     opacity: 0.8;
     line-height: 1.3rem;
   }
-  main .personalized .container .journey .cards .treatment {
+  .personalized .container .journey .cards .treatment {
     position: relative;
     border-radius: 2rem;
-    width: 25vw;
-    height: 40vh;
+    width: 28vw;
+    height: 45vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  main .personalized .container .journey .cards .treatment image {
+  .personalized .container .journey .cards .treatment image {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  main .personalized .container .journey .cards .treatment .logo {
+  .personalized .container .journey .cards .treatment .logo {
     width: 4rem;
     height: 4rem;
-    background-color: #e8f2f3;
+    background-color: #ffffff;
     border-radius: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5vw;
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 2rem;
+    left: 2rem;
   }
-  main .personalized .container .journey .cards .treatment .text {
+  .personalized .container .journey .cards .treatment .text {
     position: absolute;
     bottom: 2rem;
-    left: 1rem;
-    right: 1rem;
-    background-color: white;
-    border-radius: 2rem;
-    padding: 1.2rem;
+    left: 2rem;
+    right: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  main .personalized .container .journey .cards .aftercard {
+  .personalized .container .journey .cards .treatment .text h3 {
+    padding: 0;
+  }
+  .personalized .container .journey .cards .treatment .text p {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .personalized .container .journey .cards .aftercard {
     background-color: #f6f6f6;
     border-radius: 2rem;
-    width: 25vw;
-    height: 40vh;
-    padding: 1.2rem;
+    width: 28vw;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  main .personalized .container .journey .cards .aftercard .top {
+  .personalized .container .journey .cards .aftercard .top {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
   }
-  main .personalized .container .journey .cards .aftercard .top .logo {
+  .personalized .container .journey .cards .aftercard .top .logo {
     width: 4rem;
     height: 4rem;
     background-color: #e8f2f3;
@@ -2359,162 +2560,286 @@ body {
     align-items: center;
     margin-bottom: 5vw;
   }
-  main .personalized .container .journey .cards .aftercard .top .image {
+  .personalized .container .journey .cards .aftercard .top .image {
     width: 10vw;
     height: 10vw;
     border-radius: 2rem;
     overflow: hidden;
   }
-  main .personalized .container .btn-outline {
+  .personalized .container .btn-outline {
     padding: 0.7rem 1.5rem;
     border-radius: 30px;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
   }
-  main {
-    /* Products Desktop */
-  }
-  main .products .container {
+  /* Products Desktop */
+  .products .container {
     width: 80vw;
   }
-  main .products .container .top .arrows {
+  .products .container .top .arrows {
     display: flex;
   }
-  main .products .container .wrapper .track .card {
+  .products .container .wrapper .track .card {
     min-width: 25vw;
   }
-  main {
-    /* Doctors Desktop */
+  /* Doctors Desktop */
+  .doctors .desktop {
+    display: block;
   }
-  main .doctors .container {
+  .doctors .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .doctors .container .top-part {
     width: 80vw;
   }
-  main .doctors .container .top .arrows {
+  .doctors .container .top-part .arrows {
     display: flex;
   }
-  main {
-    /* PRECISE CARE */
+  .doctors .container .wrapper .track {
+    padding-left: 21vw;
+    gap: 2rem;
   }
-  main .precise-care .container {
+  .doctors .container .wrapper .track .card {
+    min-width: 23vw;
+  }
+  .doctors .container .wrapper .track .card .top {
+    background-color: #f5f9f9;
+    justify-content: space-between;
+  }
+  .doctors .container .wrapper .track .card p {
+    font-size: 0.9rem;
+    width: 100%;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  /* PRECISE CARE */
+  .precise-care .btn {
+    font-size: 1rem;
+  }
+  .precise-care .container {
     justify-content: center;
     display: flex;
   }
-  main .precise-care .container .bottom {
+  .precise-care .container .bottom {
     width: 80vw;
     gap: 1rem;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "a c" "b c";
   }
-  main .precise-care .container .bottom .card-1 {
+  .precise-care .container .bottom .card-1 {
     grid-area: a;
   }
-  main .precise-care .container .bottom .card-2 {
+  .precise-care .container .bottom .card-1 .left .left-text h1 {
+    font-size: 2rem;
+  }
+  .precise-care .container .bottom .card-1 .left .left-text p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .precise-care .container .bottom .card-1 .left .btn {
+    font-size: 1rem;
+  }
+  .precise-care .container .bottom .card-1 .image {
+    transform: scaleX(-1);
+    width: 20rem;
+    overflow: hidden;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+  }
+  .precise-care .container .bottom .card-1 .image img {
+    width: 100%;
+    height: 100%;
+    top: 3rem;
+    position: absolute;
+    transform: scale(1);
+    -o-object-fit: contain;
+       object-fit: contain;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+  .precise-care .container .bottom .card-1 .image .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(117, 183, 194, 0) 59%, rgb(117, 183, 194) 100%);
+  }
+  .precise-care .container .bottom .card-2 {
     grid-area: b;
   }
-  main .precise-care .container .bottom .card-3 {
+  .precise-care .container .bottom .card-2 .text-content .top-content h1 {
+    font-size: 2rem;
+  }
+  .precise-care .container .bottom .card-2 .text-content .bottom-content {
+    flex-direction: row;
+  }
+  .precise-care .container .bottom .card-2 .text-content .bottom-content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .precise-care .container .bottom .card-2 .text-content .bottom-content .btn {
+    font-size: 1rem;
+  }
+  .precise-care .container .bottom .card-3 {
     min-height: 20vh;
     gap: 1rem;
     grid-area: c;
   }
-  main {
-    /* Testimonials Desktop */
+  .precise-care .container .bottom .card-3 .top-container h1 {
+    font-size: 2rem;
   }
-  main .testimonials .container {
+  .precise-care .container .bottom .card-3 .bottom-container p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .precise-care .container .bottom .card-3 .bottom-container .btn {
+    font-size: 1rem;
+  }
+  /* Testimonials Desktop */
+  .testimonials .container {
     width: 80vw;
-    padding: 2rem;
+    padding: 3rem;
   }
-  main .testimonials .container .wrapper {
+  .testimonials .container .wrapper {
+    width: 100%;
     min-height: 24vw;
   }
-  main .testimonials .container .wrapper .slide {
+  .testimonials .container .wrapper .slide {
     flex-direction: row;
   }
-  main .testimonials .container .wrapper .slide .content {
-    width: 100vw;
+  .testimonials .container .wrapper .slide .image {
+    width: 30%;
+  }
+  .testimonials .container .wrapper .slide .content {
+    width: 70%;
     height: 100%;
   }
-  main {
-    /* FAQ Desktop */
-  }
-  main .faq .container {
+  /* FAQ Desktop */
+  .faq .container {
     width: 80vw;
   }
-  main .faq .container .top {
+  .faq .container .top {
     flex-direction: row;
     align-items: end;
   }
-  main .faq .container .content {
+  .faq .container .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
   }
-  main .faq .container .content .left {
+  .faq .container .content .left {
     display: block;
     width: 25vw;
   }
-  main .faq .container .content .right {
+  .faq .container .content .right {
     width: 50vw;
   }
-  main {
-    /* GORW TOGETHER */
+  /* GORW TOGETHER */
+  .together .btn .text {
+    font-size: 1rem;
   }
-  main .together .container {
+  .together .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main .together .container .bottom {
+  .together .container .top .image .container .top h1 {
+    font-size: 2.5rem;
+  }
+  .together .container .bottom {
     width: 80vw;
     justify-content: center;
     gap: 1rem;
     grid-template-areas: "a a" "b c";
   }
-  main .together .container .bottom .card-1 {
+  .together .container .bottom .card-1 {
     flex-direction: row;
     grid-area: a;
   }
-  main .together .container .bottom .card-1 .left {
+  .together .container .bottom .card-1 .left {
     width: 45vw;
+    height: 100%;
     flex-direction: column;
   }
-  main .together .container .bottom .card-2 {
+  .together .container .bottom .card-1 .left h1 {
+    font-size: 1.5rem;
+  }
+  .together .container .bottom .card-1 .mid {
+    width: 45rem;
+    height: 40vh;
+    justify-content: start;
+  }
+  .together .container .bottom .card-1 .mid .image .hand {
+    width: 18rem;
+  }
+  .together .container .bottom .card-1 .mid .image .frame {
+    width: 15rem;
+    left: 4.3rem;
+    bottom: -2.5rem;
+  }
+  .together .container .bottom .card-1 .mid .image .mobile {
+    width: 15rem;
+    left: 4.2rem;
+    top: 3rem;
+  }
+  .together .container .bottom .card-1 .right .text-cont h1 {
+    font-size: 1.5rem;
+  }
+  .together .container .bottom .card-1 .right .text-cont p {
+    font-size: 1rem;
+  }
+  .together .container .bottom .card-2 {
     grid-area: b;
   }
-  main .together .container .bottom .card-3 {
+  .together .container .bottom .card-2 .text-container .top-text h1 {
+    font-size: 1.5rem;
+  }
+  .together .container .bottom .card-2 .text-container .top-text p {
+    font-size: 1rem;
+  }
+  .together .container .bottom .card-3 {
     grid-area: c;
   }
-  main {
-    /* Footer Desktop */
+  .together .container .bottom .card-3 .text-content .bottom-content .left-text {
+    font-size: 1rem;
   }
-  main .footer {
+  .together .container .bottom .card-3 .text-content .bottom-content .left-text :nth-child(2) {
+    width: 20vw;
+    font-weight: 200;
+  }
+  /* Footer Desktop */
+  .footer {
     width: 100%;
   }
-  main .footer .container {
+  .footer .container {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  main .footer .container .wrapper {
+  .footer .container .wrapper {
     width: 80vw;
     padding: 3rem 0;
   }
-  main .footer .container .footer-top {
+  .footer .container .footer-top {
     display: flex;
     justify-content: space-between;
   }
-  main .footer .container .footer-top .brand {
+  .footer .container .footer-top .brand {
     width: 30vw;
     border-right: 1px solid rgba(211, 211, 211, 0.231);
   }
-  main .footer .container .footer-top .brand p {
+  .footer .container .footer-top .brand p {
     font-size: 0.8rem;
     line-height: 1.2rem;
   }
-  main .footer .container .footer-top .footer-links {
+  .footer .container .footer-top .footer-links {
     border: none;
     flex-wrap: nowrap;
   }
