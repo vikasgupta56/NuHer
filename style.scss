@@ -102,7 +102,7 @@ body {
     display: flex;
     justify-content: center;
     z-index: 40;
-    display: none;
+    // display: none;
 
 
     .container {
@@ -231,7 +231,7 @@ body {
 .hero {
     width: 100%;
     position: relative;
-    display: none;
+    // display: none;
 
 
     .image-wrapper {
@@ -391,7 +391,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    display: none;
+    // display: none;
 
 
     .container {
@@ -636,7 +636,7 @@ body {
     background: #eef4f3;
     margin-top: 4rem;
     padding: 4rem 1rem;
-    display: none;
+    // display: none;
 
     .btn {
         background-color: white;
@@ -1072,7 +1072,7 @@ body {
 
 .precise-care {
     width: 100%;
-    display: none;
+    // display: none;
 
     .btn {
         width: fit-content;
@@ -1419,7 +1419,7 @@ body {
 .products {
     padding: 4rem 0;
     background: #ffffff;
-    display: none;
+    // display: none;
 
     .container {
         width: 90%;
@@ -1607,7 +1607,7 @@ body {
     padding-top: 4rem;
     background-color: rgb(255, 255, 255);
     // background: #f4f6f5;
-    display: none;
+    // display: none;
 
     .desktop {
         display: none;
@@ -1683,6 +1683,7 @@ body {
                         padding: 0 1rem;
                         gap: 20px;
                         margin-bottom: 20px;
+                        background-color: #f5f9f9;
                         background: #ffffff;
                         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(187, 220, 225, 1) 100%);
 
@@ -1790,7 +1791,7 @@ body {
 
                 span {
                     font-family: "Playfair Display", serif;
-                    font-style: italic; 
+                    font-style: italic;
                 }
             }
 
@@ -1843,16 +1844,31 @@ body {
                     overflow: hidden;
                     position: relative;
 
-                    svg {
+                    .play-btn {
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        background-color: rgba(255, 255, 255, 0.478);
-                        width: 5rem;
-                        height: 5rem;
-                        padding: 0.5rem;
+
+                        width: 2rem;
+                        height: 2rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(12px);
+                        -webkit-backdrop-filter: blur(12px);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+                        transition: 0.3s ease;
+                        cursor: pointer;
+                    }
+
+                    .play-btn svg {
+                        width: 1rem;
+                        height: 1rem;
                     }
 
                     img {
@@ -1874,9 +1890,11 @@ body {
                     p {
                         margin-top: 1rem;
                         font-size: 16px;
-                        line-height: 1.6;
+                        line-height: 1.5rem;
                         margin-bottom: 25px;
                     }
+
+
 
                     .user {
                         display: flex;
@@ -3316,6 +3334,7 @@ body {
                 .track {
                     padding-left: 21vw;
                     gap: 2rem;
+
                     .card {
                         min-width: 23vw;
 
@@ -3488,6 +3507,37 @@ body {
                     .content {
                         width: 70%;
                         height: 100%;
+                        padding: 2rem;
+
+                        .quote {
+                            svg {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                            opacity: 0.8;
+                        }
+
+                        .user {
+                            margin-top: 4rem;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: end;
+
+                            .user-info {
+                                h4 {
+                                    
+                                }
+                            }
+
+                            .stars {
+                                font-size: 1.5rem;
+                            }
+                        }
 
                     }
                 }
