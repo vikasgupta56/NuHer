@@ -2318,7 +2318,7 @@ body {
   /* Hero Desktop */
   .hero .bottom {
     position: absolute;
-    top: 30rem;
+    top: 60%;
     width: 100%;
     display: flex;
     justify-content: center;
