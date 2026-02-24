@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Inter Tight", sans-serif;
+    cursor: default;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
+
+/* =======================================================
+       NAVBAR
+    ======================================================= */
+
+.navbar {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 40;
+    // display: none;
+
+
+    .container {
+        width: 80vw;
+        height: 4rem;
+        background: white;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.5rem;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+
+        .logo {
+            width: 7rem;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            font-weight: 300;
+            display: none;
+
+            a {
+                text-decoration: none;
+                color: #000;
+                font-size: 1rem;
+            }
+
+
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        display: none;
+
+
+        .signin {
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .divider {
+            width: 1px;
+            height: 20px;
+            background: black;
+        }
+
+        .cart {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #EFF7F8;
+            padding: 0.5rem 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+
+        }
+
+        .btn {
+            background-color: #19869A;
+            padding: 0.4rem 0.5rem;
+            border: none;
+            color: white;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.9rem;
+
+            .text {
+                padding-left: 0.8rem;
+            }
+
+            .icon {
+                background-color: white;
+                color: black;
+                min-width: 2rem;
+                min-height: 2rem;
+                border-radius: 50%;
+                padding: 0.3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .menu {
+        width: 2.2rem;
+        height: 2.2rem;
+        background: #EFF7F8;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+
+
+/* =======================================================
+        MENOPAUSE
+    ======================================================= */
+
+.menopause {
+    width: 100%;
+    background-color: #EFF7F8;
+    // display: none;
+
+    .line {
+        display: none;
+    }
+
+    .container {
+        padding: 8rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        .top {
+            padding: 0 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .left {
+                h1 {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    font-weight: 500;
+                }
+
+                span {
+                    color: #19869A;
+                    font-style: italic;
+                    font-family: "Playfun Display", serif;
+                }
+            }
+
+            .right {
+                p {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    text-align: justify;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+
+        .bottom {
+            padding: 0 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 1rem;
+
+            .bottom-left {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    line-height: 1.5rem;
+                    text-align: justify;
+                }
+            }
+
+            .bottom-right {
+                width: 100%;
+                height: 20rem;
+
+                img {
+                    transform: scaleX(-1);
+                    border-radius: 1rem;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+
+.why-menopause {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+
+    .container {
+        width: 100%;
+
+        .heading {
+            text-align: center;
+            margin-bottom: 4rem;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #0f3d3e;
+
+                span {
+                    font-family: "Playfair Display", serif;
+                    font-style: italic;
+                    color: #2d7f86;
+                }
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+            .card-1 {
+                width: 100%;
+                height: 40rem;
+                position: relative;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+
+                .stat-card {
+                    background: #ffffff;
+                    padding: 2rem;
+                    border-radius: 1.5rem;
+                    left: 1.5rem;
+                    right: 1.5rem;
+                    z-index: 2;
+                    position: absolute;
+                    bottom: 1.2rem;
+
+                    h3 {
+                        font-size: 2rem;
+                        font-family: "Playfair Display", serif;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 300;
+                        line-height: 1.6;
+                        color: #555;
+                    }
+                }
+            }
+
+            .card-2,
+            .card-3 {
+                width: 100%;
+                padding: 2.5rem;
+                border-radius: 1.5rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    font-size: 2rem;
+                    font-family: "Playfair Display", serif;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    line-height: 1.6;
+                }
+            }
+
+            .card-2 {
+                background: #1f7a86;
+                color: white;
+            }
+
+            .card-3 {
+                background: #ffffff;
+                border: 1px solid #ddd;
+                color: #333;
+            }
+
+        }
+
+        /* LEFT IMAGE SECTION */
+
+        .divider {
+            margin-top: 4rem;
+            height: 1px;
+            background: #e5e5e5;
+        }
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+
+
+    /* Navbar Desktop */
+
+    .navbar {
+        top: 2.5rem;
+
+        .container {
+            height: 5rem;
+            padding: 0 1rem;
+            overflow: hidden;
+
+            .left {
+                .logo {
+                    width: 10rem;
+                }
+
+                .links {
+                    display: flex;
+
+                }
+            }
+
+            .right {
+                display: flex;
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+    }
+
+
+    /*    Menopause     */
+
+    .menopause {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .line {
+            display: block;
+        }
+
+        .container {
+            padding: 10rem 0 9rem 0;
+            width: 80vw;
+            gap: 3rem;
+
+
+            .top {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 2rem;
+
+                .left {
+                    width: 40%;
+                }
+
+                .right {
+                    width: 60%;
+                    margin-left: 1rem;
+
+                    p {
+
+                        line-height: 1.6rem;
+                    }
+
+                }
+            }
+
+            .bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                height: 30rem;
+                gap: 2rem;
+
+                .bottom-left {
+                    width: 40%;
+                    height: 100%;
+
+                    p {
+                        text-align: justify;
+                        font-size: 16px;
+                        line-height: 1.6rem;
+                    }
+
+                }
+
+                .bottom-right {
+                    width: 60%;
+                    height: 100%;
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+    }
+
+    /*    Why Menopause     */
+
+    .why-menopause {
+        .container {
+            width: 80vw;
+
+            .heading {
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .content {
+                width: 100%;
+                justify-content: center;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: 
+                "a b"
+                "a c"
+                ;
+                .card-1 {
+                    grid-area: a;
+                    height: 30rem;
+
+                    .stat-card {
+                        width: 20rem;
+                        left: auto;
+                    }
+                }
+
+                .card-2 {
+                    grid-area: b;
+                }
+
+                .card-3 {
+                    grid-area: c;
+                }
+            }
+        }
+    }
+
+}
