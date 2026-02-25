@@ -13,12 +13,40 @@ body {
   overflow-x: hidden;
   font-family: "Inter Tight", sans-serif;
   cursor: default;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
 }
 
 .line {
   width: 100%;
   height: 1px;
   background-color: lightgray;
+}
+
+.btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5rem;
+}
+.btn .text {
+  padding-left: 0.5rem;
+}
+.btn .icon {
+  background-color: #19869A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 50%;
+  color: white;
 }
 
 /* =======================================================
@@ -32,6 +60,7 @@ body {
   display: flex;
   justify-content: center;
   z-index: 40;
+  display: none;
 }
 .navbar .container {
   width: 80vw;
@@ -203,12 +232,16 @@ body {
      object-fit: cover;
 }
 
+/* =======================================================
+        WHY - MENOPAUSE
+    ======================================================= */
 .why-menopause {
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem;
+  margin-top: 3rem;
 }
 .why-menopause .container {
   width: 100%;
@@ -307,8 +340,413 @@ body {
   background: #e5e5e5;
 }
 
+/* =======================================================
+        LONG - TERM
+    ======================================================= */
+.long-term {
+  padding: 0rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.long-term .container {
+  width: 100%;
+}
+.long-term .container .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.long-term .container .top .heading h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.long-term .container .top .heading h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #2d7f86;
+}
+.long-term .container .top .btn {
+  padding: 0.3rem 0.3rem;
+}
+.long-term .container .top .btn .text {
+  font-size: 0.8rem;
+}
+.long-term .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* LEFT SIDE */
+}
+.long-term .container .content .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.long-term .container .content .left .item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 1.2rem;
+  background: white;
+  border: 1px solid #e3e3e3;
+}
+.long-term .container .content .left .item .icon svg {
+  width: 4rem;
+  height: 4rem;
+}
+.long-term .container .content .left .item .text h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f3d3e;
+}
+.long-term .container .content .left .item .text p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.5;
+}
+.long-term .container .content {
+  /* RIGHT IMAGE */
+}
+.long-term .container .content .right {
+  width: 100%;
+  height: 20rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.long-term .container .content .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: 100% 0%;
+     object-position: 100% 0%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* =======================================================
+        LEADER-SHIP
+    ======================================================= */
+.leadership {
+  background: #19869A;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.leadership .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+}
+.leadership {
+  /* LEFT IMAGE */
+}
+.leadership .image {
+  width: 100%;
+  height: 25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.leadership .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0% 40%;
+     object-position: 0% 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.leadership {
+  /* Divider hidden on mobile */
+}
+.leadership .divider {
+  display: none;
+}
+.leadership {
+  /* RIGHT CONTENT */
+}
+.leadership .content {
+  color: white;
+}
+.leadership .content h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.leadership .content h1 span {
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+.leadership .content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.leadership .content h4 {
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* =======================================================
+        OUR EXPERTS
+    ======================================================= */
+.experts {
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  background: #EFF7F8;
+}
+.experts .container {
+  width: 100%;
+}
+.experts .container .heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.experts .container .heading h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.experts .container .heading h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #2d7f86;
+}
+.experts .container .expert {
+  border-top: 1px solid #d8e0e2;
+  padding: 1rem 0;
+  padding-top: 3rem;
+}
+.experts .container .expert .expert-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+.experts .container .expert .number {
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  font-weight: 300;
+}
+.experts .container .expert .desktop-image,
+.experts .container .expert .desktop-qualifications {
+  display: none;
+}
+.experts .container .expert .toggle {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.experts .container .expert .expert-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 2rem;
+}
+.experts .container .expert .expert-body .expand-image {
+  background: linear-gradient(180deg, rgba(207, 230, 234, 0.35) 0%, rgb(207, 230, 234) 100%);
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+.experts .container .expert .expert-body .expand-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.experts .container .expert .expert-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.experts .container .expert .expert-body ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+.experts .container .expert .expert-body ul li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #19869A;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+.experts .container .expert .expert-body .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.experts .container .expert .expert-body .content p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+.experts .container .expert.active .expert-body {
+  max-height: 1000px;
+}
+.experts .container .expert.active .toggle {
+  transform: rotate(180deg);
+}
+.experts .container .expert.active .number {
+  background-color: #1f7a86;
+  color: white;
+}
+
+/* =======================================================
+        Consult
+    ======================================================= */
+.consult-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.consult-section .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #19869A;
+  padding: 5rem 1rem;
+  /* LEFT SIDE */
+}
+.consult-section .container .left {
+  width: 100%;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.consult-section .container .left .content h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+.consult-section .container .left .content h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.consult-section .container .left .content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.consult-section .container .left .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.consult-section .container .left .image img {
+  height: 20rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scaleX(-1);
+  mask-image: linear-gradient(to top, transparent 0%, black 40%);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 40%);
+}
+.consult-section .container .left .image .image-overlay {
+  position: absolute;
+  inset: 0;
+  background: #19869A;
+  background: linear-gradient(180deg, rgba(25, 134, 154, 0) 0%, rgba(25, 134, 154, 0) 75%, rgb(25, 134, 154) 100%);
+}
+.consult-section .container {
+  /* RIGHT SIDE */
+}
+.consult-section .container .right {
+  width: 100%;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+.consult-section .container .right .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.consult-section .container .right .form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.consult-section .container .right .form .input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.consult-section .container .right .form .input-group label {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.consult-section .container .right .form .input-group input,
+.consult-section .container .right .form .input-group textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+.consult-section .container .right .form .input-group textarea {
+  border-radius: 1rem;
+  min-height: 120px;
+  resize: none;
+}
+.consult-section .container .right .form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+.consult-section .container .right .form .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  border-radius: 2rem;
+  border: none;
+  background: #19869A;
+  color: white;
+  font-weight: 500;
+}
+
 @media (min-width: 1024px) {
-  /* Navbar Desktop */
+  /* =======================================================
+     NAVBAR
+  ======================================================= */
   .navbar {
     top: 2.5rem;
   }
@@ -329,7 +767,9 @@ body {
   .navbar .container .menu {
     display: none;
   }
-  /*    Menopause     */
+  /* =======================================================
+      MENOPAUSE
+  ======================================================= */
   .menopause {
     width: 100%;
     display: flex;
@@ -379,7 +819,9 @@ body {
     height: 100%;
     margin-left: 1rem;
   }
-  /*    Why Menopause     */
+  /* =======================================================
+      WHY - MENOPAUSE
+  ======================================================= */
   .why-menopause .container {
     width: 80vw;
   }
@@ -406,5 +848,199 @@ body {
   }
   .why-menopause .container .content .card-3 {
     grid-area: c;
+  }
+  /* =======================================================
+      LONG - TERM
+  ======================================================= */
+  .long-term {
+    width: 100%;
+  }
+  .long-term .container {
+    width: 80vw;
+  }
+  .long-term .container .content {
+    height: 100%;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .long-term .container .content .left {
+    width: 60%;
+    gap: 1rem;
+  }
+  .long-term .container .content .left .item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 1.2rem;
+    background: white;
+    border: 1px solid #e3e3e3;
+  }
+  .long-term .container .content .left .item .icon svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .long-term .container .content .left .item .text h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #0f3d3e;
+  }
+  .long-term .container .content .left .item .text p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.5;
+  }
+  .long-term .container .content .right {
+    width: 40%;
+    height: auto;
+  }
+  .long-term .container .content .right img {
+    -o-object-position: 90% 0%;
+       object-position: 90% 0%;
+  }
+  /* =======================================================
+      LEADER-SHIP
+  ======================================================= */
+  .leadership .container {
+    width: 80vw;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .leadership .container .divider {
+    display: block;
+    width: 0.5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.344);
+  }
+  .leadership .container .image {
+    width: 50%;
+    height: 32rem;
+  }
+  .leadership .container .content {
+    width: 50%;
+  }
+  .leadership .container .content p {
+    text-align: justify;
+  }
+  /* =======================================================
+      OUR EXPERTS
+  ======================================================= */
+  .experts .container {
+    width: 80vw;
+  }
+  .experts .container .expert {
+    position: relative;
+  }
+  .experts .container .expert .expert-header {
+    display: grid;
+    grid-template-columns: 80px 220px 180px 1fr 60px;
+    align-items: center;
+  }
+  .experts .container .expert .expert-header .desktop-image {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #CFE6EA;
+    background: linear-gradient(180deg, rgba(207, 230, 234, 0.35) 0%, rgb(207, 230, 234) 100%);
+    transition: all 0.5s ease;
+  }
+  .experts .container .expert .expert-header .desktop-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-position: 0% 20%;
+       object-position: 0% 20%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .experts .container .expert .expert-header .desktop-qualifications {
+    display: block;
+  }
+  .experts .container .expert .expert-header .desktop-qualifications ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .experts .container .expert .expert-header .desktop-qualifications ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+  .experts .container .expert .expert-header .desktop-qualifications ul li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #19869A;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 8px;
+  }
+  .experts .container .expert .expert-body {
+    display: flex;
+    justify-content: end;
+    gap: 5rem;
+    padding: 0 5rem;
+    margin-top: 2rem;
+  }
+  .experts .container .expert .expert-body .expand-image {
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  .experts .container .expert .expert-body .expand-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0% 10%;
+       object-position: 0% 10%;
+  }
+  .experts .container .expert .expert-body .content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 2.5rem;
+  }
+  .experts .container .expert .expert-body {
+    /* aligns paragraph under qualifications */
+  }
+  .experts .container .expert .mobile-qualifications {
+    display: none;
+  }
+  .experts .container .expert.active .desktop-image {
+    opacity: 0;
+  }
+  .experts .container .expert.active .expand-image {
+    opacity: 1;
+  }
+  /* =======================================================
+      Consult
+  ======================================================= */
+  .consult-section {
+    padding: 5rem 0;
+  }
+  .consult-section .container {
+    width: 80vw;
+    flex-direction: row;
+    border-radius: 2rem;
+    padding: 3rem 3rem;
+  }
+  .consult-section .container .left .content p {
+    width: 25rem;
+  }
+  .consult-section .container .left .image {
+    justify-content: start;
   }
 }/*# sourceMappingURL=style.css.map */
