@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Inter Tight", sans-serif;
+  cursor: default;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5rem;
+}
+.btn .text {
+  padding-left: 0.5rem;
+}
+.btn .icon {
+  background-color: #19869A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 50%;
+  color: white;
+}
+
+/* =======================================================
+   Comparasion
+======================================================= */
+.comparison {
+  background: #19869A;
+  padding: 4rem 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.comparison .desktop {
+  display: none;
+}
+.comparison .container {
+  width: 100%;
+}
+.comparison .container h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+.comparison .container h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.comparison .container .table {
+  position: relative;
+}
+.comparison .container .table .row:not(.header) .feature {
+  font-size: 0.8rem;
+}
+.comparison .container .table.mobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  background: #ffffff;
+  border-radius: 1rem;
+  z-index: 1;
+}
+.comparison .container .row {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.2rem 0;
+  gap: 0.5rem;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2470588235);
+  z-index: 2;
+  font-size: 1rem;
+}
+.comparison .container .row .pure {
+  color: #19869A;
+  padding: 0 2rem;
+}
+.comparison .container .row .pure,
+.comparison .container .row .berb {
+  text-align: center;
+}
+.comparison .container .row:last-child {
+  border: none;
+}
+
+/* =======================================================
+   clinical
+======================================================= */
+.clinical {
+  background: #eaf2f3;
+  padding: 4rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clinical .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  /* IMAGE */
+}
+.clinical .container .left {
+  width: 100%;
+  height: 25rem;
+}
+.clinical .container .left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.clinical .container {
+  /* CONTENT */
+}
+.clinical .container .right h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #0f3d3e;
+  margin-bottom: 2rem;
+}
+.clinical .container .right h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #19869A;
+  font-weight: 400;
+}
+.clinical .container .right .benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a b" "c d";
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.clinical .container .right .benefits .item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.clinical .container .right .benefits .item .icon {
+  color: #19869A;
+}
+.clinical .container .right .benefits .item .icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+.clinical .container .right .benefits .item h3 {
+  font-size: 1rem;
+  color: #0f3d3e;
+  font-weight: 500;
+}
+.clinical .container .right .benefits .item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+.clinical .container .right .benefits .item-1 {
+  grid-area: a;
+}
+.clinical .container .right .benefits .item-2 {
+  grid-area: b;
+}
+.clinical .container .right .benefits .item-3 {
+  grid-area: c;
+}
+.clinical .container .right .benefits .item-3 {
+  grid-area: d;
+}
+
+/* =======================================================
+   FAQ
+======================================================= */
+.faq {
+  padding: 4rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq .container {
+  width: 100%;
+}
+.faq .container .heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.faq .container .heading h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #0f3d3e;
+}
+.faq .container .heading h1 span {
+  font-family: serif;
+  font-style: italic;
+  color: #19869A;
+}
+.faq .container .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.faq .container .faq-list .faq-item {
+  background: #fff;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  transition: background 0.3s ease;
+}
+.faq .container .faq-list .faq-item .faq-question {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f3d3e;
+  cursor: pointer;
+}
+.faq .container .faq-list .faq-item .icon {
+  transition: transform 0.3s ease;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq .container .faq-list .faq-item {
+  /* IMPORTANT FIX */
+}
+.faq .container .faq-list .faq-item .faq-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  padding: 0 1.5rem;
+}
+.faq .container .faq-list .faq-item .faq-answer p {
+  margin: 0rem 0 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+.faq .container .faq-list .faq-item.active {
+  background: #19869A;
+}
+.faq .container .faq-list .faq-item.active .faq-question {
+  color: #ffffff;
+}
+.faq .container .faq-list .faq-item.active .icon {
+  transform: rotate(-180deg);
+  color: #ffffff;
+}
+
+/* =======================================================
+   Related Supplements
+======================================================= */
+.products {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+.products .container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+.products .container .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.products .container .top h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #0f3d3e;
+}
+.products .container .top h2 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #2d7f86;
+}
+.products .container .top .arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  display: none;
+}
+.products .container .top .arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products .container .top .arrow:hover {
+  background: #0f3d3e;
+  color: white;
+}
+.products .container .wrapper {
+  overflow: hidden;
+}
+.products .container .wrapper .track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.4s ease;
+}
+.products .container .wrapper .track .card {
+  min-width: 18rem;
+  background: #ffffff;
+  padding: 0.8rem;
+  border-radius: 1.2rem;
+  position: relative;
+  border: 1px solid rgb(214, 214, 214);
+}
+.products .container .wrapper .track .card .image {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.products .container .wrapper .track .card .image img {
+  width: 100%;
+  display: block;
+}
+.products .container .wrapper .track .card h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #0f3d3e;
+  font-weight: 300;
+}
+.products .container .wrapper .track .card .price {
+  margin-bottom: 15px;
+  color: #666;
+}
+.products .container .wrapper .track .card .buttons {
+  display: flex;
+  gap: 10px;
+}
+.products .container .wrapper .track .card .buttons .btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.products .container .wrapper .track .card .buttons .dark {
+  background: #333;
+  color: white;
+}
+.products .container .wrapper .track .card .buttons .primary {
+  background: #2d7f86;
+  color: white;
+}
+.products .container .wrapper .track .card .buttons .outline {
+  background: transparent;
+  border: 1px solid #ccc;
+}
+
+@media (min-width: 1024px) {
+  /* =======================================================
+     Comparasion
+  ======================================================= */
+  .comparison {
+    padding: 5rem 1rem;
+  }
+  .comparison .mobile {
+    display: none;
+  }
+  .comparison .desktop {
+    display: block;
+  }
+  .comparison .container {
+    width: 80vw;
+  }
+  .comparison .container h1 {
+    font-size: 2.5rem;
+  }
+  .comparison .container .table {
+    position: relative;
+  }
+  .comparison .container .table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    background: #ffffff;
+    border-radius: 2rem;
+    z-index: 1;
+  }
+  .comparison .container .table .header {
+    font-size: 1.2rem;
+  }
+  .comparison .container .table .header .pure {
+    color: black;
+  }
+  .comparison .container .table .row {
+    padding: 2rem 0;
+  }
+  .comparison .container .table .row:not(.header) .feature {
+    font-size: 1.1rem;
+    font-weight: 200;
+  }
+  .comparison .container .table .row:not(.header) .pure p {
+    color: black;
+  }
+  .comparison .container .table .row:not(.header) .pure,
+  .comparison .container .table .row:not(.header) .berb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .comparison .container .table .row:not(.header) .pure p,
+  .comparison .container .table .row:not(.header) .berb p {
+    font-weight: 300;
+  }
+  .comparison .container .table .row:not(.header) .pure svg,
+  .comparison .container .table .row:not(.header) .berb svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  /* =======================================================
+     clinical
+  ======================================================= */
+  .clinical {
+    padding: 5rem 1rem;
+  }
+  .clinical .container {
+    width: 80vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 4rem;
+  }
+  .clinical .container .left {
+    height: auto;
+  }
+  .clinical .container .right {
+    padding: 3rem 0;
+  }
+  .clinical .container .right h1 {
+    font-size: 2.2rem;
+  }
+  .clinical .container .right .benefits .item .icon svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .clinical .container .right .benefits .item h3 {
+    font-size: 1.2rem;
+  }
+  .clinical .container .right .benefits .item p {
+    font-size: 1rem;
+  }
+  /* =======================================================
+     FAQ
+  ======================================================= */
+  .faq .container {
+    width: 50vw;
+  }
+  .faq .container .heading h1 {
+    font-size: 2.2rem;
+  }
+  /* =======================================================
+     Related Supplements
+  ======================================================= */
+  .products .container {
+    width: 80vw;
+  }
+  .products .container .top .heading h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .products .container .top .arrows {
+    display: flex;
+  }
+  .products .container .wrapper .track .card {
+    min-width: 25vw;
+  }
+}/*# sourceMappingURL=style.css.map */

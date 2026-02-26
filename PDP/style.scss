@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Inter Tight", sans-serif;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.btn {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5rem;
+
+    .text {
+        padding-left: 0.5rem;
+    }
+
+    .icon {
+        background-color: #19869A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 2rem;
+        min-height: 2rem;
+        border-radius: 50%;
+        color: white;
+    }
+
+
+}
+
+
+/* =======================================================
+   Comparasion
+======================================================= */
+
+
+
+.comparison {
+    background: #19869A;
+    padding: 4rem 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    // display: none;
+
+    .desktop {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 3rem; 
+            font-weight: 500;
+
+            span {
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+
+        .table {
+            position: relative;
+
+            .row:not(.header) {
+                .feature {
+                    font-size: 0.8rem;
+                }
+            }
+
+        }
+
+
+        .table.mobile::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            background: #ffffff;
+            border-radius: 1rem;
+            z-index: 1;
+        }
+
+        .row {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 1.2rem 0;
+            gap: 0.5rem;
+            position: relative;
+            border-bottom: 1px solid #00d9ff3f;
+            z-index: 2;
+            font-size: 1rem;
+
+            .pure {
+                color: #19869A;
+                padding: 0 2rem;
+            }
+
+            .pure,
+            .berb {
+                text-align: center;
+            }
+        }
+
+        .row:last-child {
+            border: none;
+        }
+
+
+    }
+
+}
+
+
+/* =======================================================
+   clinical
+======================================================= */
+
+.clinical {
+    background: #eaf2f3;
+    padding: 4rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // display: none;
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+
+        /* IMAGE */
+        .left {
+            width: 100%;
+            height: 25rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 1.5rem;
+                object-fit: cover;
+            }
+        }
+
+        /* CONTENT */
+        .right {
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #0f3d3e;
+                margin-bottom: 2rem;
+
+                span {
+                    font-family: "Playfair Display", serif;
+                    font-style: italic;
+                    color: #19869A;
+                    font-weight: 400;
+                }
+            }
+
+            .benefits {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                    "a b"
+                    "c d"
+                ;
+                justify-content: center;
+                gap: 1.5rem;
+                margin-top: 3rem;
+
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.6rem;
+
+                    .icon {
+                        color: #19869A;
+
+                        svg {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1rem;
+                        color: #0f3d3e;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 0.9rem;
+                        color: #555;
+                        line-height: 1.6;
+                    }
+                }
+
+                .item-1 {
+                    grid-area: a;
+                }
+
+                .item-2 {
+                    grid-area: b;
+                }
+
+                .item-3 {
+                    grid-area: c;
+                }
+
+                .item-3 {
+                    grid-area: d;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+/* =======================================================
+   FAQ
+======================================================= */
+
+.faq {
+    padding: 4rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // display: none;
+
+    .container {
+        width: 100%;
+
+        .heading {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #0f3d3e;
+
+                span {
+                    font-family: serif;
+                    font-style: italic;
+                    color: #19869A;
+                }
+            }
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .faq-item {
+                background: #fff;
+                border-radius: 1.2rem;
+                overflow: hidden;
+                border: 1px solid #e5e5e5;
+                transition: background 0.3s ease;
+
+                .faq-question {
+                    width: 100%;
+                    padding: 1.2rem 1.5rem;
+                    background: transparent;
+                    border: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #0f3d3e;
+                    cursor: pointer;
+                }
+
+                .icon {
+                    transition: transform 0.3s ease;
+                    width: 2rem;
+                    height: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* IMPORTANT FIX */
+                .faq-answer {
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.4s ease;
+                    padding: 0 1.5rem;
+
+                    p {
+                        margin: 0rem 0 1rem 0;
+                        font-size: 0.9rem;
+                        line-height: 1.6;
+                        color: #ffffff;
+                    }
+                }
+
+                &.active {
+                    background: #19869A;
+
+                    .faq-question {
+                        color: #ffffff;
+                    }
+
+                    .icon {
+                        transform: rotate(-180deg);
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* =======================================================
+   Related Supplements
+======================================================= */
+
+.products {
+    padding: 4rem 0;
+    background: #ffffff;
+    // display: none;
+
+    .container {
+        width: 90%;
+        max-width: 1400px;
+        margin: auto;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+
+            h2 {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: #0f3d3e;
+
+                span {
+                    font-family: "Playfair Display", serif;
+                    font-style: italic;
+                    color: #2d7f86;
+                }
+            }
+
+            .arrows {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                display: none;
+            }
+
+            .arrow {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                background: white;
+                cursor: pointer;
+                transition: 0.3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: #0f3d3e;
+                    color: white;
+                }
+            }
+        }
+
+
+        .wrapper {
+            overflow: hidden;
+
+            .track {
+                display: flex;
+                gap: 1.5rem;
+                transition: transform 0.4s ease;
+
+                .card {
+                    min-width: 18rem;
+                    background: #ffffff;
+                    padding: 0.8rem;
+                    border-radius: 1.2rem;
+                    position: relative;
+                    border: 1px solid rgb(214, 214, 214);
+
+                    .image {
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        margin-bottom: 1.5rem;
+
+                        img {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                        color: #0f3d3e;
+                        font-weight: 300;
+                    }
+
+                    .price {
+                        margin-bottom: 15px;
+                        color: #666;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        gap: 10px;
+
+                        .btn {
+                            padding: 10px 18px;
+                            border-radius: 25px;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 14px;
+
+                        }
+
+                        .dark {
+                            background: #333;
+                            color: white;
+                        }
+
+                        .primary {
+                            background: #2d7f86;
+                            color: white;
+                        }
+
+                        .outline {
+                            background: transparent;
+                            border: 1px solid #ccc;
+                        }
+                    }
+
+
+                }
+
+
+
+            }
+        }
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+
+    /* =======================================================
+   Comparasion
+======================================================= */
+    .comparison {
+        padding: 5rem 1rem;
+
+        .mobile {
+            display: none;
+        }
+
+        .desktop {
+            display: block;
+        }
+
+        .container {
+            width: 80vw;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .table {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 30%;
+                    background: #ffffff;
+                    border-radius: 2rem;
+                    z-index: 1;
+                }
+
+                .header {
+                    font-size: 1.2rem;
+
+                    .pure {
+                        color: black;
+                    }
+
+                }
+
+                .row {
+                    padding: 2rem 0;
+
+                    &:not(.header) {
+                        .feature {
+                            font-size: 1.1rem;
+                            font-weight: 200;
+
+                        }
+
+                        .pure {
+                            p {
+                                color: black;
+                            }
+                        }
+
+                        .pure,
+                        .berb {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0.5rem;
+
+                            p {
+                                font-weight: 300;
+                            }
+
+                            svg {
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* =======================================================
+   clinical
+======================================================= */
+
+    .clinical {
+        padding: 5rem 1rem;
+        .container {
+            width: 80vw;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 4rem;
+
+            .left {
+                height: auto;
+            }
+
+            .right {
+                padding: 3rem 0;
+
+                h1 {
+                    font-size: 2.2rem;
+                }
+
+                .benefits {
+
+                    .item {
+                        .icon {
+                            svg {
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 1.2rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    /* =======================================================
+   FAQ
+======================================================= */
+
+    .faq {
+        .container {
+            width: 50vw;
+
+            .heading {
+                h1 {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    /* =======================================================
+   Related Supplements
+======================================================= */
+
+    .products {
+        .container {
+            width: 80vw;
+
+            .top {
+
+                .heading {
+                    h2 {
+                        font-size: 2.5rem;
+                        line-height: 3rem;
+                    }
+                }
+
+                .arrows {
+                    display: flex;
+                }
+            }
+
+            .wrapper {
+                .track {
+                    .card {
+                        min-width: 25vw;
+                    }
+                }
+            }
+        }
+    }
+}
