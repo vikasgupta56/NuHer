@@ -25,6 +25,11 @@ body {
   background-color: lightgray;
 }
 
+p,
+li {
+  font-weight: 300;
+}
+
 .btn {
   width: -moz-fit-content;
   width: fit-content;
@@ -62,7 +67,6 @@ body {
   justify-content: center;
   z-index: 40;
   padding: 0 1rem;
-  display: none;
 }
 .navbar .container {
   width: 100%;
@@ -172,75 +176,67 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7rem 1rem 4rem 1rem;
-  display: none;
+  padding: 7rem 1rem 2rem 1rem;
 }
 .midlife .container {
   width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid lightgray;
 }
-.midlife {
-  /* ---------- TOP SECTION ---------- */
-}
-.midlife .top {
+.midlife .container .top {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 3rem;
 }
-.midlife .heading h2 {
+.midlife .container .top .heading h2 {
   font-size: 2rem;
   font-weight: 500;
   color: #0f3d3e;
 }
-.midlife .heading h2 span {
+.midlife .container .top .heading h2 span {
   font-family: "Playfair Display", serif;
   font-style: italic;
   color: #19869A;
   font-weight: 400;
 }
-.midlife .text p {
+.midlife .container .top .text p {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #444;
 }
-.midlife {
-  /* ---------- IMAGE ---------- */
-}
-.midlife .image {
+.midlife .container .image {
   width: 100%;
   margin-bottom: 4rem;
 }
-.midlife .image img {
+.midlife .container .image img {
   width: 100%;
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.midlife {
-  /* ---------- AREAS ---------- */
-}
-.midlife .areas {
+.midlife .container .areas {
   text-align: center;
 }
-.midlife .areas h3 {
+.midlife .container .areas h3 {
   font-size: 1.8rem;
   font-weight: 500;
   color: #0f3d3e;
   margin-bottom: 1.5rem;
 }
-.midlife .areas h3 span {
+.midlife .container .areas h3 span {
   font-family: "Playfair Display", serif;
   font-style: italic;
   color: #19869A;
   font-weight: 400;
 }
-.midlife .areas .tabs {
+.midlife .container .areas .tabs {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
-.midlife .areas .tabs button {
+.midlife .container .areas .tabs button {
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
   border: 1px solid #dcdcdc;
@@ -249,20 +245,22 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
 }
-.midlife .areas .tabs button.active {
+.midlife .container .areas .tabs button.active {
   background: #4a4a4a;
   color: white;
   border-color: #4a4a4a;
 }
 
+/* =======================================================
+       AREA - SUPPORT
+    ======================================================= */
 .areas-support {
   background: #eef3f3;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0rem 1rem;
-  margin-bottom: 10rem;
+  padding: 0rem 1rem 5rem 1rem;
 }
 .areas-support .overview-block {
   display: flex;
@@ -270,17 +268,18 @@ body {
   gap: 2rem;
   margin-bottom: 4rem;
 }
+.areas-support .overview-block .line {
+  display: none;
+}
 .areas-support .overview-block .left h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 .areas-support .overview-block .left p {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-}
-.areas-support .overview-block .left h4 {
-  margin-bottom: 1rem;
 }
 .areas-support .overview-block .left ul {
   list-style: none;
@@ -302,8 +301,14 @@ body {
   left: 0;
   top: 7px;
 }
+.areas-support .overview-block .right {
+  width: 100%;
+  height: 25rem;
+}
 .areas-support .overview-block .right img {
   width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -313,10 +318,11 @@ body {
 }
 .areas-support .support-options h3 {
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 .areas-support .support-options .option {
-  border-top: 1px solid #d8e0e2;
-  padding: 1rem 0;
+  border-bottom: 1px solid #d8e0e2;
+  padding: 1.5rem 0 1rem 0;
 }
 .areas-support .support-options .option .option-header {
   display: flex;
@@ -325,26 +331,32 @@ body {
   gap: 1rem;
   cursor: pointer;
 }
-.areas-support .support-options .option .option-header .number {
-  background: #19869A;
-  color: white;
-  width: 1.8rem;
-  height: 1.8rem;
+.areas-support .support-options .option .option-header .left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.areas-support .support-options .option .option-header .left .number {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+  transition: all 0.5 ease;
 }
-.areas-support .support-options .option .option-header p {
+.areas-support .support-options .option .option-header .left p {
   flex: 1;
   font-size: 0.9rem;
 }
 .areas-support .support-options .option .option-header .toggle {
   font-size: 1.2rem;
-  width: 2rem;
-  height: 2rem;
-  font-weight: 300;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: 200;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,28 +375,111 @@ body {
 }
 .areas-support .support-options .option .option-body .image {
   width: 100%;
-  height: 20rem;
-  background-color: red;
+  height: 12rem;
   border-radius: 1.5rem;
   overflow: hidden;
 }
 .areas-support .support-options .option .option-body .image img {
+  transform: scaleX(-1);
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
   -o-object-position: center;
      object-position: center;
 }
 .areas-support .support-options .option .option-body p {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 .areas-support .support-options .option.active .option-body {
   max-height: 500px;
 }
+.areas-support .support-options .option.active .option-header .left .number {
+  background-color: #19869A;
+  color: white;
+}
 .areas-support .support-options .option.active .toggle {
   content: "-";
+}
+.areas-support .support-options .option:first-of-type {
+  border-top: 1px solid #d8e0e2;
+}
+.areas-support .bottom {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.areas-support .bottom .btn {
+  background-color: transparent;
+}
+
+.causes {
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.causes .container {
+  width: 100%;
+}
+.causes .container .heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.causes .container .heading h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #0f3d3e;
+}
+.causes .container .heading h2 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #2d7f86;
+}
+.causes .container .content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+}
+.causes .container .content .image {
+  width: 100%;
+  height: 25rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.causes .container .content .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 80% 0%;
+     object-position: 80% 0%;
+}
+.causes .container .content .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.causes .container .content .cards .card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e2e5e6;
+}
+.causes .container .content .cards .card .text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #1d2f31;
+}
+.causes .container .content .cards .card .text p {
+  font-size: 0.8rem;
+  color: #6b7c7e;
+  line-height: 1.6;
 }
 
 @media (min-width: 1024px) {
@@ -416,41 +511,63 @@ body {
      MIDLIFE
   ======================================================= */
   .midlife {
-    padding: 10rem 0 5rem 0;
+    padding: 10rem 0 4rem 0;
   }
   .midlife .container {
     width: 80vw;
   }
-  .midlife .top {
+  .midlife .container .top {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 4rem;
   }
-  .midlife .heading {
+  .midlife .container .top .heading {
     flex: 1;
   }
-  .midlife .text {
+  .midlife .container .top .text {
     flex: 1;
   }
-  .midlife .heading h2 {
+  .midlife .container .top .text p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .midlife .container .top .heading h2 {
     font-size: 3rem;
   }
-  .midlife .areas h3 {
+  .midlife .container .areas h3 {
     font-size: 2.4rem;
   }
-  .midlife .image img {
+  .midlife .container .image img {
     border-radius: 2rem;
   }
+  /* =======================================================
+     AREA - SUPPORT
+  ======================================================= */
   .areas-support .support-content {
     width: 80vw;
   }
   .areas-support .support-content .overview-block {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
+    gap: 5rem;
+  }
+  .areas-support .support-content .overview-block .line {
+    height: auto;
+    width: 1px;
+    display: block;
   }
   .areas-support .support-content .overview-block .left {
     width: 60%;
+  }
+  .areas-support .support-content .overview-block .left h3 {
+    font-size: 1.3rem;
+  }
+  .areas-support .support-content .overview-block .left p {
+    font-size: 1rem;
+  }
+  .areas-support .support-content .overview-block .left ul li {
+    font-size: 1rem;
   }
   .areas-support .support-content .overview-block .right {
     width: 40%;
@@ -463,7 +580,6 @@ body {
     grid-template-columns: 40% 50% 10%;
     gap: 2rem;
     align-items: start;
-    border-top: 1px solid #d8e0e2;
     padding: 2rem 0;
   }
   .areas-support .support-content .support-options {
@@ -471,6 +587,9 @@ body {
   }
   .areas-support .support-content .support-options .option-header {
     display: contents;
+  }
+  .areas-support .support-content .support-options .option-header .left p {
+    font-size: 1rem;
   }
   .areas-support .support-content .support-options .option-header .left {
     grid-column: 1;
@@ -496,10 +615,30 @@ body {
     gap: 3rem;
   }
   .areas-support .support-content .support-options .option-body .image {
-    width: 20rem;
-    height: 15rem;
+    width: 18rem;
+    height: 10rem;
   }
   .areas-support .support-content .support-options .option.active .option-body {
     max-height: 500px;
+  }
+  .causes .container {
+    width: 80vw;
+  }
+  .causes .container .content {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .causes .container .content .image {
+    width: 40%;
+    height: auto;
+  }
+  .causes .container .content .cards {
+    width: 60%;
+  }
+  .causes .container .content .cards .card .text h3 {
+    font-size: 1.1rem;
+  }
+  .causes .container .content .cards .card .text p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

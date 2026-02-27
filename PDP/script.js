@@ -137,3 +137,27 @@ function initSlider(sectionSelector) {
 
 
 initSlider(".products")
+
+
+// product detail
+
+document.querySelectorAll(".acc-header").forEach(header => {
+
+  header.addEventListener("click", () => {
+
+    const item = header.parentElement;
+    const isActive = item.classList.contains("active");
+
+    // Sab close karo
+    document.querySelectorAll(".acc-item").forEach(i => {
+      i.classList.remove("active");
+    });
+
+    // Agar pehle se active nahi tha to open karo
+    if (!isActive) {
+      item.classList.add("active");
+    }
+
+  });
+
+});
